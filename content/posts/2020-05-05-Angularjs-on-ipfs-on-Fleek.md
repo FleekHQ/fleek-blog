@@ -60,7 +60,7 @@ Start your angular project using the command below
 ng serve --open
 ```
 
-This command will start the Angular project and open up right away in your browser one the preview on `http://localhost:4200/` is ready
+This command will start the Angular project and open up right away in your browser one the preview on `http://localhost:4200/` is ready.
 
 
 ![](images/angular/1.png)
