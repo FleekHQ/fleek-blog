@@ -1,156 +1,80 @@
 ---
 template: post
-title: 'Getting Started with the Space Daemon'
+title: 'Getting To Know the Space Daemon'
 slug: space-daemon-getting-started
-draft: true
-date: 2020-08-03T12:18:31.636+00:00
-description: Want to create the next great app using the Space Daemon? This guide will get you started! 
-category: Tutorial
+draft: false
+date: 2020-08-12T12:18:31.636+00:00
+description: Get ready for some one-on-one time with the Space Daemon. Learn what it does and how you can leverage it for your projects!
+category: General
 socialImage: https://fleek-team-bucket.storage.fleek.co/SpaceDaemon.png
 tags:
-- tutorial
+- general
 
 ---
 ![](https://fleek-team-bucket.storage.fleek.co/SpaceDaemon.png)
 
-The Space Daemon, our latest open source project, unlocks a new range of possibilities for privacy-focused apps. The Space Daemon saves encrypted files to IPFS and takes care of key management, thus empowering users with true data ownership.
+The Space Daemon is a our latest open source project aimed at developers wanting to build the next great app by leveraging encrypted file storage on IPFS.
 
-Maybe you wish to create the next great privacy-focused peer-to-peer app, but don't know where to start with the Space Daemon. If that is the case, this guide is for you!
+In the next few minutes, we will discuss the Space Daemon, what it is, what it does and how to make use of it.
 
-In the next few minutes, we will cover the subject of setup, installation and get an overview of a few basic commands.
+### Why the Space Daemon was created
+![](https://fleekblog-team-bucket.storage.fleek.co/space-daemon-getting-started/and-its-gone.jpg)
 
-### Setup
-To use the Space Daemon in an app we will need two things.
+Necessity is the mother of invention, and at Fleek we've identified an area of the modern internet necessitating a new invention.
 
-First, we need to have the Space Daemon running. Second, we must install the Space Client in our app so we can use it to interact with the Space Daemon.
+As a case study, let's discuss Twitter. Recently, many high-profile Twitter accounts from the likes of Barack Obama, Joe Biden, Jeff Bezos, Elon Musk and many more got [badly hacked](https://www.bbc.com/news/technology-53445090). This hack exposed the frailty of modern security practices. Furthermore, it highlighted how vulnerable users are to centralised big tech control.
 
-#### Downloading the Daemon
-First of all, grab the [latest release](https://github.com/FleekHQ/space-daemon/releases) of the Daemon.
-The daemon is an executable available for Windows, Mac and Linux, so you can take the version corresponding to your system and cpu architecture (32 or 64 bits).
+### Private privacy and secure security
+![](https://fleekblog-team-bucket.storage.fleek.co/space-daemon-getting-started/little-privacy.jpg)
 
-Then, simply run the daemon as an executable.
+Encryption is like underwear for data. It safeguards your privacy by preventing those for whom it's not their business to take a little peek.
 
-#### Installing the Client
-The Space Client allows you to interact with the Space Daemon and it is available as an [npm package](https://www.npmjs.com/package/@fleekhq/space-client).
+However, there's an important distinction between the encryption schemes of the Space Daemon and those of tech companies like Twitter.
 
-In order to install, run the following command:
+For example, Twitter encrypts the content of the databases containing private messages (which people suspect were laeked in the hack) as they should be. But who controls the keys to decrypt the data? It is Twitter. This gives the companies and/or hackers access your data.
 
-```
-npm install @fleekhq/space-client
-```
+That is why we've decided that the Space Daemon give power back to the users. Files uploaded using the Space Daemon are encrypted not in a remote server but locally on the user's machines. The keys are kept in the possession of the user himself. No one can access user data, but the user.
 
-or with yarn
+Also, the Space Daemon is built on IPFS, a peer-to-peer, content addressed protocol for transferring data. What does it mean for users? It means IPFS has no central point of failure and, as such, it cannot be censured.
 
-```
-yarn add @fleekhq/space-client
-```
+Additionally, new technologies like Filecoin will allow data to be backed up in a decentralised manner, thus enforcing the robustness of the system even further.
 
-The Space Client package is now in your app.
+### Daemon or Space Desktop app?
 
-#### Create an Instance of the Client
-In order to call the methods offered by the Space Client, we must first declare a new instance of the Client and tell it how to connect to the Space Daemon.
+What is the difference between the [Space app](https://blog.space.storage/posts/Introducing-Space) and the Space Daemon?
 
-By default, the Space Daemon runs on localhost, port 9998.
+The Space Desktop app is an encrypted file storage platform competing with the likes of Dropbox and Google Drive. It will be open source so users can verify themselves that no weird shenanigans is going on with their data.
 
-The code below will generate the client based on the default port.
+The Space Daemon (also [open source](https://github.com/FleekHQ/space-daemon)), on the other hand, is the backbone of the Space Desktop app. It handles the brunt of the work by handling encryption, peer-to-peer functionality and other tasks.
 
-```
-  const client = new SpaceClient({
-    url: `http://0.0.0.0:9998`,
-  });
-```
+That being said, we've built the Space Daemon not just for the Space Desktop app, but for ALL developers of privacy-focused apps.
 
-### Basic Commands
-The most basic function of the Space Daemon is to privately upload files to IPFS by encrypting them on the local machine.
+### It's easy to develop for!
 
-Below are a few of the Client methods related to this task.
+We've made it easy to develop on top of the Space Daemon through thorough documentation, a simple-to-use client and plenty of educational content.
 
-#### Creating a Bucket
-Buckets store all the files and folders created by the Daemon. Therefore, we must create one before proceeding any further.
+So whether you want to build the next great app or just want to experiment, you will have minimal friction with the Space Daemon.
 
-The `createBucket` method receives a `slug` input which corresponds to the name to give to the bucket.
+Also, since we've open sourced the Daemon itself, any developer can add new features whether it is support for a new web3 protocol,  integrating an ethereum node to the Daemon, or extending the client's methods it can all be added and we will be happy to include your pull requests.
 
-```
-  try {
-    console.log('creating bucket...');
-    const res = await client.createBucket({ slug: bucket });
-    const bucketObj = res.getBucket();
+### I want to build! Now what?
 
-    console.log(getBucketObject(bucketObj));
-  } catch (error) {
-    console.error(error);
-  }
-```
+First, you need an idea. Good thing that there's ton of potential products to be built with the Space Daemon. Basically, any product existing today in the web2 field could make use of a web3 make over supported by the Space Daemon. Apps like Google docs, Gmail, Github, Reddit, Youtube, Photo Album apps and more.
 
-The bucket name is an important value to keep track of since it is used as input for other methods.
+Of course, the Dweb field being such a melting pot of innovation, we're also expecting products no one has even thought about yet.
 
-#### Creating a Folder
-Files withing a bucket are organized in a unix-like file system and folders can be created to better organize our files.
+Second, you will need resources to get you started.
+To start, the documentation provides a [great introduction to the Space Daemon](https://docs.fleek.co/space-daemon/getting-started/), including how to setup and an exhaustive listing of all the methods available through the Space Client.
 
-The `createFolder` method takes the name of the bucket alongside the path as input for the folder in the following format: `/path/to/my/folder`.
 
-```
-  try {
-    console.log('creating folder...');
-    await client.createFolder({ bucket, path });
-    console.log('folder created!');
-  } catch (error) {
-    console.error(error);
-  }
-```
+Additionally, we also have a [Space Daemon playlist](https://www.youtube.com/playlist?list=PL3v9ZaTBrN9F8V5AjUTJm2jhKM24abPbk) of video tutorials on the Fleek Youtube Channel.
 
-#### Uploading a File
-The `addItems` method is used for file upload. It takes the name of the bucket as input, the `targetPath` which is the path in which the files should be copied within the bucket and an array of `sourcePaths` which are the paths of the files to be copied from the local machine.
 
-```
-  const uploadStream = client.addItems({
-    bucket,
-    targetPath,
-    sourcePaths: [ path ],
-  })
-
-  uploadStream.on('data', (data) => {
-    const itemResult = data.getResult();
-
-    console.log(itemResult.getSourcepath());
-  });
-
-```
-
-#### Opening a File
-The `openFile` method takes the name of a bucket and the path of a file in the bucket as input. It creates a temporary decrypted copy of a file in the local machine and prints out the path to this file so it can be accessed.
-
-```
-  try {
-    const res = await client.openFile({ bucket, path });
-    console.log(res.getLocation());
-  } catch (error) {
-    console.error(error);
-  }
-```
-
-#### Listing the Content of a Folder
-
-The `listDirectory` method lists the content of a folder and takes the name of the bucket and the path to the folder as input.
-
-```
-    try {
-      console.log('fetchig directory...');
-      const res = await client.listDirectory({ bucket, path });
-
-      const entryList = res.getEntriesList();
-      const entries = entryList.map((entry) => getEntryObject(entry));
-
-      console.log(entries);
-    } catch (error) {
-      console.error(error);
-    }
-```
-
+And finally, we have an [educational example of an electron app](https://github.com/FleekHQ/space-client-workshop) integrating the Space Daemon and showcasing basic functionality that you can study.
 
 ### Share your creations!
 
-We are excited to see what cool projects you will come up with using the Space Daemon, so share your ideas with us on [Twitter](https://twitter.com/FleekHQ "Fleek's Twitter").
+We are excited to see what cool projects you will come up with using the Space Daemon, so share your ideas with us on [Twitter](https://twitter.com/spacestorage).
 
 Happy hacking!
 
