@@ -33,7 +33,11 @@ Create an empty repository and clone it.
 
 Create a Next.js app using:
 
-`$ mkdir nextjs && cd nextjs` `$ npm init --y' '$ npm install next react react-dom`
+```console
+$ mkdir nextjs && cd nextjs
+$ npm init --y
+$ npm install next react react-dom
+```
 
 ![](./media/nextjs/CreateNextjsapp.png)
 
