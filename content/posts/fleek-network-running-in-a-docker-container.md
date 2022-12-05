@@ -1,11 +1,11 @@
 ---
 template: post
 draft: false
-title: 'Fleek Network: Running in a Docker container'
-slug: fleek-network-running-in-a-docker-container
+title: 'Fleek Network: Running Ursa in a Docker container'
+slug: fleek-network-running-ursa-in-a-docker-container
 date: 2022-12-05T23:00:00Z
 canonical: ''
-description: A guide on how to run Fleek Network in a docker container
+description: A guide on how to run Fleek Network's Ursa in a docker container
 category: Tutorial
 tags:
 - DCDN
@@ -16,11 +16,24 @@ tags:
 
 ---
 
-# Fleek Network: Running in a Docker container
+# Fleek Network: Running Ursa in a Docker container
 
-Our Docker image provides all the requirements to have Fleek Network running quickly. The following guide will provide you a quick reference to get you started!
+Our [Docker](https://www.docker.com/) [image](https://docs.docker.com/engine/reference/commandline/images/) provides all the requirements to have Fleek Network running quickly and the following guide will provide you a quick reference to get you started with Docker!
 
-If you need to deep dive into Docker, check the oficial getting started [here](https://docs.docker.com/get-started/).
+If you need a deep dive into Docker, check the oficial getting started [here](https://docs.docker.com/get-started/).
+
+
+## Content summary
+  - [Install Docker desktop](#install-docker-desktop)
+  - [Build the Docker image](#build-the-docker-image)
+  - [Run the Docker container](#run-the-docker-container)
+  - [Restart the Docker container](#restart-the-docker-container)
+  - [Delete the Docker container](#delete-the-docker-container)
+  - [Execute Bash Shell in the container](#execute-bash-shell-in-the-container)
+  - [Running a stack with Docker compose](#running-a-stack-with-docker-compose)
+  - [Conclusion](#conclusion)
+
+As Fleek Network's repositories are in constant development and change, you should consider that the following guide was [checked in](https://git-scm.com/docs/git-checkout) to commit `60a37c62e`. While we try our best to update documentation and guides during development, there might be breaking changes which might take some time to reflect in our docs. To avoid disappointment, feel free to check into commit `60a37c62e` or contribute by getting in touch with us, or sending a PR in the relevant context 🙏.
 
 ## Install Docker desktop
 
@@ -39,7 +52,19 @@ docker -v
 Docker version 20.10.6, build 370c289
 ```
 
-Make sure that you can run the command above in your terminal, as that hints everything's ok to go!
+Let's do the same for `docker-compose`
+
+```sh
+docker-compose -v
+```
+
+```sh
+docker-compose version 1.29.1, build c34c88b2
+```
+
+💡 Versions might differ a bit from the time of writing.
+
+Make sure that you can run the commands above in your terminal, as that hints everything's ok to go 👍!
 
 ## Build the Docker image
 
@@ -67,7 +92,7 @@ Make sure that your work directory is set to the project root to build the Docke
 docker build -t ursa -f ./Dockerfile .
 ```
 
-The build process takes awhile and you have to wait for completion. The output should be similar to:
+The build process takes awhile and you have to wait for completion. 🤖 The output should be similar to:
 
 ```
 [+] Building 16.1s (8/16)                                                                                                                           
@@ -85,7 +110,7 @@ The build process takes awhile and you have to wait for completion. The output s
 
 ## Run the Docker container
 
-Once the Docker image is ready, you can run it by providing a container and image name!
+Once the Docker image is ready ✅, you can run it by providing a container and image name!
 
 Since we want to interact with the process `ursa`, we'll run in interactive mode by using the flags `-it`.
 
@@ -99,7 +124,7 @@ We are providing a custom name of our liking (ursa-cli) for the container and th
 docker run -p <HOST-PORT>:<CONTAINER-PORT> --name <CONTAINER-NAME> -it <IMAGE>
 ```
 
-💡 We understand these commands might be hard to remember and provide some utility commands for your convenience. Although, if you need naming, port customisation, then you can stick with the knowledge you've acquired, or use this document as a reference. The utility commands require [make](https://www.gnu.org/software/make/manual/make.html), most operating systems have it installed by default, otherwise you can use a web search engine to find instructions on how to install it in your operating system.
+⚠️ We understand these commands might be hard to remember and provide some utility commands for your convenience. Although, if you need naming, port customisation, then you can stick with the knowledge you've acquired, or use this document as a reference. The utility commands require [make](https://www.gnu.org/software/make/manual/make.html), most operating systems have it installed by default, otherwise you can use a web search engine to find instructions on how to install it in your operating system.
 
 The utility commands are the `docker-build` and `docker-run`.
 
@@ -115,7 +140,7 @@ Execute the `docker-run` to run the Docker container based in the built image:
 make docker-run
 ```
 
-Remember, the utility commands will use default naming and port numbers. Use the original Docker commands for better control or customisation.
+💡 Remember, the utility commands will use default naming and port numbers. Use the original Docker commands for better control or customisation.
 
 If all goes well, the output should be similar to:
 
@@ -133,7 +158,7 @@ If all goes well, the output should be similar to:
 2022-12-05T17:06:25.975885Z  INFO ursa_metrics::metrics: listening on 0.0.0.0:4070
 ```
 
-A few points to notice are the listener port number and hostname. As described in the [Run the Docker container](#run-the-docker-container), the container listener port number is exposed to your host's port number.
+A few points to notice are the listener port number and hostname 👀. As described in the [Run the Docker container](#run-the-docker-container), the container listener port number is exposed to your host's port number.
 
 Here's an example of a curl request for the http headers, as a quick healthcheck.
 
@@ -147,9 +172,19 @@ For users who need high customisation, the Docker port binding is an important c
 -p <HOST-ADDRESS>:<CONTAINER-PORT>:<HOST-PORT>
 ```
 
+Following up, we'll look into how to control Ursa via the container's processes, to help you understand a bit more of Ursa. This can be useful, if you want to follow some of ursa subcommands explained in the [Fleek Network: Getting started guide](https://blog.fleek.co/posts/fleek-network-getting-started-guide), or if you need to interact with the process in the container:
+
+- [Stop the Docker container](#stop-the-docker-container)
+- [Restart the Docker container](#restart-the-docker-container)
+- [Delete the Docker container](#delete-the-docker-container)
+- [Execute bash shell in the container](#execute-bash-shell-in-the-container)
+- [Stop the Docker container](#stop-the-docker-container)
+
+If you are not interested in this level of control and detail 😹, or rather check these later, you can skip to [running a stack with Docker compose](#running-a-stack-with-docker-compose).
+
 ## Stop the Docker container
 
-After you're done with the process, the Docker container can be stopped by:
+After you're done with the process ⏳, the Docker container can be stopped by:
 
 ```sh
 docker stop <CONTAINER-NAME>
@@ -161,7 +196,21 @@ In our case, we'd like to stop `ursa-cli`:
 docker stop ursa-cli
 ```
 
-## Re-run the Docker container
+## Restart the Docker container
+
+After the initial run of the project Dockerfile image, we can restart it by the container name:
+
+```sh
+docker start <CONTAINER-NAME>
+```
+
+Our container name is `ursa-cli`, so we do:
+
+```sh
+docker start ursa-cli
+```
+
+We haven't set any of the host or port number bindings, that information is part of the metadata of a container, which is immutable, it's persistant.
 
 ## Delete the Docker container
 
@@ -177,9 +226,9 @@ For what matters to us, we'd like to delete `ursa-cli`:
 docker rm ursa-cli
 ```
 
-When we delete a container, it's no longer available and thus we'd have to 
+When we delete a container, it's no longer available and thus we'd have to [Docker run](#run-the-docker-container) 👷.
 
-## 
+## Execute bash shell in the container
 
 Start the bash shell in the container:
 
@@ -193,7 +242,7 @@ As we have `ursa-cli` for our container name example, do:
 docker exec -it ursa-cli bash
 ```
 
-Here, we're just looking into how to execute a process in the container where host and port binding is still relevant and required to be applied, if you haven't, otherwise your host will not have the correct bindings. Bear in mind that Docker executes a process in the container, not your host!
+👩‍💻 Here, we're just looking into how to execute a process in the container where host and port binding is still relevant and required to be applied, if you haven't, otherwise your host will not have the correct bindings. Bear in mind that Docker executes a process in the container, not your host!
 
 For example, we could then check the `help` flag.
 
@@ -226,3 +275,57 @@ SUBCOMMANDS:
 ```
 
 💡 At time of writing the Docker build places the ursa binary in the pathname `/`, thus we executed `/ursa --help`, if you wonder where the forward slash is used for. You can add the the directory to the system PATH but we should tweak the Docker file shortly and `ursa` available globally in the container.
+
+## Running a stack with Docker compose
+
+We have defined a Stack 🕸 that can be useful for running and monitoring and at time of writing, this is declared in a docker-compose file located [here](https://github.com/fleek-network/ursa/blob/cfbbe6208dc6a33d28b43c6e6820ab76c2905353/infra/ursa/docker-compose.yml).
+
+There you'll find specified all the configuration options, such as the one's we've discussed in the previous topics on host, port bindings, etc, so that you
+don't need to constantly make sure you specify all the correct options when running the Docker containers. Plus, have setup for you [grafana](https://grafana.com/), [prometheus](https://prometheus.io/docs/introduction/overview/), [certbot](https://certbot.eff.org/) and [nginx](https://www.nginx.com/). The docker compose file can be customised to your preference and Docker will detect any changes and re-creates the container if necessary.
+
+For the purpose of this guide 📒, we'll look into how to start and stop the stack only!
+
+In the project root, execute the docker-compose command 🤖 by providing the `docker-compose.yml` configuration file and the subcommand up.
+
+```sh
+docker-compose -f <DOCKER-COMPOSE-FILEPATH> <up | down>
+```
+
+For our use-case, here's how it'll look like:
+
+```sh
+docker-compose -f infra/ursa/docker-compose.yml up
+```
+
+Where for stopping `down`, you'd:
+
+```sh
+docker-compose -f infra/ursa/docker-compose.yml down
+```
+
+Here, we have an opinionated stack that you can use as base for your system, or as a reference for your own research and learning. This means that you are not obligated to use Grafana or Prometheus and Ursa works without any dependency.
+
+💡 Learn more about [docker compose](https://docs.docker.com/compose/) by checking the documentation [here](https://docs.docker.com/compose/).
+
+If you'd like to use some of the points explained previously, such as to [execute bash shell in the container](#execute-bash-shell-in-the-container), you need to ensure that the [Docker compose file](https://github.com/fleek-network/ursa/blob/cfbbe6208dc6a33d28b43c6e6820ab76c2905353/infra/ursa/docker-compose.yml) have set the `container_name` to the name of your preference.
+
+```sh
+  ursa:
+    container_name: ursa-cli
+    build:
+      context: ../../.
+      dockerfile: Dockerfile
+    restart: on-failure
+```
+
+Executing the bash shell in the container is not mandatory and what we shared here is to demonstrate how to interact with the `ursa` process for the users that don't have it on their local machines and/or interested in checking subcommands, learning, following tutorials, etc in the same way someone who have it installed in their operating system has access to.
+
+## Conclusion
+
+Containers are a way to have a self-contained environment that includes all necessary dependencies, libraries, software, etc, required to run an application.
+
+Fleek Network's Ursa is developed with [Rust](https://www.rust-lang.org/), a general-purpose programming language, that requires a number of dependencies and libraries to compile the project. Some of these libraries are not installed by default and require some troubleshooting to the end-user. [Docker](https://www.docker.com/) provide us with containers, self-containing all the required libraries for the purpose of running Ursa, our application.
+
+We guided you through the initial installation steps, how to build a [Docker](https://www.docker.com/) image, which then's used to Docker run a container. Plus, provided the lower-level commands, we offer as simple utility methods to help you understand other present or advanced use-cases.
+
+While we do our best to provide the most clear instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [Discord](https://discord.gg/fleekxyz) or by opening a [PR](https://github.com/fleek-network) in any of our repositories.
