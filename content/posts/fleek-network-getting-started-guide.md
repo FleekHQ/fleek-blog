@@ -76,6 +76,8 @@ A Fleek Network node can be built and run on your local machine. It’s an [open
 
 The project is built with Rust, a general-purpose programming language, be sure to have it installed on your local machine in advance to be able to follow the guide.
 
+> Installing and configuring Rust and dependencies can be difficult. If you haven't already, check the guides [How to install Rust and the dependencies for Ursa CLI](fleek-network-how-to-install-rust-and-the-dependencies-for-ursa-cli.md) or [Running in a Docker container](fleek-network-running-in-a-docker-container.md)
+
 We’ll clone the repository locally, build it and interact with the node through the binary or the HTTP JSON-RPC API with a client like cURL, but you can use a GUI (Postman, Insomnia, etc.) if your preference.
 
 Start by cloning the repository located at [https://github.com/fleek-network/ursa](https://github.com/fleek-network/ursa "https://github.com/fleek-network/ursa")
