@@ -18,7 +18,9 @@ tags:
 
 # Fleek Network: Running Ursa in a Docker container
 
-Our [Docker](https://www.docker.com/) [image](https://docs.docker.com/engine/reference/commandline/images/) provides all the requirements to have Fleek Network running quickly and the following guide will provide you a quick reference to get you started with Docker!
+## Introduction
+
+Our [Docker](https://www.docker.com/) [image](https://docs.docker.com/engine/reference/commandline/images/) provides all the requirements to have Fleek Network running quickly 🌈 and the following guide will provide you a quick reference to get you started with Docker 🔥!
 
 If you need a deep dive into Docker, check the oficial getting started [here](https://docs.docker.com/get-started/).
 
@@ -29,6 +31,7 @@ If you need a deep dive into Docker, check the oficial getting started [here](ht
   - [Run the Docker container](#run-the-docker-container)
   - [Restart the Docker container](#restart-the-docker-container)
   - [Delete the Docker container](#delete-the-docker-container)
+  - [Execute Ursa CLI commands in the container](#execute-ursa-cli-commands-in-the-container)
   - [Execute Bash Shell in the container](#execute-bash-shell-in-the-container)
   - [Running a stack with Docker compose](#running-a-stack-with-docker-compose)
   - [Conclusion](#conclusion)
@@ -99,15 +102,25 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 
-Make sure to run all the commands above in your terminal, If all good, proceed to the next steps 👍!
+Run all the commands above in your terminal, to confirm 👍 everything's working before proceeding to the next steps, please!
 
 ## Build the Docker image
 
-We are assuming that you've followed our [Fleek Network: Getting started guide](https://blog.fleek.co/posts/fleek-network-getting-started-guide) and have successfully cloned the `ursa` repository, this because at time of writing the [Dockerfile](https://github.com/fleek-network/ursa/blob/32928e78afa0bbed8241ddc4d7e2456752456fd6/Dockerfile) is located in the Ursa repository, [here](https://github.com/fleek-network/ursa/blob/32928e78afa0bbed8241ddc4d7e2456752456fd6/Dockerfile). Also, the image builder requires the source files to build on.
+We are assuming 😅 that you've followed our [Fleek Network: Getting started guide](https://blog.fleek.co/posts/fleek-network-getting-started-guide) and have successfully cloned the `ursa` repository. If you haven't give it a go, before you proceed! The reason is that the image builder requires the source files as the input file to have information to build a container. The [Dockerfile](https://github.com/fleek-network/ursa/blob/32928e78afa0bbed8241ddc4d7e2456752456fd6/Dockerfile) that is located in the Ursa repository (at time of writing), [here](https://github.com/fleek-network/ursa/blob/32928e78afa0bbed8241ddc4d7e2456752456fd6/Dockerfile).
 
 If you have cloned the project correctly, you should `change directory` to the project root directory.
 
-At time of writing, this is how the project root looks like:
+```sh
+cd <PATH-TO-URSA-DIRECTORY>
+```
+
+Example, ours is located at `/Users/fleek/ursa`:
+
+```sh
+cd /Users/fleek/ursa
+```
+
+At time of writing, this is how the project root looks like (e.g. use the [ls](https://en.wikipedia.org/wiki/Ls) to see the list):
 
 ```sh
 .
@@ -121,13 +134,17 @@ At time of writing, this is how the project root looks like:
 └── specs
 ```
 
-Make sure that your work directory is set to the project root to build the Docker image from the [Dockerfile](https://github.com/fleek-network/ursa/blob/32928e78afa0bbed8241ddc4d7e2456752456fd6/Dockerfile) and when ready, run the Docker build command:
+> Double-check that your work directory is in the project root. You'll build the Docker image based in the [Dockerfile](https://github.com/fleek-network/ursa/blob/32928e78afa0bbed8241ddc4d7e2456752456fd6/Dockerfile).
+
+When ready, run the Docker build command:
 
 ```sh
 docker build -t ursa -f ./Dockerfile .
 ```
 
-The build process takes awhile and you have to wait for completion. 🤖 The output should be similar to:
+The build process takes awhile and you have to wait for completion. 
+
+🤖 The output should be similar to:
 
 ```
 [+] Building 16.1s (8/16)                                                                                                                           
@@ -141,7 +158,9 @@ The build process takes awhile and you have to wait for completion. 🤖 The out
  => => sha256:c7bf205db148c9f9202dbece143e86487c678d108c3936897cfd9bcd7915dd3c 6.42kB / 6.42kB                                                 0.0s
  ```
 
-⚠️ The Docker image is only required to be built once and on every remote repository changes, versionins you might be interested in. Otherwise, you are not required to build it everytime, to run the node. Bear in mind that if you don't update your build often, you won't have the latest changes, which happen frequently with all the ongoing development! This is quite important to understand, as it causes confusion to some users.
+⚠️ The Docker image is only required to be built once and/or, when changes are pulled from the remote repository, or versions you might be interested in! Otherwise, you're not required to build it everytime to run the node.
+
+> Bear in mind that if you don't update your build often, you won't have the latest changes, which happen frequently with all the ongoing development! This is quite important to understand, as it causes confusion to some users. The Ursa application at time of writing does not update automatically.
 
 ## Run the Docker container
 
@@ -159,7 +178,7 @@ We are providing a custom name of our liking (ursa-cli) for the container and th
 docker run -p <HOST-PORT>:<CONTAINER-PORT> --name <CONTAINER-NAME> -it <IMAGE>
 ```
 
-⚠️ We understand these commands might be hard to remember and provide some utility commands for your convenience. Although, if you need naming, port customisation, then you can stick with the knowledge you've acquired, or use this document as a reference. The utility commands require [make](https://www.gnu.org/software/make/manual/make.html), most operating systems have it installed by default, otherwise you can use a web search engine to find instructions on how to install it in your operating system.
+> 💡 We understand these commands might be hard to remember and provide some utility commands for your convenience. Although, if you need naming, port customisation, then you can stick with the knowledge you've acquired, or use this document as a reference. The utility commands require [make](https://www.gnu.org/software/make/manual/make.html), most operating systems have it installed by default, otherwise you can use a web search engine to find instructions on how to install it in your operating system.
 
 The utility commands are the `docker-build` and `docker-run`.
 
@@ -201,13 +220,21 @@ Here's an example of a curl request for the http headers, as a quick healthcheck
 curl -I 127.0.0.1:4069
 ```
 
-For users who need high customisation, the Docker port binding is an important concept to understand when working with containers. For example, we can extend the previous `p` by providing.
+The output displays some http headers:
+
+```sh
+HTTP/1.1 405 Method Not Allowed
+content-length: 0
+date: Tue, 06 Dec 2022 17:09:16 GMT
+```
+
+For users who need high customisation 😎, the Docker port binding is an important concept to understand when working with containers 🧐. For example, we can extend the previous `p` by providing.
 
 ```sh
 -p <HOST-ADDRESS>:<CONTAINER-PORT>:<HOST-PORT>
 ```
 
-Following up, we'll look into how to control Ursa via the container's processes, to help you understand a bit more of Ursa. This can be useful, if you want to follow some of ursa subcommands explained in the [Fleek Network: Getting started guide](https://blog.fleek.co/posts/fleek-network-getting-started-guide), or if you need to interact with the process in the container:
+Following up 👇, we'll look into how to control Ursa via the container's processes, to help you understand a bit more of Ursa. This can be useful, if you want to follow some of ursa subcommands explained in the [Fleek Network: Getting started guide](https://blog.fleek.co/posts/fleek-network-getting-started-guide), or if you need to interact with the process in the container:
 
 - [Stop the Docker container](#stop-the-docker-container)
 - [Restart the Docker container](#restart-the-docker-container)
@@ -215,7 +242,7 @@ Following up, we'll look into how to control Ursa via the container's processes,
 - [Execute bash shell in the container](#execute-bash-shell-in-the-container)
 - [Stop the Docker container](#stop-the-docker-container)
 
-If you are not interested in this level of control and detail 😹, or rather check these later, you can skip to [running a stack with Docker compose](#running-a-stack-with-docker-compose).
+If you are not interested in this level of control and detail 😹, or rather check these later, you can skip to [running a stack with Docker compose](#running-a-stack-with-docker-compose), the simplest and opinionated way to start Ursa along other services to help you monitor, etc.
 
 ## Stop the Docker container
 
@@ -262,6 +289,24 @@ docker rm ursa-cli
 ```
 
 When we delete a container, it's no longer available and thus we'd have to [Docker run](#run-the-docker-container) 👷.
+
+## Execute Ursa CLI commands in the container
+
+```sh
+docker exec -it ursa-cli <FILEPATH> <ARGS>
+```
+
+For example, we'll execute `ursa` which is located in the root `/`, with the flag `version` to get the version number of the `ursa cli` we are running.
+
+```sh
+docker exec -it ursa-cli /ursa --version
+```
+
+If successfull, you'll get the version number (beware that version might differ from time of writing, as Ursa is in constant development).
+
+```sh
+ursa 0.1.0
+```
 
 ## Execute bash shell in the container
 
@@ -311,12 +356,14 @@ SUBCOMMANDS:
 
 💡 At time of writing the Docker build places the ursa binary in the pathname `/`, thus we executed `/ursa --help`, if you wonder where the forward slash is used for. You can add the the directory to the system PATH but we should tweak the Docker file shortly and `ursa` available globally in the container.
 
+
+Executing the bash shell in the container is not mandatory and what we shared here is to demonstrate how to interact with the `ursa` process for the users that don't have it on their local machines and/or interested in checking subcommands, learning, following tutorials, etc in the same way someone who have it installed in their operating system has access to.
+
 ## Running a stack with Docker compose
 
 We have defined a Stack 🕸 that can be useful for running and monitoring and at time of writing, this is declared in a docker-compose file located [here](https://github.com/fleek-network/ursa/blob/cfbbe6208dc6a33d28b43c6e6820ab76c2905353/infra/ursa/docker-compose.yml).
 
-There you'll find specified all the configuration options, such as the one's we've discussed in the previous topics on host, port bindings, etc, so that you
-don't need to constantly make sure you specify all the correct options when running the Docker containers. Plus, have setup for you [grafana](https://grafana.com/), [prometheus](https://prometheus.io/docs/introduction/overview/), [certbot](https://certbot.eff.org/) and [nginx](https://www.nginx.com/). The docker compose file can be customised to your preference and Docker will detect any changes and re-creates the container if necessary.
+There you'll find specified all the configuration options, such as the one's we've discussed in the previous topics about the host, port bindings, etc, You don't have to constantly verify if specified all the correct options when running the Docker containers. Plus, we have these setup for you [grafana](https://grafana.com/), [prometheus](https://prometheus.io/docs/introduction/overview/), [certbot](https://certbot.eff.org/) and [nginx](https://www.nginx.com/). Also, the docker compose file can be customised to your preference and Docker will detect any changes and re-creates the container when/if necessary.
 
 For the purpose of this guide 📒, we'll look into how to start and stop the stack only!
 
@@ -353,16 +400,14 @@ If you'd like to use some of the points explained previously, such as to [execut
     restart: on-failure
 ```
 
-Executing the bash shell in the container is not mandatory and what we shared here is to demonstrate how to interact with the `ursa` process for the users that don't have it on their local machines and/or interested in checking subcommands, learning, following tutorials, etc in the same way someone who have it installed in their operating system has access to.
-
 ## Conclusion
 
-Containers are a way to have a self-contained environment that includes all necessary dependencies, libraries, software, etc, required to run an application.
+Containers are a way to have a self-contained environment that includes all necessary dependencies, libraries, software, etc, required to run an application 🍰.
 
-Fleek Network's Ursa is developed with [Rust](https://www.rust-lang.org/), a general-purpose programming language, that requires a number of dependencies and libraries to compile the project. Some of these libraries are not installed by default and require some troubleshooting to the end-user. [Docker](https://www.docker.com/) provide us with containers, self-containing all the required libraries for the purpose of running Ursa, our application.
+Fleek Network's Ursa is developed with [Rust](https://www.rust-lang.org/), a general-purpose programming language, that requires a number of dependencies and libraries to compile the project. Some of these libraries are not installed by default 🤖 and require some troubleshooting to the end-user. [Docker](https://www.docker.com/) provide us with containers, self-containing all the required libraries for the purpose of running Ursa, our application.
 
 We guided you through the initial installation steps, how to build a [Docker](https://www.docker.com/) image, which then's used to Docker run a container. Plus, provided the lower-level commands, we offer as simple utility methods to help you understand other present or advanced use-cases.
 
-While we do our best to provide the most clear instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [Discord](https://discord.gg/fleekxyz) or by opening a [PR](https://github.com/fleek-network) in any of our repositories.
+While we do our best to provide the most clear instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [Discord](https://discord.gg/fleekxyz) or by opening a [PR](https://github.com/fleek-network) in any of our repositories 🙏.
 
 Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
