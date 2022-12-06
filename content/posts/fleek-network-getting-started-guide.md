@@ -84,7 +84,7 @@ Start by cloning the repository located at [https://github.com/fleek-network/urs
 
 You’ll notice that we try our best to document the project as we go, so it should be easy to follow if interested. Of course, don’t shy away from contributing with any amends or your wording poetry!
 
-Once the git clone completes, you’ll have the latest HEAD version at the time of cloning. You should use git to fetch or pull the latest versions consequently.
+Once the git clone completes, you’ll have the latest version at the time of cloning. You should use git to fetch or pull the latest versions consequently.
 
 Execute the install command to build and install the Fleek Network CLI.
 

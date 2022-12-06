@@ -364,3 +364,5 @@ Fleek Network's Ursa is developed with [Rust](https://www.rust-lang.org/), a gen
 We guided you through the initial installation steps, how to build a [Docker](https://www.docker.com/) image, which then's used to Docker run a container. Plus, provided the lower-level commands, we offer as simple utility methods to help you understand other present or advanced use-cases.
 
 While we do our best to provide the most clear instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [Discord](https://discord.gg/fleekxyz) or by opening a [PR](https://github.com/fleek-network) in any of our repositories.
+
+Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
