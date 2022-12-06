@@ -19,9 +19,13 @@ tags:
 
 # How to install Rust and the dependencies for Ursa CLI
 
+## Introduction
+
 The following guide 🎓 will walk through the Rust and dependencies installation process for Linux, macOS and Windows WSL: for the linux guides we'll use Ubuntu as an example. If you're on windows, we recommend to setup [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/install) or [Ubuntu tutorial](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview) and pick a popular distro like Ubuntu. The WSL will let you use Linux applications, utilities and bash command tools you'll find in the tutorial.
 
-## Requirements
+## Prerequisites
+
+To follow the guide, you will need the following:
 
 - Familiarity with the command-line interface
 - Git
@@ -29,6 +33,18 @@ The following guide 🎓 will walk through the Rust and dependencies installatio
 You're required to have some experience with the command-line interface 😿 and have Git installed; Also, you should be happy to troubleshoot, since versions might differ from time of writing and reading. Most times, a simple web search provides the best answers 🙏!
 
 If you don't have Git installed, learn more about it and instructions by reading the [Git documentation](https://git-scm.com/book/en/v2).
+
+## Content
+
+- [Install Rust with Rustup tool](#install-rust-with-rustup-tool)
+- [Ursa installer rust dependencies](#ursa-installer-rust-dependencies)
+- [Dependencies by operating system](#dependencies-by-operating-system)
+  - [MacOS](#macos-dependencies)
+  - [Linux Ubuntu](#linux-ubuntu-dependencies)
+  - [Windows Subsystem Linux](#linux-ubuntu-dependencies)
+- [Installing Ursa CLI](#installing-ursa-cli)
+- [Troubleshooting](#troubleshooting)
+- [Summary](#summary)
 
 ## Install Rust with Rustup tool
 
@@ -87,7 +103,7 @@ Here's the output we got (beware that our version might differ to yours, it's ex
 cargo 1.65.0 (4bc8f24d3 2022-10-20)
 ```
 
-## Ursa rust dependencies
+## Ursa installer rust dependencies
 
 Rustup subcommands deal with [toolchains](https://rust-lang.github.io/rustup/concepts/toolchains.html), a collection of programs required to compile a Rust application.
 
@@ -121,6 +137,10 @@ rustup default <TOOLCHAIN-LIST-NAME>
 ```sh
 cargo install sccache
 ```
+
+## Dependencies by operating system
+
+Find the most common steps to have all the required dependencies (packages, libraries, etc) for Linux, macOS and Windows WSL. As mentioned earlier, the linux guides use Ubuntu as an example, but should give you a good reference for your distro.
 
 ## MacOS dependencies
 
