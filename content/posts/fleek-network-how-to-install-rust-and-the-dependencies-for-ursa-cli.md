@@ -314,7 +314,7 @@ Operating systems are higly customisable and you might be missing some dependenc
 
 Follow the guide for your operating system in the [Ursa rust dependencies](#ursa-rust-dependencies) topic. It should help most use-cases, but depending on how your operating system is setup, you might need to troubleshoot to find what the missing package is and understand how to install the missing package by copying the error and doing a web search.
 
-## Summary
+## Conclusion
 
 A Fleek Network node can be built and run on your local machine.
 
