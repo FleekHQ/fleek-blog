@@ -96,6 +96,9 @@ The install command uses the Rust compiler to build; depending on how fast your 
 
 ![](https://storageapi.fleek.co/fleek-team-bucket/Blogs/fleek-network-rust-compiler.png)
 
+
+⚠️ If you encounter errors in the install process, is very likely that you're missing dependencies, packages, libraries for Rust to compile the Ursa CLI 😅. Save yourself time and energy, read the guide [How to install Rust and the dependencies for Ursa CLI](fleek-network-how-to-install-rust-and-the-dependencies-for-ursa-cli.md) or [Running in a Docker container](fleek-network-running-in-a-docker-container.md) for help!
+
 Once the Rust compiler completes generating the binary, it’ll include it in the cargo’s bin directory. On macOS and Linux this is located at `$HOME/.cargo/bin` and on Windows `%USERPROFILE%\\.cargo\\bin`. These should be in your `$PATH` environment variable. If you have customized these, check the [installation guide](https://rust-lang.github.io/rustup/installation/index.html) for any questions.
 
 Run the CLI with the flag `version` to confirm it's available.
