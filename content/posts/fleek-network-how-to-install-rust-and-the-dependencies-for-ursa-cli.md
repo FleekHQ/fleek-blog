@@ -304,7 +304,7 @@ To learn more about Fleek Network and Ursa, check our [Getting started guide](fl
 
 ## Troubleshooting
 
-😈 Applications are constantly updated, guides can keep up with all the updates, thus being able to do a simple web search can take you a long way...
+😈 Applications are constantly updated, guides can hardly keep up with all the updates, thus being able to do a simple web search can take you a long way...
 
 ### Failed to run custom build command for X?
 
