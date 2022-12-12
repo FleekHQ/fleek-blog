@@ -41,8 +41,8 @@ We're also assuming that you have followed our initial [getting started guide](h
 
 - [Pulling the latest changes](#pulling-the-latest-changes)
 - [How to rebuild Ursa CLI?](#how-to-rebuild-ursa-cli)
-  - [On host notes](#on-host-notes)
-  - [Docker notes](#docker-notes)
+  - [Native build](#native-build)
+  - [Docker build](#docker-build)
 - [Troubleshooting](#troubleshooting)
 
 ***
@@ -116,7 +116,7 @@ After you have successfully pull the latest changes, or checked into a particula
 
 To kick things out, we're going to discuss the installation process in a host OS. Keep reading to understand how to trigger these for the Docker container runtimes. [Docker notes](#docker-notes).
 
-### On Host notes
+### Native build
 
 💁‍♀️ We are assuming that your system setup hasn't changed, either Rust toolchain is still installed correctly or if you opted to run via Docker have the Docker application). If you have made changes to your system and need to revisit our getting started guide find it [here]([here](https://blog.fleek.co/posts/fleek-network-getting-started-guide)).
 
@@ -145,7 +145,7 @@ Installed package `ursa vX.X.X (/temp/ursa/crates/ursa)` (executable `ursa`)
 
 > Rust creates the binary and stores it in the Cargo bin directory. On mac and linux, this is located at $HOME/.cargo/bin and on Windows %USERPROFILE%\.cargo\bin. If ursa is not available as a command, it’s very likely that your OS Rust setup is unhealthy, thus as recommended above, revisit the [Getting started guide]([here](https://blog.fleek.co/posts/fleek-network-getting-started-guide)).
 
-### Docker notes
+### Docker build
 
 If you have opted to Docker 🐬, there are a few things you need to do first. 
 
