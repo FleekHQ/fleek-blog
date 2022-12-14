@@ -129,7 +129,7 @@ Once "IPFS" is installed, you should do a quick healthcheck to confirm its worki
 ipfs --version
 ```
 
-Here's how output should look like (the version you find below is illustrative only, yours might be slightly different):
+Here's how the output should look like (the version you find below is illustrative only, yours might be slightly different):
 
 ```sh
 ipfs version X.X.X
@@ -159,7 +159,7 @@ Find all subcommands available by running:
 ipfs --help
 ```
 
-Let's create a new file to use as an example afterwards. A file called `hello.txt` that has some content:
+Let's create a new file to use as an example afterwards, a file called `hello.txt` that has some content:
 
 ```sh
 echo 'Hello world!' > hello.txt
