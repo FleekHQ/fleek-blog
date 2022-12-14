@@ -56,7 +56,7 @@ For other topics, check our [getting started guide](https://blog.fleek.co/posts/
 
 # How Fleek Network deals with files?
 
-The way content is handled, stored and distributed defines how trustworthy is a protocol 🤞. Some of the primitives to achieve it, has roots in immutability, verificartion, the [Semantic Web](https://www.w3.org/standards/semanticweb/) and [Linked Data](https://www.w3.org/standards/semanticweb/data). 
+The way content is handled, stored and distributed defines how trustworthy is a protocol 🤞. Some of the primitives to achieve it, has roots in immutability, verification, the [Semantic Web](https://www.w3.org/standards/semanticweb/) and [Linked Data](https://www.w3.org/standards/semanticweb/data). 
 
 When you use Fleek Network, you either provide your data packed into a format called a Content Archive ([CAR](https://ipld.io/specs/transport/car)) or an existing [CID](https://docs.ipfs.tech/concepts/content-addressing/#what-is-a-cid) of a CAR file, which hash addresses are unique and universally addressable 🛸.
 
