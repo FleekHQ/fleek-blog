@@ -103,7 +103,7 @@ As discussed above in [Hash functions -> multihash](#hash-functions), the CAR fi
 
 > [DAB-PB](https://ipld.io/docs/codecs/known/dag-pb/) is a codec that implements a very small subset of the IPLD Data Model in a particular set Protobuf messages. But there are other known [codecs](https://ipld.io/docs/codecs/known/).
 
-Fleek Network only works with car files ([CARv1](https://ipld.io/specs/transport/car/carv1/)) and ([CARv2](https://ipld.io/specs/transport/car/carv2/)) soon, this means that it only computes car files, as input and output! Therefore, the decoding of the files is handled by the clients. We're still on early development days, where a client library is in early development, which the should abstract some the possible hurdles, but at the end it will be simple to use 🌈.
+Fleek Network only works with car files ([CARv1](https://ipld.io/specs/transport/car/carv1/)) and ([CARv2](https://ipld.io/specs/transport/car/carv2/)) soon, this means that it only computes car files, as input and output! Therefore, the decoding of the files is handled by the clients. We're still on early development days, where a client library is in early development, which should abstract some possible hurdles, and simple to use 🌈.
 
 # Using CAR files
 
