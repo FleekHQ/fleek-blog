@@ -44,16 +44,19 @@ For other topics, check our [getting started guide](https://blog.fleek.co/posts/
   - [Hash functions](#hash-functions)
   - [Interplanetary linked data (IPLD)](#interplanetary-linked-data-ipld)
   - [Content Addressable aRchive (CAR)](#content-addressable-archive-car)
+- [Using CAR files](#using-car-files)
+  - [Command line tools](#command-line-tools)
+    - [IPFS Kubo](#ipfs-kubo)
 
 ***
 
-## How Fleek Network deals with files?
+# How Fleek Network deals with files?
 
 The way content is handled, stored and distributed defines how trustworthy is a protocol. Some of the primitives to achieve it, has roots in immutability, verificartion, the [Semantic Web](https://www.w3.org/standards/semanticweb/) and [Linked Data](https://www.w3.org/standards/semanticweb/data). 
 
 When you use Fleek Network, you either provide your data packed into a format called a Content Archive ([CAR](https://ipld.io/specs/transport/car)) or an existing [CID](https://docs.ipfs.tech/concepts/content-addressing/#what-is-a-cid) of a CAR file, which hash addresses are unique and universally addressable.
 
-### Immutability
+## Immutability
 
 Some of the principles that help us provide guarantees to end-users,
 require a high-ability for content verification, as a consequence, immutability of files are critical to the system. To emphasize, immutability means the state of not changing, or being unable to change!
@@ -68,13 +71,13 @@ In retrospect, what we have in the web today are files acessible via a URL addre
 
 > When content is immutable, we can verify its integrity and thus provide the ability get the content from anyone and everywhere. The ability to get it from anywhere, lead us to the decentralised and distributed nature of content storage and delivery in the Fleek Network.
 
-### Content Addressing
+## Content Addressing
 
 Content addressing is where we use a hash to access the content, and which allow us to verify that the content we received is the content we asked for! For this we use a special hash called CID ([Content Identifier](https://docs.ipfs.tech/concepts/content-addressing/#what-is-a-cid)), a cryptography hash function that maps input of arbitrary size to output of a fixed size - the content identifiers are short, regardless of the size of the content, and the address does not actually tell us where the content is stored. It's also interesting to observe, that the CID is a sort of string like binary that is human-friendlier in comparison to the underlying binary, that is way longer.
 
 > Caching and deduplication are possible due to immutability of content e.g. if content changes, let's say that an image has some new detail, the files share many of the same bytes. The amount of data we have to transfer to fetch is minimum, we'd only pull the difference. In today's web, we'd have to transfer both files in full, which is a worse path on resource allocation and performance.
 
-### Hash functions
+## Hash functions
 
 The hash function for creating [CID's](https://docs.ipfs.tech/concepts/content-addressing/#what-is-a-cid) use `sha-256`, but there is support for other hashing algorithms, such as sha1 (used by Git), sha2-256, sha3-255, blake2b-160, etc. Some older algorithms are proven to not be collision free, so if algorithms can break, we have to swith the hash algorithm we use in the future! The problem with this switching of algorithms is the need of finding a future proof way of identifying the hash functions used to generate the hash, as well as the hash name.
 
@@ -82,19 +85,123 @@ The hash function for creating [CID's](https://docs.ipfs.tech/concepts/content-a
 
 What's important is that it is the users choice and why [IPLD](https://ipld.io) becomes useful for Fleek Network's use-cases. A system for understanding and working with data, made up of a [Data Model](https://ipld.io/docs/intro/hello-world/#data-model-and-codecs) and [Codecs](https://ipld.io/docs/intro/hello-world/#data-model-and-codecs), some tools for [Linking](https://ipld.io/docs/intro/hello-world/#linking), and then a handful of other [Powerful Features](https://ipld.io/docs/intro/hello-world/#powerful-features) that help ups develop a decentralized application.
 
-### Interplanetary linked data (IPLD)
+## Interplanetary linked data (IPLD)
 
 [Interplanetary linked data (IPLD)](https://ipld.io/) provide us all the metadata prefixes to soothe the system needs, provide us the data model of the content-addressable web, as discussed earlier. IPLD is a set of conventions for creating decentralised data-structures that are universally addressable and linkable.
 
 > These addressable and linkable data structures will allow us to do for data what URLs and links did for HTML web pages (Quote from [IPLD](https://ipld.io/docs/)).
 
-### Content Addressable aRchive (CAR)
+## Content Addressable aRchive (CAR)
 
 For all the reasons demonstrated here, Fleek Network uses the IPLD CAR [Content Adressable aRchive](https://ipld.io/specs/transport/) to transport IPLD data. IPFS IPLD defines transport as of both file and stream format, meaning packing IPLD data together and interactivity that involves requests and responses.
 
-As discussed above in [Hash functions -> multihash](#hash-functions), the CAR files contain data encoded in a particular codec, in the Fleek Network, the IPLD codec supported is called [dag-pb](https://ipld.io/docs/codecs/known/dag-pb/).
+As discussed above in [Hash functions -> multihash](#hash-functions), the CAR files contain data encoded in a particular codec, in the Fleek Network, we support any IPLD codec e.g. [dag-pb](https://ipld.io/docs/codecs/known/dag-pb/), which uses a stricter subset of Protocol Buffers to encode an object graph.
+
+> [DAB-PB](https://ipld.io/docs/codecs/known/dag-pb/) is a codec that implements a very small subset of the IPLD Data Model in a particular set Protobuf messages. But there are other known [codecs](https://ipld.io/docs/codecs/known/).
 
 Fleek Network only works with car files ([CARv1](https://ipld.io/specs/transport/car/carv1/)) and ([CARv2](https://ipld.io/specs/transport/car/carv2/)) soon, this means that it only computes car files, as input and output! Therefore, the decoding of the files is handled by the clients. We're still on early development days, where a client library is in early development, which the should abstract some the possible hurdles, but at the end it will be simple to use.
+
+# Using CAR files
+
+As shared above in our discussion about the supported codec [DAB-PB](https://ipld.io/docs/codecs/known/dag-pb/) for [Content Adressable aRchive (CAR)](#content-addressable-archive-car), inside these object graphs, we find a [UnixFS](https://github.com/ipfs/specs/blob/main/UNIXFS.md) object describing files, directories and symlinks.
+
+To get us started, we'll take a look into some command line tools to help us create and interact with CAR files. In the future, we'll look into how to integrate these in your projects by looking at libraries, SDK, etc.
+
+## Command line tools
+
+### IPFS Kubo
+
+[IPFS Kubo](https://docs.ipfs.tech/install/command-line/) is a [Go](https://go.dev) based implementation of the InterPlanetary File System (IPFS) protocol. Official binary distributions are provided. Follow the instructions to install it [here](https://docs.ipfs.tech/install/command-line/#install-official-binary-distributions).
+
+> Some users might refer to IPFS Kubo as `go-ipfs`, the previous name.
+
+IPFS Kubo supports exporting any IPFS object graph into a CAR file and importing data from CAR files into your local IPFS repository.
+
+Once "IPFS" is installed, you should do a quick healthcheck to confirm its working correctly:
+
+```sh
+ipfs --version
+```
+
+Here's how output should look like (the version you find below is illustrative only, yours might be slightly different):
+
+```sh
+ipfs version X.X.X
+```
+
+Initialise IPFS on your machine, to generate an IPFS repo with a standard default configuration file. The config file is saved as config in your repo root directory by default `~/.ipfs/config`. If interested in learning more about the config, check the [docs](https://docs.ipfs.tech/how-to/default-profile/).
+
+To initialise IPFS, run:
+
+```sh
+ipfs init
+```
+
+Here's how our output looks like, yours will be slightly different but similar.
+
+```sh
+generating ED25519 keypair...done
+peer identity: XXXXXXXXXXXXXXXXXXXXXXX
+initializing IPFS node at /Users/<YOUR-USERNAME>/.ipfs
+```
+
+Find all subcommands available by running:
+
+```
+ipfs --help
+```
+
+Let's create a new file to use as an example afterwards. A file called `hello.txt` that has some content:
+
+```sh
+echo 'Hello world!' > hello.txt
+```
+
+Add the file by using the `add` subcommand, as follows:
+
+```sh
+ipfs add hello.txt
+```
+
+We're not running the IPFS daemon, it'll just add the file locally.
+
+The output should look like:
+
+```sh
+added QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM hello.txt
+ 13 B / 13 B [==================================================] 100.00%
+```
+
+The CID for our `hello.text` is `QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM`, this is the content's cryptographic hash. If the file content changes, the hash will change, otherwise if the file's content's the same, the hash will always be the same, as described [here](#immutability).
+
+💡 Notice that our string starts with a "Qm" which refers to the v0 of CID. The v1 of CID starts with "Bafy", or "Bafk" sometimes. You can learn a lot from the CID by using the [cid.ipfs.tech](https://cid.ipfs.tech/#QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM) tool. If we wish, we can do [CID conversion](https://docs.ipfs.tech/concepts/content-addressing/#cid-conversion) from v0 to v1 using the ipfs cli.
+
+Now that we have a CID `QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM`, we can read the content out of IPFS just as we'd do with a regular `cat` command when reading a content of a file.
+
+```sh
+ipfs cat QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM
+```
+
+We'll get the same output, as the input provided above when we created the `hello.txt` file.
+
+```sh
+Hello world!
+```
+
+When we execute `ipfs cat` to read the file content, it returns the content of the file, not the `hello.txt` file.
+
+Let's takes the output of our echo "Hello world" (stdout) and pass directly on the standard input (stdin) of ipfs add.
+
+```sh
+echo 'Hello world!' | ipfs add
+```
+
+```sh
+added QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM
+ 13 B / 13 B [==================================================] 100.00%
+```
+
+You'll always get the same hash, because as far as IPFS is concerned, it is the same content and the filename doesn't matter.
 
 ## Final Thoughts
 
