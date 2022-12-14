@@ -47,6 +47,7 @@ For other topics, check our [getting started guide](https://blog.fleek.co/posts/
 - [Using CAR files](#using-car-files)
   - [Command line tools](#command-line-tools)
     - [IPFS Kubo](#ipfs-kubo)
+    - [Adding files to IPFS](#adding-files-to-ipfs)
 
 ***
 
@@ -129,6 +130,8 @@ Here's how output should look like (the version you find below is illustrative o
 ipfs version X.X.X
 ```
 
+### Adding files to IPFS
+
 Initialise IPFS on your machine, to generate an IPFS repo with a standard default configuration file. The config file is saved as config in your repo root directory by default `~/.ipfs/config`. If interested in learning more about the config, check the [docs](https://docs.ipfs.tech/how-to/default-profile/).
 
 To initialise IPFS, run:
@@ -203,6 +206,110 @@ added QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM QmXgBq2xJKMqVo8jZdziyudNmnb
 
 You'll always get the same hash, because as far as IPFS is concerned, it is the same content and the filename doesn't matter.
 
+## Creating CAR files
+
+To create a CAR file using [IPFS Kubo](#ipfs-kubo), you can redirect the output of ipfs dag export to a file. Here's an example:
+
+```sh
+ipfs dag export <CID> > path/to/filename.car
+```
+
+💡 Notice that when we mention `path/to/filename.car`, that's literally asking you to provide a location in your filesystem where to save the file to.
+
+We have the CID `QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM` we got earlier, let's create a `basic.car` file.
+
+We do this by redirecting the output of the ipfs dag export to the new `basic.car` file.
+
+```sh
+ipfs dag export QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM > ./basic.car
+```
+
+We'll get the output:
+
+```sh
+0s  113 B / ? [---------------------=----------------------] 998 B/s 0s
+```
+
+Also, we should find the file we just created in our current work directory. Use the `ls` to list directory contents.
+
+```sh
+drwxr-xr-x  3 fleek  staff   96 14 Dec 16:08 .
+drwxr-xr-x  5 fleek  staff  160 14 Dec 16:08 ..
+-rw-r--r--  1 fleek  staff  113 14 Dec 16:08 basic.car
+```
+
+Depending on where you've saved the file, the list should be different but your file should be located there, in the path you have provided earlier.
+
+If you inspect the content of the `basic.car`, you'll notice that there are some funny 
+characters. The content is encoded and thus not used as it is to access data.
+
+## IPFS-CAR library and CLI tool
+
+There's a [library](https://github.com/web3-storage/ipfs-car) and CLI-tool for the purpose of packing and unpacking files.
+
+If you are interested, check the repository for the project to install it, [here](https://github.com/web3-storage/ipfs-car).
+
+Otherwise, if you have nodejs setup on your system, you can do a quick check and run some commands by preceeding the package name with `npx`. 
+
+We're assuming that you have the `basic.car` provided in our guide [Creating CAR files](#creating-car-files), or create a new file to use as an example.
+
+The file we're creating gets the output from [here](http://ipfs.io/ipfs/bafybeieqjclrxiva2tqfuii7kyc5fhggncetd5g5gdm5esxh2egmdwuqee), as the filename `planet.jpg`. You can provide a different name if you wish.
+
+```sh
+curl http://ipfs.io/ipfs/bafybeieqjclrxiva2tqfuii7kyc5fhggncetd5g5gdm5esxh2egmdwuqee -o planet.jpg
+```
+
+We can then pack `planet.jpg`, if an `--output` is not provided it defaults to the base filename.
+
+```sh
+npx ipfs-car --pack planet.jpg --output planet.car
+```
+
+Where output:
+
+```sh
+root CID: bafybeicfhsvyehkt2nfmcln43htotivt6yglb4zysuv2l3xzzu4kb2c63q
+  output: planet.car
+```
+
+Could then list the content:
+
+```sh
+npx ipfs-car --list planet.car
+```
+
+The output:
+
+```sh
+bafybeicfhsvyehkt2nfmcln43htotivt6yglb4zysuv2l3xzzu4kb2c63q
+bafybeicfhsvyehkt2nfmcln43htotivt6yglb4zysuv2l3xzzu4kb2c63q/planet.jpg
+```
+
+Then after, if you unpack you'll get the corresponding directory and filename:
+
+```sh
+npx ipfs-car --unpack planet.car
+```
+
+Under the `bafy...63q` we have the `planet.jpg` file that holds our original content gathered via the curl command.
+
+```sh
+.
+├── bafybeicfhsvyehkt2nfmcln43htotivt6yglb4zysuv2l3xzzu4kb2c63q
+│   └── planet.jpg
+├── planet.car
+└── planet.jpg
+```
+
+The `ipfs-car` is a thin wrapper over [@ipld/car](https://github.com/ipld/js-car) and [unix-fs](https://github.com/ipfs/js-ipfs-unixfs). If your use-case requires you to do more, then you're much better looking deeper into the subject, which is out-of-scope for this guide, we're afraid.
+
 ## Final Thoughts
 
-Discover more about the project by [watching/contributing on Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
+We've looked into the current state of the web today, how's the current state of accessing files,and the web of tomorrow. Discussed some of the princibles inline with the Fleek Network, such as
+the importance of immutable data, hash functions, content addressability, metadata, etc.
+
+We have then provided a [demonstration](#creating-car-files) of how to deal with files in the Fleek Network. Keeping things simple to get you started into dealing with Content addressed data.
+
+While we try our best to provide you with the best information, we are not free of typos and software updates. Feel free to provide us any feedback to help us improve our guides!
+
+Discover more about the project by watching or contributing on [Github](https://github.com/fleek-network/ursa), following us on [Twitter](https://twitter.com/fleek_net), and joining [our community Discord](https://discord.gg/fleekxyz) for all the best updates!
