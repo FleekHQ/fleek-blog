@@ -212,7 +212,7 @@ docker pull ghcr.io/fleek-network/ursa:nightly
 Once the Docker image is downloaded completely, you can run a container based on the image:
 
 ```sh
-docker run -p 4069:4069 -p 4070:4070 -p 6009:6009 -p 8070:8070 --name ursa-cli -it fleek-network/ursa:nightly
+docker run -p 4069:4069 -p 4070:4070 -p 6009:6009 -p 8070:8070 --name ursa-cli -it ghcr.io/fleek-network/ursa:nightly
 ```
 
 You can then do a quick healthcheck as described [here](#ursa-healthcheck).
