@@ -182,7 +182,7 @@ added QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM hello.txt
 
 The CID for our `hello.text` is `QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM`, this is the content's cryptographic hash. If the file content changes, the hash will change, otherwise if the file's content's the same, the hash will always be the same, as described [here](#immutability).
 
-💡 Notice that our string starts with a "Qm" which refers to the v0 of CID. The v1 of CID starts with "Bafy", or "Bafk" sometimes. You can learn a lot from the CID by using the [cid.ipfs.tech](https://cid.ipfs.tech/#QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM) tool. If we wish, we can do [CID conversion](https://docs.ipfs.tech/concepts/content-addressing/#cid-conversion) from v0 to v1 using the ipfs cli.
+💡 Notice that our string starts with a "Qm" which refers to the v0 of CID. The v1 of CID starts with "Bafy", or "Bafk" sometimes. You can learn a lot from the CID by using the [cid.ipfs.tech](https://cid.ipfs.tech/#QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM) tool. We can do [CID conversion](https://docs.ipfs.tech/concepts/content-addressing/#cid-conversion) from v0 to v1 using the ipfs cli.
 
 Now that we have a CID `QmXgBq2xJKMqVo8jZdziyudNmnbiwjbpAycy5RbfDBoJRM`, we can read the content out of IPFS just as we'd do with a regular `cat` command when reading a content of a file.
 
