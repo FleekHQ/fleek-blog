@@ -97,7 +97,7 @@ What's important is that it is the user's choice and why [IPLD](https://ipld.io)
 
 ## Content Addressable aRchive (CAR)
 
-For all the reasons demonstrated here 💁‍♀️, Fleek Network uses the IPLD CAR [Content Adressable aRchive](https://ipld.io/specs/transport/) to transport IPLD data. IPFS IPLD defines transport as of both file and stream format, meaning packing IPLD data together and interactivity that involves requests and responses.
+For all the reasons demonstrated here 💁‍♀️, Fleek Network uses the IPLD CAR [Content Addressable aRchive](https://ipld.io/specs/transport/) to transport IPLD data. IPLD defines transport as file and stream format, meaning packing IPLD data together and interactivity that involves requests and responses.
 
 As discussed above in [Hash functions -> multihash](#hash-functions), the CAR files contain data encoded in a particular codec, in the Fleek Network, we support any IPLD codec e.g. [dag-pb](https://ipld.io/docs/codecs/known/dag-pb/), which uses a stricter subset of Protocol Buffers to encode an object graph.
 
