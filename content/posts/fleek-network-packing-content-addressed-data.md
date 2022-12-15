@@ -91,7 +91,7 @@ What's important is that it is the user's choice and why [IPLD](https://ipld.io)
 
 ## Interplanetary linked data (IPLD)
 
-[Interplanetary linked data (IPLD)](https://ipld.io/) provide us all the metadata prefixes to soothe the system needs, provide us the data model of the content-addressable web, as discussed earlier. IPLD is a set of conventions for creating decentralised data-structures that are universally addressable and linkable.
+[Interplanetary linked data (IPLD)](https://ipld.io/) provides us all the metadata prefixes to soothe the system needs, and provides us the data model of the content-addressable web, as discussed earlier. IPLD is a set of conventions for creating decentralised data-structures that are universally addressable and linkable.
 
 > These addressable and linkable data structures will allow us to do for data what URLs and links did for HTML web pages (Quote from [IPLD](https://ipld.io/docs/)).
 
