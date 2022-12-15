@@ -69,7 +69,7 @@ The web is nothing more and nothing less than a mirror of what it has become fro
 
 Fleek Network deals with files in a manner where the content determines the address in which the user of the system can locate and verify it unquestionably 👩🏽‍⚖️. This is possible due to cryptography, of which the same data always produce the same hash deterministically.
 
-A file which content determines the hash, but also impossible to invert it. We shouldn't be able to reconstruct the data from a hash. It's unique, not two files produce the same file or content. Thus, a small change in the content should always generate a completely different hash.
+A file whose content determines the hash, but also impossible to invert it. We shouldn't be able to reconstruct the data from a hash. It's unique, not two files produce the same file or content. Thus, a small change in the content should always generate a completely different hash.
 
 In retrospect 👵🏼, what we have in the web today are files acessible via a URL address and the problem with this approach is that the content is not intrinsically tight to the address e.g. the content can change and the URL remaining the same. That is the problematic way we access files in the web today, that we call "Location addressing", and the way we solve it for the web of tomorrow, is called "Content addressing".
 
