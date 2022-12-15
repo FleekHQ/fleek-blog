@@ -99,7 +99,7 @@ What's important is that it is the user's choice and why [IPLD](https://ipld.io)
 
 For all the reasons demonstrated here 💁‍♀️, Fleek Network uses the IPLD CAR [Content Addressable aRchive](https://ipld.io/specs/transport/) to transport IPLD data. IPLD defines transport as file and stream format, meaning packing IPLD data together and interactivity that involves requests and responses.
 
-As discussed above in [Hash functions -> multihash](#hash-functions), the CAR files contain data encoded in a particular codec, in the Fleek Network, we support any IPLD codec e.g. [dag-pb](https://ipld.io/docs/codecs/known/dag-pb/), which uses a stricter subset of Protocol Buffers to encode an object graph.
+As discussed above in [Hash functions -> multihash](#hash-functions), the CAR files contain data encoded in a particular codec, in the Fleek Network, we support any IPLD codec, e.g. [dag-pb](https://ipld.io/docs/codecs/known/dag-pb/), which uses a stricter subset of Protocol Buffers to encode an object graph.
 
 > [DAB-PB](https://ipld.io/docs/codecs/known/dag-pb/) is a codec that implements a very small subset of the IPLD Data Model in a particular set Protobuf messages. But there are other known [codecs](https://ipld.io/docs/codecs/known/).
 
