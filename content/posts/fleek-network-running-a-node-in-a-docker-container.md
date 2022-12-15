@@ -21,10 +21,11 @@ tags:
 
 ## Introduction
 
-Our [Docker](https://www.docker.com/) [image](https://docs.docker.com/engine/reference/commandline/images/) provides all the requirements to have Fleek Network running quickly 🌈 and the following guide will provide you a quick reference to get you started with Docker 🔥!
+Our [Docker](https://www.docker.com/) [image](https://docs.docker.com/engine/reference/commandline/images/) provides all the requirements to have Fleek Network running quickly 🌈 and the following guide will provide you a quick reference to get you started with Docker 🔥! 
 
-If you need a deep dive into Docker, check the oficial getting started [here](https://docs.docker.com/get-started/).
+**TL;DR** If you have Docker experience then you'll find our [run the container from official nightly image](#run-the-container-from-official-nightly-image) more satisfying!
 
+Alternatively, if you need a deep dive into Docker, check the oficial getting started [here](https://docs.docker.com/get-started/).
 
 ## Topics
   - [Setup](#docker-setup)
