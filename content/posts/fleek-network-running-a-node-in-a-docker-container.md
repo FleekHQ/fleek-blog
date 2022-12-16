@@ -25,7 +25,7 @@ Our [Docker](https://www.docker.com/) [image](https://docs.docker.com/engine/ref
 
 **TL;DR** If you have Docker experience then you'll find our [run the container from official nightly image](#run-the-container-from-official-nightly-image) more satisfying!
 
-Alternatively, if you need a deep dive into Docker, check the oficial getting started [here](https://docs.docker.com/get-started/).
+Alternatively, if you need a deep dive into Docker, check the official getting started [here](https://docs.docker.com/get-started/).
 
 ## Topics
   - [Setup](#docker-setup)
@@ -119,7 +119,7 @@ Run all the commands above in your terminal, to confirm 👍 everything's workin
 
 A Docker image is a read-only template with instructions for creating a Docker container, like a template. Docker images also act as a the starting point when using Docker. 
 
-The starting point in for our use-case is a Dockerfile, where all those "template instructions" are declared.
+The starting point for our use-case is a Dockerfile, where all those "template instructions" are declared.
 
 Here's how our [Dockerfile](https://github.com/fleek-network/ursa/blob/32928e78afa0bbed8241ddc4d7e2456752456fd6/Dockerfile) looks like.
 
