@@ -459,7 +459,7 @@ If you'd like to use some of the points explained previously, such as to [execut
 
 ```sh
   ursa:
-    container_name: ursa-cli
+    container-name: ursa-cli
     build:
       context: ../../.
       dockerfile: Dockerfile
