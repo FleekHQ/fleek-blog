@@ -212,7 +212,7 @@ docker pull ghcr.io/fleek-network/ursa:nightly
 Once the Docker image is downloaded completely, you can run a container based on the image:
 
 ```sh
-docker run -p 4069:4069 -p 4070:4070 -p 6009:6009 -p 8070:8070 --name ursa-cli -it ghcr.io/fleek-network/ursa:nightly
+docker run -p 4069:4069 -p 6009:6009 -p 8070:8070 -v ~/.ursa:/root/.ursa --name ursa-cli -it ghcr.io/fleek-network/ursa:nightly
 ```
 
 You can then do a quick healthcheck as described [here](#ursa-healthcheck).
@@ -226,13 +226,13 @@ Once the Docker image is ready ✅, you can run it by providing a container and 
 Since we want to interact with the process `ursa`, we'll run in interactive mode by using the flags `-it`.
 
 ```sh
-docker run -p 4069:4069 -p 4070:4070 -p 6009:6009 -p 8070:8070 --name ursa-cli -it ursa
+docker run -p 4069:4069 -p 6009:6009 -p 8070:8070 -v ~/.ursa:/root/.ursa --name ursa-cli -it ursa
 ```
 
 We are providing a custom name of our liking (ursa-cli) for the container and the image name we have built previously (ursa).
 
 ```sh
-docker run [-p <HOST-PORT>:<CONTAINER-PORT>] --name <CONTAINER-NAME> -it <IMAGE>
+docker run [-p <HOST-PORT>:<CONTAINER-PORT>] [-v <HOST-PATH>:<CONTAINER-PATH] --name <CONTAINER-NAME> -it <IMAGE>
 ```
 
 > 💡 We understand these commands might be hard to remember and provide some utility commands for your convenience. Although, if you need naming, port customisation, then you can stick with the knowledge you've acquired, or use this document as a reference. The utility commands require [make](https://www.gnu.org/software/make/manual/make.html), most operating systems have it installed by default, otherwise you can use a web search engine to find instructions on how to install it in your operating system.
@@ -266,7 +266,6 @@ If all goes well, the output should be similar to:
 2022-12-05T17:06:25.975632Z  INFO ursa_rpc_server::server: listening on 0.0.0.0:4069
 2022-12-05T17:06:25.975806Z  INFO ursa_index_provider::provider: index provider listening on: 0.0.0.0:8070
 2022-12-05T17:06:25.975553Z  INFO ursa_network::service: Node starting up with peerId PeerId("12D3KooWRis5Gn8TrKNyvx5iizTMKqVyJehw2KRSRAR79FMnxLqQ")
-2022-12-05T17:06:25.975885Z  INFO ursa_metrics::metrics: listening on 0.0.0.0:4070
 ```
 
 A few points to notice are the listener port number and hostname 👀. As described in the [Run the Docker container](#run-the-docker-container), the container listener port number is exposed to your host's port number.
@@ -354,13 +353,13 @@ When we delete a container, it's no longer available and thus we'd have to [Dock
 ### Execute Ursa CLI commands in the container
 
 ```sh
-docker exec -it <CONTAINER-NAME> <FILEPATH> <ARGS>
+docker exec -v ~/.ursa:/root/ursa -it <CONTAINER-NAME> <FILEPATH> <ARGS>
 ```
 
 For example, we'll interact with the container named `ursa-cli` and execute `ursa` which is located in the `/usr/local/bin`, with the flag `version` to get the version number of the `ursa cli` we are running.
 
 ```sh
-docker exec -it ursa-cli ursa --version
+docker exec -v ~/.ursa:/root/ursa -it ursa-cli ursa --version
 ```
 
 If successfull, you'll get the version number (beware that version might differ from time of writing, as Ursa is in constant development).
@@ -374,13 +373,13 @@ ursa 0.1.0
 Start the bash shell in the container:
 
 ```sh
-docker exec -it <CONTAINER-NAME> bash
+docker exec -v ~/.ursa:/root/ursa -it <CONTAINER-NAME> bash
 ```
 
 As we have `ursa-cli` for our container name example, do:
 
 ```sh
-docker exec -it ursa-cli bash
+docker exec -v ~/.ursa:/root/ursa -it ursa-cli bash
 ```
 
 👩‍💻 Here, we're just looking into how to execute a process in the container where host and port binding is still relevant and required to be applied, if you haven't, otherwise your host will not have the correct bindings. Bear in mind that Docker executes a process in the container, not your host!
@@ -459,11 +458,12 @@ If you'd like to use some of the points explained previously, such as to [execut
 
 ```sh
   ursa:
-    container_name: ursa-cli
+    container-name: ursa-cli # add this!
     build:
       context: ../../.
       dockerfile: Dockerfile
     restart: on-failure
+    ...
 ```
 
 ## Conclusion
