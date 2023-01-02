@@ -157,7 +157,9 @@ If another party holds the private key, they can control the identity, e.g. have
 
 When you run a node, there's a private key which is used to compute a public key that your node is identified with. If another party holds the private key, they can get get control of your rewards. It's important to have a very basic understanding of how identity works in Fleek Network.
 
-There are two types of keys related to the identity your node is configured to run with, the private and public keys!
+There are two types of keys related to the identity your node is configured to run with, the private and public keys! 
+
+💡 The public-key cryptography curve used for our key store is the [ed25519](https://en.wikipedia.org/wiki/EdDSA)
 
 The public key is open to anybody to see and it represents a unique node in the Fleek Network, a bit like a bank account number. On the other hand, the private key is secret and the operator is responsible to store it privately!
 
