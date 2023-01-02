@@ -212,7 +212,7 @@ docker pull ghcr.io/fleek-network/ursa:nightly
 Once the Docker image is downloaded completely, you can run a container based on the image:
 
 ```sh
-docker run -p 4069:4069 -p 4070:4070 -p 6009:6009 -p 8070:8070 --name ursa-cli -it ghcr.io/fleek-network/ursa:nightly
+docker run -p 4069:4069 -p 4070:4070 -p 6009:6009 -p 8070:8070 -v $HOME/.ursa/:/root/.ursa/:rw --name ursa-cli -it ghcr.io/fleek-network/ursa:nightly
 ```
 
 You can then do a quick healthcheck as described [here](#ursa-healthcheck).
@@ -226,13 +226,13 @@ Once the Docker image is ready ✅, you can run it by providing a container and 
 Since we want to interact with the process `ursa`, we'll run in interactive mode by using the flags `-it`.
 
 ```sh
-docker run -p 4069:4069 -p 4070:4070 -p 6009:6009 -p 8070:8070 --name ursa-cli -it ursa
+docker run -p 4069:4069 -p 4070:4070 -p 6009:6009 -p 8070:8070 -v $HOME/.ursa/:/root/.ursa/:rw --name ursa-cli -it ursa
 ```
 
-We are providing a custom name of our liking (ursa-cli) for the container and the image name we have built previously (ursa).
+We are providing a custom name of our liking (ursa-cli) for the container and the image name we have built previously (ursa). Also, we do a bind mount to mount a file or directory on the host machine into a container, as an example, this is useful to persist the configuration for the identity. Find more on managing the identity [here](#fleek-network-managing-the-key-store).
 
 ```sh
-docker run [-p <HOST-PORT>:<CONTAINER-PORT>] --name <CONTAINER-NAME> -it <IMAGE>
+docker run [-p <HOST-PORT>:<CONTAINER-PORT>] --name <CONTAINER-NAME> -v <HOST-PATH>:<CONTAINER-PATH> -it <IMAGE>
 ```
 
 > 💡 We understand these commands might be hard to remember and provide some utility commands for your convenience. Although, if you need naming, port customisation, then you can stick with the knowledge you've acquired, or use this document as a reference. The utility commands require [make](https://www.gnu.org/software/make/manual/make.html), most operating systems have it installed by default, otherwise you can use a web search engine to find instructions on how to install it in your operating system.
