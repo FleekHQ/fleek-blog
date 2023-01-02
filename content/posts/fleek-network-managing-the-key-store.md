@@ -84,7 +84,6 @@ The Fleek Network node configuration settings is located in the path `$HOME/.urs
 At time of writing, we have the following sections:
 - Network config
 - Provider config
-- Metrics config
 - Server config
 
 Each of the sections, hold a number of property names and values, if you are accustomed to the [JSON](https://en.wikipedia.org/wiki/JSON) or [YAML](https://en.wikipedia.org/wiki/YAML) formats, you'll find the TOML format a bit similar (if you'd like to learn more about the TOML file format, read about it [here](https://toml.io/en/)).
@@ -110,10 +109,6 @@ port = 8070
 domain = ""
 indexer_url = "https://dev.cid.contact"
 database_path = "/root/.ursa/data/index_provider_db"
-
-[metrics_config]
-port = "4070"
-api_path = "/metrics"
 
 [server_config]
 port = 4069
