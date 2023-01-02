@@ -124,13 +124,13 @@ addr = "0.0.0.0"
 
 Some advanced use-cases might require to deal with the host and port number binding, depending on the service provider needs and customisation. We'll keep things simple and assume the default settings!
 
-In this guide, we are interesting in the `network_config` section settings for the `keystore_path` which defaults to `/root/.ursa/keystore`.
+In this guide, we are interested in the `network_config` section settings for the `keystore_path` which defaults to `/root/.ursa/keystore`.
 
 💡 The identity is a text description for the keystore and at time of writing we have not yet implemented multiple identity management via the CLI. Thereupon, the identity value serves to find the filename match in the `keystore_path`. This might change as we progress with development. Check the [Identity selection](#identity-selection) to learn more about it!
 
 ### Identity selection
 
-Multiple identity management is yet to be implemented but in any case, some users might find trivial to keep multiple identities and switch between them referencing them by name.
+Multiple identity management is yet to be implemented but in any case, some users might find it trivial to keep multiple identities and switch between them referencing them by name.
 
 Let's suppose that we've recently moved to a new server setup and copied our previous server keystore as `old-server-keystore.pem` and renamed the `$HOME/.ursa/keystore/default.pem` to `new-server-keystore.pem`.
 
@@ -156,7 +156,7 @@ Set the identity name in the `network_config` -> `identity` to a matching PEM fi
 
 When you run a node, there's a private key which is used to compute a public key that your node is identified with. 
 
-If another party holds the private key, they can control the identity, e.g. have access to the rewards. For this reason, is important to have at the very least a basic understanding of how identity works in Fleek Network.
+If another party holds the private key, they can control the identity, e.g. have access to the rewards. For this reason, it's important to have at the very least a basic understanding of how identity works in Fleek Network.
 
 ### Type of keys
 
@@ -164,9 +164,9 @@ When you run a node, there's a private key which is used to compute a public key
 
 There are two types of keys related to the identity your node is configured to run with, the private and public keys!
 
-The public key is open to anybody to see and it represents a unique node in the Fleek Network, a bit like a bank account number. In the other hand, the private key is secret and the operator is responsible to store it privately!
+The public key is open to anybody to see and it represents a unique node in the Fleek Network, a bit like a bank account number. On the other hand, the private key is secret and the operator is responsible to store it privately!
 
-The Fleek Network relies in cryptography, thus it's not possible to the Fleek Network team to access, compromise or manipulate the secrets of an identity. In the other hand, the public key can be used by anyone, Fleek Network included, to identity a node or send rewards to the address without jeopordizing the identity security!
+The Fleek Network relies on cryptography, thus it's not possible to the Fleek Network team to access, compromise or manipulate the secrets of an identity. On the other hand, the public key can be used by anyone, Fleek Network included, to identity a node or send rewards to the address without jeopordizing the identity security!
 
 ### Key privacy
 
