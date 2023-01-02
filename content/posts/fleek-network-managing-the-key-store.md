@@ -3,9 +3,9 @@ template: post
 draft: false
 title: 'Fleek Network: Managing the key store'
 slug: fleek-network-managing-the-key-store
-date: 2023-01-01T23:00:00Z
+date: 2023-01-02T23:00:00Z
 canonical: ''
-socialImage: https://storageapi.fleek.co/fleek-team-bucket/fleek-network-docker-setup-overview.png?202212071243
+socialImage: https://storageapi.fleek.one/fleek-team-bucket/fleek-network-managing-the-keystore.png?202301021625
 description: An explainer on how to manage the key store
 category: Tutorial
 tags:
@@ -17,7 +17,7 @@ tags:
 
 ---
 
-![](https://storageapi.fleek.co/fleek-team-bucket/fleek-network-docker-setup-overview.png?202212071243)
+![](https://storageapi.fleek.one/fleek-team-bucket/fleek-network-managing-the-keystore.png?202301021625)
 
 ## Introduction
 
