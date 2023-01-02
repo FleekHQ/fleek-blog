@@ -155,8 +155,6 @@ If another party holds the private key, they can control the identity, e.g. have
 
 ### Type of keys
 
-When you run a node, there's a private key which is used to compute a public key that your node is identified with. If another party holds the private key, they can get get control of your rewards. It's important to have a very basic understanding of how identity works in Fleek Network.
-
 There are two types of keys related to the identity your node is configured to run with, the private and public keys! 
 
 💡 The public-key cryptography curve used for our key store is the [ed25519](https://en.wikipedia.org/wiki/EdDSA)
@@ -178,7 +176,7 @@ Here are few examples of what you should not do:
 
 There are many other ways of getting compromised, but hopefully the ones put above give you a good starting idea!
 
-Remember, the node provider is the only one responsable when managing the key store! Neither Fleek Network, or the most sophisticated AI system presently can compromise the cryptography in use to help you out.
+Remember, the node provider is the only one responsable when managing the key store! Nor Fleek Network, or the most sophisticated AI system presently can compromise the cryptography in use to help you out.
 
 ## Conclusion
 
@@ -186,7 +184,7 @@ We've walked through the most basics of where the configuration file is located,
 
 Additionalty, a brief guide on the [identity](#identity), more specifically an introduction to the [type of keys](#type-of-keys) and [key privacy](#key-privacy), which we find important to understand for anyone seriously interested in running a node by hinting into some system administration and security principals.
 
-In the future, we'll introduce more advanced topics that will help you improve into the knowledge you get from this, but we are glad that you followed this guide and got some compreehension to help you manage the key store.
+In the future, we'll introduce more advanced topics that will help you improve into the knowledge you get from this, but we are glad that you followed this guide and got some comprehension to help you manage the key store.
 
 While we do our best to provide the most clear instructions, there's always space for improvement, therefore feel free to make any contributions by messaging us on our [Discord](https://discord.gg/fleekxyz) or by opening a [PR](https://github.com/fleek-network) in any of our repositories 🙏.
 
