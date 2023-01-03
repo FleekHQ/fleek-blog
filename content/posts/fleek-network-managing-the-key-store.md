@@ -79,7 +79,7 @@ Now that you know where to locate the configuration file for any given user you 
 
 ### Configuration sections
 
-The Fleek Network node configuration settings is located in the path `$HOME/.ursa/config.toml` and it's organised by configuration sections.
+The Fleek Network node configuration settings are located in the path `$HOME/.ursa/config.toml`, and it's organized by configuration sections.
 
 At time of writing, we have the following sections:
 - Network config
