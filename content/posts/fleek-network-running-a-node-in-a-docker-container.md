@@ -181,7 +181,7 @@ The build process takes awhile and you have to wait for completion.
  => => sha256:c7bf205db148c9f9202dbece143e86487c678d108c3936897cfd9bcd7915dd3c 6.42kB / 6.42kB                                                 0.0s
  ```
 
-⚠️ The Docker image is only required to be built once and/or, when changes are pulled from the remote repository, or versions you might be interested in! Otherwise, you're not required to build it everytime to run the node.
+⚠️ The Docker image is only required to be built once and/or, when changes are pulled from the remote repository, or versions you might be interested in! Otherwise, you're not required to build it everytime to run the node. If you'd like to learn how to update the Ursa CLI, find our guide [here](#fleek-network-how-to-get-the-latest-updates-for-ursa-cli-from-the-source-repository).
 
 > Bear in mind that if you don't update your build often, you won't have the latest changes, which happen frequently with all the ongoing development! This is quite important to understand, as it causes confusion to some users. The Ursa application at time of writing does not update automatically.
 
@@ -191,13 +191,13 @@ A container is what's originated from the image we discussed [earlier](#image), 
 
 Following up, we'll learn how to run the Docker container that includes our `ursa` program, built from our source [Dockerfile](https://github.com/fleek-network/ursa/blob/32928e78afa0bbed8241ddc4d7e2456752456fd6/Dockerfile).
 
-📢 We've been referencing the Dockerfile to a particular commit hash in our repository, to secure the pointer to it, but you are free to check any commit message, including the latest version of our main branch!
+📢 We've been referencing the Dockerfile to a particular commit hash in our repository, to secure the pointer to it, but you are free to check any commit message, including the latest version of our main branch! This is explained in our guide to help you update the Ursa CLI source and binary [here](#fleek-network-how-to-get-the-latest-updates-for-ursa-cli-from-the-source-repository).
 
 ### Run the container from official nightly image
 
 Building a Docker image requires some effort and some of our users might find easier to pull our nightly image for quick access to Ursa, which does not require them to build from source.
 
-For that reason, we provide you a quick demonstration on how to pull and run the Docker container! If you need more detailed information, then you'll be happier to follow the [run the Docker container](#run-the-docker-container).
+For that reason, we provide you a quick demonstration on how to pull the image and run the Docker container quickly! If you need more detailed information, then you'll be happier to follow the [run the Docker container](#run-the-docker-container).
 
 > The official `fleek-network/ursa:nightly` image is currently hosted in Github's container registry and updated every night, you can `docker pull` the image and run it locally. Beware that the version is built at a particular time of the day, so if you are looking for a custom image then you're better off learning how to build one yourself. The extended guide provides you all the information you need, but we also have a guide on how to update images that you may be interested in reading [here](https://blog.fleek.co/posts/fleek-network-how-to-get-the-latest-updates-for-ursa-cli-from-the-source-repository).
 
@@ -209,11 +209,15 @@ Firstly, start by running the `docker pull`, as follows:
 docker pull ghcr.io/fleek-network/ursa:nightly
 ```
 
+⚠️ Important: The Github container registry is private, you need a Github account and private token to login via the CLI to be able to pull, find the instructions [here](https://ghcr.io/).
+
 Once the Docker image is downloaded completely, you can run a container based on the image:
 
 ```sh
 docker run -p 4069:4069 -p 4070:4070 -p 6009:6009 -p 8070:8070 -v $HOME/.ursa/:/root/.ursa/:rw --name ursa-cli -it ghcr.io/fleek-network/ursa:nightly
 ```
+
+Notice that the command arguments we pass are for the flag's `-p` for port numbers, `-v` to bind mount a location in your host to a container path (useful to persist your ursa configuration files, e.g. keystore), `--name` to make it easier to identify, `-it` to make it interactive (e.g. presents output to the terminal), and the image name we pulled earlier (ghcr.io/fleek-network/ursa:nightly), if you hadn't pulled and not found, docker would pull it for you.
 
 You can then do a quick healthcheck as described [here](#ursa-healthcheck).
 
@@ -425,13 +429,37 @@ Stack is a way to describe a list of services (applications), we'll have running
 
 We'll find out how to run an opinionated stack to help us run Fleek Network, with monitoring, etc.
 
+Also, by using Docker compose it'll be easier to persist the configuration files (config.toml, identity, etc). Therefore, this is the recommend way to run a node in a docker container.
+
 ### Running a stack with Docker compose
 
 We have defined a Stack 🕸 that can be useful for running and monitoring; At time of writing, this is declared in a docker-compose file located [here](https://github.com/fleek-network/ursa/blob/cfbbe6208dc6a33d28b43c6e6820ab76c2905353/infra/ursa/docker-compose.yml).
 
-There you'll find specified all the configuration options, such as the one's we've discussed in the previous topics about the host, port bindings, etc. You don't have to constantly verify if specified all the correct options when running the Docker containers. Plus, we have these setup for you [grafana](https://grafana.com/), [prometheus](https://prometheus.io/docs/introduction/overview/), [certbot](https://certbot.eff.org/) and [nginx](https://www.nginx.com/). Also, the docker compose file can be customised to your preference, Docker will detect any changes recreating the the container if and when necessary.
+There you'll find specified all the configuration options, such as the one's we've discussed in the previous topics about the host, port bindings, bind mount, etc. You don't have to constantly verify if specified all the correct options when running the Docker containers. Plus, we have these setup for you [grafana](https://grafana.com/), [prometheus](https://prometheus.io/docs/introduction/overview/), [certbot](https://certbot.eff.org/) and [nginx](https://www.nginx.com/). 
+
+Also, the docker compose file can be customised to your preference, Docker will detect any changes recreating the the container if and when necessary.
 
 For the purpose of this guide 📒, we'll look into how to start and stop the stack only!
+
+Before proceeding, make sure you have the image ready! If you haven't already a quick utility method is available as the following command:
+
+```sh
+make compose-build
+```
+
+Most of the stack is already built as we declared an image in the docker compose yaml file.
+
+```sh
+certbot uses an image, skipping
+nginx uses an image, skipping
+nginxexporter uses an image, skipping
+prometheus uses an image, skipping
+grafana uses an image, skipping
+```
+
+The `ursa` Dockerfile
+
+💡 The `ursa` Docker image should be built everytime you want to pull and use an update, learn how by following the guide [here](#fleek-network-how-to-get-the-latest-updates-for-ursa-cli-from-the-source-repository).
 
 In the project root, execute the docker-compose command 🤖 by providing the `docker-compose.yml` configuration file and the subcommand up.
 
@@ -451,11 +479,26 @@ Where for stopping, you have option `down`:
 docker-compose -f infra/ursa/docker-compose.yml down
 ```
 
+Also, we provide the following utility commands for your convinience.
+
+A command to execute the docker compose up:
+
+```sh
+make compose-up
+```
+
+Also, to execute the docker compose down:
+
+```sh
+make compose-down
+```
+
 Here, we have an opinionated stack that you can use as base for your system, or as a reference, for your own research and learning. This means you aren't obligated to use Grafana or Prometheus.Ursa works without any dependency!
 
 💡 Learn more about [docker compose](https://docs.docker.com/compose/) by checking the documentation [here](https://docs.docker.com/compose/).
 
-If you'd like to use some of the points explained previously, such as to [execute bash shell in the container](#execute-bash-shell-in-the-container), you need to ensure that the [Docker compose file](https://github.com/fleek-network/ursa/blob/cfbbe6208dc6a33d28b43c6e6820ab76c2905353/infra/ursa/docker-compose.yml) have set the `container_name` to the name of your preference.
+
+If you'd like to use some of the points explained previously, such as to [execute bash shell in the container](#execute-bash-shell-in-the-container), you need to ensure that the [Docker compose file](https://github.com/fleek-network/ursa/blob/cfbbe6208dc6a33d28b43c6e6820ab76c2905353/infra/ursa/docker-compose.yml) have set the `container_name` to the name of your preference for our examples we chose `ursa-cli`.
 
 ```sh
   ursa:
