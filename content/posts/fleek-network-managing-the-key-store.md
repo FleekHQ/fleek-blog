@@ -176,7 +176,7 @@ Here are few examples of what you should not do:
 
 There are many other ways of getting compromised, but hopefully the ones put above give you a good starting idea!
 
-Remember, the node provider is the only one responsible when managing the key store! Nor Fleek Network, or the most sophisticated AI system presently can compromise the cryptography in use to help you out.
+Remember, the node provider is the only one responsible when managing the key store! Neither Fleek Network, nor the most sophisticated AI system presently can compromise the cryptography in use to help you out.
 
 ## Conclusion
 
