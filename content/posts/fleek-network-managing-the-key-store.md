@@ -143,7 +143,7 @@ The `old-server-keystore.pem` is the original keystore and `new-server-keystore.
 
 As we have our `network_config` -> `identity` set as `default` and `network_config` -> `keystore_path` defined as `/root/.ursa/keystore`, we have to change it! We can switch to an existing identity by providing the filename before the node initialisation! 
 
-Set the identity name in the `network_config` -> `identity` to a matching PEM file that exists in the `keystore_path`. For our example, that'd be `new-server-keystore.pem` or `old-server-keystore.pem`.
+Set the identity name in the `network_config` -> `identity` to a matching PEM file that exists in the `keystore_path`. For our example, that'd be `new-server-keystore` or `old-server-keystore`.
 
 💡 Name the PEM files as you wish, we have used the naming above to make it as clear as possible.
 
