@@ -46,7 +46,7 @@ The following will guide you through some of the fundamentals to help understand
 
 ### Locating the file
 
-The Ursa CLI has a configuration file in the home directory of the user, which is located in the path `$HOME/.ursa` or `~/.ursa` unde the name `config.toml`. 
+The Ursa CLI has a configuration file in the home directory of the user, which is located in the path `$HOME/.ursa` or `~/.ursa` under the name `config.toml`. 
 
 💡 The tilda in `~/.ursa` represents `$HOME` which is simpler, but we'll use `$HOME` to make it easy to follow.
 
