@@ -161,7 +161,7 @@ There are two types of keys related to the identity your node is configured to r
 
 The public key is open to anybody to see and it represents a unique node in the Fleek Network, a bit like a bank account number. On the other hand, the private key is secret and the operator is responsible to store it privately!
 
-The Fleek Network relies on cryptography, thus it's not possible to the Fleek Network team to access, compromise or manipulate the secrets of an identity. On the other hand, the public key can be used by anyone, Fleek Network included, to identity a node or send rewards to the address without jeopordizing the identity security!
+The Fleek Network relies on cryptography, thus it's not possible to the Fleek Network team to access, compromise or manipulate the secrets of an identity. On the other hand, the public key can be used by anyone, Fleek Network included, to identity a node or send rewards to the address without jeopardizing the identity security!
 
 ### Key privacy
 
