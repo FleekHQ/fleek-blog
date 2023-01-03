@@ -182,7 +182,7 @@ Remember, the node provider is the only one responsible when managing the key st
 
 We've walked through the most basics of where the configuration file is located, the configuration settings we use to setup and run the node, the different configuration sections we have, but most importantly the identity section.
 
-Additionalty, a brief guide on the [identity](#identity), more specifically an introduction to the [type of keys](#type-of-keys) and [key privacy](#key-privacy), which we find important to understand for anyone seriously interested in running a node by hinting into some system administration and security principals.
+Additionally, a brief guide on the [identity](#identity), more specifically an introduction to the [type of keys](#type-of-keys) and [key privacy](#key-privacy), which we find important to understand for anyone seriously interested in running a node by hinting into some system administration and security principals.
 
 In the future, we'll introduce more advanced topics that will help you improve into the knowledge you get from this, but we are glad that you followed this guide and got some comprehension to help you manage the key store.
 
