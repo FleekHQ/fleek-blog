@@ -30,6 +30,7 @@ Alternatively, if you need a deep dive into Docker, check the official getting s
 ## Topics
   - [Setup](#docker-setup)
     - [Install Docker desktop](#install-docker-desktop)
+    - [Recommended settings](#recommended-settings)
   - [Image](#image)
     - [Build the Docker image](#build-the-docker-image)
   - [Container](#container)
@@ -45,9 +46,21 @@ Alternatively, if you need a deep dive into Docker, check the official getting s
     - [Running a stack with Docker compose](#running-a-stack-with-docker-compose)
   - [Conclusion](#conclusion)
 
-As Fleek Network's repositories are in constant development and change, you should consider that the following guide was [checked in](https://git-scm.com/docs/git-checkout) to commit `60a37c62e`. While we try our best to update documentation and guides during development, there might be breaking changes which might take some time to reflect in our docs. To avoid disappointment, feel free to check into commit `60a37c62e` or contribute by getting in touch with us, or sending a PR in the relevant context 🙏.
+As Fleek Network's repositories are in constant development and change, you should consider that the following guide was [checked in](https://git-scm.com/docs/git-checkout) to commit `180585c`. While we try our best to update documentation and guides during development, there might be breaking changes which might take some time to reflect in our docs. To avoid disappointment, feel free to check into commit `180585c` or contribute by getting in touch with us, or sending a PR in the relevant context 🙏.
 
 ## Setup
+
+### Requirements
+
+To follow the guide successfully, a good amount of memory and disk space will be necessary for Docker to run. The reason is that your host machine requires a genorous amount, and has to have some spare amount for the containers.
+
+Here's a quick look into the resouces used during runtime
+
+| Name        | CPU %       | Memory usage / Limit  | Mem %          |
+| ----------- | ----------- | -----------           | -----------    |
+| ursa-cli    | 1.06%       | 49.7MiB / 7.775GiB    | 0.62%          |
+
+In our example, used for this guide, we have 8 GB spare memory and 20 GB spare disk space that we'll setup Docker to run our node successfully! You'll find more about that later on in the [recommended settings](#recommended-settings)!
 
 ### Install Docker desktop
 
@@ -113,7 +126,37 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 
-Run all the commands above in your terminal, to confirm 👍 everything's working before proceeding to the next steps, please!
+Run all the commands above in your terminal, to confirm everything's working before proceeding to the next steps, please! 👍 
+
+### Recommended settings
+
+As mentioned in the [requirements](#requirements) you'll need enough disk space and memory to run containers successfully.
+
+As an example, during build time, the minimum memory required is about 8gb! If you do not have enough memory configured in the Docker preferences, you might encounter errors, such as:
+
+```sh
+#13 139.1    Compiling actix-web v4.2.1
+#13 143.4    Compiling jsonrpc-v2 v0.11.0
+#13 183.5 The following warnings were emitted during compilation:
+#13 183.5 
+#13 183.5 warning: c++: fatal error: Killed signal terminated program cc1plus
+#13 183.5 warning: compilation terminated.
+#13 183.5 
+#13 183.5 error: failed to run custom build command for `librocksdb-sys v0.8.0+7.4.4`
+#13 183.5 
+#13 183.5 Caused by:
+#13 183.6   process didn't exit successfully: `/usr/src/app/target/release/build/librocksdb-sys-c0aabb249f648650/build-script-build` (exit status: 1)
+#13 183.6   --- stdout
+#13 183.6   cargo:rerun-if-changed=rocksdb/
+#13 183.6   TARGET = Some("x86_64-unknown-linux-gnu")
+#13 183.6   OPT_LEVEL = Some("z")
+#13 183.6   HOST = Some("x86_64-unknown-linux-gnu")
+#13 183.6   cargo:rerun-if-env-changed=CXX_x86_64-unknown-linux-gnu
+```
+
+If you are running Docker desktop application, open the dashboard settings and in the "resources" change the memory to the recommended size 8 GB. If you need instructions to locate it, visit the Docker official documentation, here's an example for [Linux](https://docs.docker.com/desktop/settings/linux) and [MacOS](https://docs.docker.com/desktop/settings/macos).
+
+Make sure that you have configured Docker desktop with the [recommended settings](#recommended-settings), before proceeding any further!
 
 ## Image
 
@@ -121,7 +164,7 @@ A Docker image is a read-only template with instructions for creating a Docker c
 
 The starting point for our use-case is a Dockerfile, where all those "template instructions" are declared.
 
-Here's how our [Dockerfile](https://github.com/fleek-network/ursa/blob/32928e78afa0bbed8241ddc4d7e2456752456fd6/Dockerfile) looks like.
+Here's how our [Dockerfile](https://github.com/fleek-network/ursa/blob/22de01ecb4be347e2b76f17e4e40e4fd9956e69b/Dockerfile) looks like.
 
 ### Build the Docker image
 
@@ -129,7 +172,7 @@ We are assuming 😅 that you've followed our [Fleek Network: Getting started gu
 
 The reason is that the image builder requires the source files as the input file to have information to build a container, as mentoned [earlier](#image). 
 
-The [Dockerfile](https://github.com/fleek-network/ursa/blob/32928e78afa0bbed8241ddc4d7e2456752456fd6/Dockerfile) is located in the Ursa repository (at time of writing), [here](https://github.com/fleek-network/ursa/blob/32928e78afa0bbed8241ddc4d7e2456752456fd6/Dockerfile).
+The [Dockerfile](https://github.com/fleek-network/ursa/blob/22de01ecb4be347e2b76f17e4e40e4fd9956e69b/Dockerfile) is located in the Ursa repository (at time of writing), [here](https://github.com/fleek-network/ursa/blob/22de01ecb4be347e2b76f17e4e40e4fd9956e69b/Dockerfile).
 
 If you have cloned the project correctly, you should `change directory` to the project root directory.
 
