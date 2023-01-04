@@ -210,15 +210,6 @@ Content-Length: 19
 
 ## Conclusion
 
-  <!-- - [What's a node health check?](#whats-a-node-health-check)
-  - [Resource monitoring](#resource-monitoring)
-    - [Log messages](#log-messages)
-    - [Processes](#processes)
-    - [Host](#host)
-    - [Ports](#ports)
-  - [How to do a check-up?](#how-to-do-a-check-up)
-  - [Conclusion](#conclusion) -->
-
 We started by going through [What a node Health Check](#whats-a-node-health-check) means and looked into [Resource monitoring](#resource-monitoring) and the parts the resource provides, such as [Log messages](#log-messages), [Processes](#processes), [Host](#host), [Ports](#ports), with some warnings along the way about firewalls.
 
 To complete this, we demonstrated how to use `cURL` to do a simple health check to verify if the endpoints or ports are in use by expecting particular responses. We found out about at least one different request which is closed immediately, as it's not an HTTP/S request and provided some hints or some thoughts on how to leverage this information.
