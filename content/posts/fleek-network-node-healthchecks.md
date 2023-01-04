@@ -5,7 +5,7 @@ title: 'Fleek Network: Node health checks'
 slug: fleek-network-node-health-checks
 date: 2023-01-04T23:00:00Z
 canonical: ''
-socialImage: https://storageapi.fleek.one/fleek-team-bucket/fleek-network-managing-the-keystore.png?202301021625
+socialImage: https://storageapi.fleek.one/fleek-team-bucket/fleek-network-node-health-checks.png?202301041235
 description: Provides instructions to do node health checks
 category: Tutorial
 tags:
@@ -17,7 +17,7 @@ tags:
 
 ---
 
-![](https://storageapi.fleek.one/fleek-team-bucket/fleek-network-managing-the-keystore.png?202301021625)
+![](https://storageapi.fleek.one/fleek-team-bucket/fleek-network-node-health-checks.png?202301041235)
 
 ## Introduction
 
@@ -25,17 +25,24 @@ In Software development, a health check means checking the health status of a re
 
 The purpose of the guide is to provide basic information about the node resource by exposing the host, port numbers, logs during runtime, etc.
 
-You should have followed our [getting started guide](#)
+You should have followed our [getting started guide](#fleek-network-getting-started-guide) and have the Ursa CLI installed in the machine terminal you're accessing to follow along.
+
+We'll give you a basic introduction into the topic, but you should also appreciate the fact that development is ongoing and other factors, such as the introduction of features, may cause malfunction of a node beyond what a simple health check can hint about the network.
+
+For any unexpected behavior, we appreciate the contribution of the community by any means which includes reporting to our [Discord](https://discord.gg/fleekxyz), opening a [PR](https://github.com/fleek-network), reporting issues in our [Github repository](https://github.com/fleek-network/ursa/issues), etc.
 
 ## Topics
-  - [Configuration file](#configuration-file)
-    - [Locating the file](#locating-the-file)
-    - [Configuration sections](#configuration-sections)
-    - [Identity selection](#identity-selection)
-  - [Identity](#identity)
-    - [Type of keys](#type-of-keys)
-    - [Key privacy](#key-privacy)
+  - [What's a node health check?](#whats-a-node-health-check)
+  - [Available interface]()
   - [Conclusion](#conclusion)
+
+## What's a node health check?
+
+A Node health check is exactly what it sounds like, a way of checking the health status of a Fleek Network node! A Node operator can do a health check, as it's common among system operators to get feedback and see if it's working. It's a good practice for a Node operator to do it frequently, as otherwise there'd be no way of knowing whether or not the Node is running.
+
+Health checks are valuable and a must for all Node operators, as they are incentivized to participate in the network by making their resources available which the reward mechanism evaluates. Rewards are only a given for good behavior and an unhealthy Node, or bad management of a Node can cause disappointment.
+
+Among other reasons, this is why you should take the time to learn how to operate and understand how to do node health checks.
 
 ## Conclusion
 
