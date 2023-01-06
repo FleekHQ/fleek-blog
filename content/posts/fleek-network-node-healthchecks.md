@@ -155,23 +155,35 @@ For the ones who followed the [getting started guide](#fleek-network-getting-sta
 We execute a `cURL` request with the `--head` or `-I` flag to show the document info only, in our case the headers of our HTTP response.
 
 ```sh
-curl --head 127.0.0.1:80
+curl 127.0.0.1/ping
 ```
 
-Or, the shorter version:
+The response should be:
 
 ```sh
-curl -I 127.0.0.1:80
+pong
 ```
 
-The response is:
+You can also check the headers of the response:
 
 ```sh
-HTTP/1.1 404 Not Found
+curl -I 127.0.0.1/ping
+```
+
+Which response is:
+
+```sh
+HTTP/1.1 200 OK
 Server: nginx/1.23.3
-Date: Fri, 06 Jan 2023 18:36:09 GMT
-Content-Length: 0
+Date: Fri, 06 Jan 2023 20:07:16 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 4
 Connection: keep-alive
+content-type: application/vnd.ipld.raw
+content-type: application/vnd.ipld.car
+content-type: application/octet-stream
+cache-control: public,max-age=31536000,immutable
+X-Proxy-Cache: HIT
 ```
 
 We can do the same for other ports, and you'll notice different responses where for port `6009`, get an empty reply from the server because it works over a different protocol which is not HTTP/S, as described [above](#ports):
@@ -181,6 +193,13 @@ curl: (52) Empty reply from server
 ```
 
 ⚠️ A curl (52) usually means *something* accepted the TCP connection but just closed it. For our use case, we can take this as something running in port `6009`. Although, there are more appropriate ways to check this in particular. In comparison, the port `4069` is used for HTTP RPC, REST, and metrics, which operate via HTTP, as such a Http Header is expected but not for `6009`.
+
+You can determine failure when you make a `cURL` request which fails:
+
+```sh
+curl: (7) Failed to connect to 127.0.0.1 port 80: Connection refused
+curl: (7) Failed to connect to 127.0.0.1 port 6009: Connection refused
+```
 
 If you're running the `Stack` (docker-compose), then a service like `Prometheus` (`port 9090`) or `Grafana` (`port 3000`) could also be checked!
 
