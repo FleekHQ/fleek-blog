@@ -148,6 +148,8 @@ You should have completed the topics above to understand what and why the endpoi
 
 We're going to use [cURL](https://curl.se/), make sure that you have it installed otherwise install it in your operating system.
 
+In any case, you should have the Node running to be able to follow the steps. We'll use the Docker Container version but if you have a custom setup in a server or host you'll be able to follow.
+
 For the ones who followed the [getting started guide](#fleek-network-getting-started-guide), the following request should be familiar.
 
 We execute a `cURL` request with the `--head` or `-I` flag to show the document info only, in our case the headers of our HTTP response.
