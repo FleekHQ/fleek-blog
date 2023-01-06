@@ -6,7 +6,7 @@ slug: fleek-network-node-health-check-guide
 date: 2023-01-04T23:00:00Z
 canonical: ''
 socialImage: https://storageapi.fleek.one/fleek-team-bucket/fleek-network-node-health-check-guide.png?202301041235
-description: Provides instructions to do node health checks
+description: The purpose of the guide is to provide basic information about the node resource by explaining the host, port numbers, logs during runtime, etc for the Fleek Network.
 category: Tutorial
 tags:
 - DCDN
@@ -21,13 +21,13 @@ tags:
 
 ## Introduction
 
-In Software development, a health check means checking the health status of a resource to determine whether the resource is operating correctly. Here, we'll look into how to check the health of a Fleek Network node.
+In Software development, a health check means checking the health status of a resource to determine whether the resource is operating correctly.
 
-The purpose of the guide is to provide basic information about the node resource by exposing the host, port numbers, logs during runtime, etc.
+The purpose of the guide is to provide basic information about the node resource by explaining the host, port numbers, logs during runtime, etc for Fleek Network.
 
 You should have followed our [getting started guide](#fleek-network-getting-started-guide) and have the Ursa CLI installed in the machine terminal you're accessing to follow along.
 
-We'll give you a basic introduction into the topic, but you should also appreciate the fact that development is ongoing and other factors, such as the introduction of features, may cause malfunction of a node beyond what a simple health check can hint about the network.
+We'll give you a basic introduction to the topic, but you should also appreciate the fact that development is ongoing, and other factors, such as the introduction of features that may cause malfunction of a node beyond what a simple health check can hint about the network.
 
 For any unexpected behavior, we appreciate the contribution of the community by any means which includes reporting to our [Discord](https://discord.gg/fleekxyz), opening a [PR](https://github.com/fleek-network), reporting issues in our [Github repository](https://github.com/fleek-network/ursa/issues), etc.
 
@@ -57,7 +57,7 @@ Fleek Network depends on the Node operator's success, thus we try to keep things
 
 ## Resource monitoring
 
-The Fleek Network Node is initialized by running the `Ursa CLI` which creates a process in the operating system, this process responds to requests over an inter-communication mechanism we denominate as the Fleek Network, a DCDN (Decentralized Content Delivery Network). 
+The Fleek Network Node is initialized by running the `Ursa CLI` which creates a process in the operating system, this process responds to requests over an inter-communication mechanism we denominate as the Fleek Network - Fleek's DCDN (Decentralized Content Delivery Network). 
 
 We can call the Fleek Network Node a service, meaning that the Node is a sort of application that runs as a service on a server, or in the practical sense, the `Ursa CLI` initializes a Node as a client version used to access the main service provider, the Fleek Network, composed by any number of these Nodes!
 
@@ -67,7 +67,7 @@ As Fleek Network is used by getting and serving content, the Node responds as a 
 
 As `Ursa CLI` is in constant development, at the current development stage the output from the Node should be super verbose.
 
-This is to help the development team get feedback. You might see `logs` of the types: Debug, Trace, etc; which for a non-developer human, can cause the feeling of reading the most dreadful poetry in literature, it'd only spark joy to help troubleshoot or make development decisions. As in any book title and book content, feel free to ignore it but don't judge the book by its cover!
+This is to help the development team get feedback. You might see `logs` of the types: Debug, Trace, etc; which for a non-developer human, can cause the feeling of reading the most dreadful poetry in literature, as it'd only spark joy to help troubleshoot or make development decisions. As in any book title and book content, feel free to ignore it but don't judge the book by its cover!
 
 ### Processes
 
@@ -77,7 +77,7 @@ We recommend running the Stack (for docker-compose users), which provides a prox
 
 The Stack has the following services:
   - Node - we call `Ursa` the living process that we refer to as Node, this is started via the `Ursa CLI` (`ports 4069, 6009, 8070`)
-  - Reverse proxy - we use `NGINX` as a reverse proxy for `Ursa` Node service where we have configured the public port 80, SSL certification, a server name, etc
+  - Reverse proxy - we use `NGINX` as a reverse proxy for `Ursa` Node service where we have configured the public port 80, SSL certification, a server name, etc. The port 80 maps to the `4069` internally, as to provide a secure connection over HTTP
   - Process monitoring - a monitoring system for real-time metrics with a web client (`port 9090`) that exposes metrics of the reverse proxy (`port 9113`) and the actual Node metrics (`port 4069`)
   - Metric visualization - for visualizing metrics, logs, and traces collected from the `Ursa` Node we have Grafana (`port 3000`)
 
@@ -109,7 +109,16 @@ ursa_1           | DEBUG libp2p_gossipsub::behaviour HEARTBEAT: Mesh low. Topic:
 ursa_1           | DEBUG libp2p_gossipsub::behaviour RANDOM PEERS: Got 0 peers
 ursa_1           | TRACE hyper::proto::h1::encode sized write, len = 17809
 ursa_1           | TRACE hyper::proto::h1::io buffer.queue, self.len=120, buf.len=17809
+```
 
+Where also,
+
+```sh
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:18:29:38 +0000] "GET /stub_status HTTP/1.1" 200 99 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:18:29:43 +0000] "GET /stub_status HTTP/1.1" 200 99 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:18:29:48 +0000] "GET /stub_status HTTP/1.1" 200 99 "-" "Go-http-client/1.1" "-"
+grafana_1        | logger=cleanup t=2023-01-06T18:29:51.663801631Z level=info msg="Completed cleanup jobs" duration=16.523158ms
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:18:29:53 +0000] "GET /stub_status HTTP/1.1" 200 99 "-" "Go-http-client/1.1" "-"
 ```
 
 ### Host
@@ -120,17 +129,16 @@ Any traffic sent to an addressable interface that hits the correct endpoint or p
 
 ### Ports
 
-A Fleek Network Node, or the process we refer to as Node has bound to `0.0.0.0` and has a few ports exposed to the host, these are the port 4069, 6009 and 8070.
+A Fleek Network Node, or the process we refer to as Node has bound to `0.0.0.0` and has a port exposed to the host, port 6009 and in the Stack's network, port 4069.
 
 Below, we explain what these are used for:
 
 - Port `4069` (TCP), used for HTTP RPC, RPC, REST and metrics
 - Port `6009` (TCP/UDP), used by the P2P protocol running in the network
-- Port `8070` (TCP), used by the HTTP-based index provider
 
 💡 To communicate, the Node uses TCP and UDP (retransmission of lost data packets is only possible with TCP, for example, when we download a file from the internet through our browsers we expect a complete file, no bits should be missing, TCP ensures that the data is received correctly, data is not missing and is in order).
 
-As described in the [processes](#processes), the ports should be available in the host for other services to operate! Make sure you don't have blockers, such as Firewall, or forget to expose them in Docker or on your custom setup!
+As described in the [processes](#processes), the ports should be available in the host for other services to operate! Make sure you don't have blockers, such as Firewall, or forget to expose them in Docker or on your custom setup! Open up your firewall, and if needed do a port-forward if docker doesn't do that for you.
 
 ⚠️ Remember, the Node won't be able to respond if the ports are blocked. This might be quite difficult to troubleshoot, so make sure you have control over your system permissions to guarantee a successful node operation.
 
@@ -145,23 +153,24 @@ For the ones who followed the [getting started guide](#fleek-network-getting-sta
 We execute a `cURL` request with the `--head` or `-I` flag to show the document info only, in our case the headers of our HTTP response.
 
 ```sh
-curl --head 127.0.0.1:4069
+curl --head 127.0.0.1:80
 ```
 
 Or, the shorter version:
 
 ```sh
-curl -I 127.0.0.1:4069
+curl -I 127.0.0.1:80
 ```
 
 The response is:
 
 ```sh
-HTTP/1.1 405 Method Not Allowed
-content-length: 0
-date: Wed, 04 Jan 2023 19:00:52 GMT
+HTTP/1.1 404 Not Found
+Server: nginx/1.23.3
+Date: Fri, 06 Jan 2023 18:36:09 GMT
+Content-Length: 0
+Connection: keep-alive
 ```
-
 
 We can do the same for other ports, and you'll notice different responses where for port `6009`, get an empty reply from the server because it works over a different protocol which is not HTTP/S, as described [above](#ports):
 
@@ -169,23 +178,7 @@ We can do the same for other ports, and you'll notice different responses where 
 curl: (52) Empty reply from server
 ```
 
-⚠️ A curl (52) usually means *something* accepted the TCP connection but just closed it. For our use case, we can take this as something running in port `6009`. Although, there are more appropriate ways to check this in particular.
-
-For port `8070`, you'd get:
-
-```sh
-HTTP/1.1 404 Not Found
-content-length: 0
-date: Wed, 04 Jan 2023 19:09:23 GMT
-```
-
-You can determine failure when you make a `cURL` request which fails:
-
-```sh
-curl: (7) Failed to connect to 127.0.0.1 port 4069: Connection refused
-curl: (7) Failed to connect to 127.0.0.1 port 6009: Connection refused
-curl: (7) Failed to connect to 127.0.0.1 port 8070: Connection refused
-```
+⚠️ A curl (52) usually means *something* accepted the TCP connection but just closed it. For our use case, we can take this as something running in port `6009`. Although, there are more appropriate ways to check this in particular. In comparison, the port `4069` is used for HTTP RPC, REST, and metrics, which operate via HTTP, as such a Http Header is expected but not for `6009`.
 
 If you're running the `Stack` (docker-compose), then a service like `Prometheus` (`port 9090`) or `Grafana` (`port 3000`) could also be checked!
 
