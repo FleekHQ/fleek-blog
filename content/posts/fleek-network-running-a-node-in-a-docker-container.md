@@ -53,9 +53,9 @@ As Fleek Network's repositories are in constant development and change, you shou
 
 For the one's interested in running the node as quickly as possible, there are a few options, among those we pick two you might find handy:
 
-- A Docker compose Stack, which is an opinionated stack that provides a proxy service for IPFS, a service to enable HTTPS on your server, services for monitoring and analytics, etc. You can run a stack quickly by following the instructions in [Run the container from the recommended stack](#run-the-container-from-the-recommended-stack).
+- A Docker compose Stack, which is an opinionated stack that provides a reverse proxy service for the Node (Proxied internal `4069` to external ports `80` and `443`), a service to enable HTTPS on your server, services for monitoring and analytics, etc. You can run a stack quickly by following the instructions in [run the container from the recommended stack](#run-the-container-from-the-recommended-stack).
 
-- Building a Docker image requires some effort and some of our users might find it easier to pull our nightly image for quick access to Ursa, which does not require them to build from source. For that reason, we provide you with a quick demonstration of how to pull the image and run the Docker container quickly! Check the [Run the container from the official nightly image](#run-the-container-from-the-official-nightly-image)
+- Building a Docker image requires some effort and some of our users might find it easier to pull our nightly image for quick access to Ursa, which does not require them to build from source. For that reason, we provide you with a quick demonstration of how to pull the image and run the Docker container quickly! Check the [run the container from the official nightly image](#run-the-container-from-the-official-nightly-image)
 
 At some point in time you will have to look at the how things work and figure out what abstractions did wrong. For some advanced users that are used to it is not a big deal, but for everyone else that might cause quite a lot of hassle! Therefore, challenge yourself to learn the basics instead of executing commands you are yet to understand, this guide is your friend!
 
@@ -269,7 +269,7 @@ docker pull ghcr.io/fleek-network/ursa:nightly
 Once the Docker image is downloaded completely, you can run a container based on the image:
 
 ```sh
-docker run -p 4069:4069 -p 4070:4070 -p 6009:6009 -p 8070:8070 -v $HOME/.ursa/:/root/.ursa/:rw --name ursa-cli -it ghcr.io/fleek-network/ursa:nightly
+docker run -p 4069:4069 -p 6009:6009 -v $HOME/.ursa/:/root/.ursa/:rw --name ursa-cli -it ghcr.io/fleek-network/ursa:nightly
 ```
 
 Notice that the command arguments we pass are for the flag's `-p` for port numbers, `-v` to bind mount a location in your host to a container path (useful to persist your ursa configuration files, e.g. keystore), `--name` to make it easier to identify, `-it` to make it interactive (e.g. presents output to the terminal), and the image name we pulled earlier (ghcr.io/fleek-network/ursa:nightly), if you hadn't pulled and not found, docker would pull it for you.
@@ -285,7 +285,7 @@ Once the Docker image is ready ✅, you can run it by providing a container and 
 Since we want to interact with the process `ursa`, we'll run in interactive mode by using the flags `-it`.
 
 ```sh
-docker run -p 4069:4069 -p 4070:4070 -p 6009:6009 -p 8070:8070 -v $HOME/.ursa/:/root/.ursa/:rw --name ursa-cli -it ursa
+docker run -p 4069:4069 -p 6009:6009 -v $HOME/.ursa/:/root/.ursa/:rw --name ursa-cli -it ursa
 ```
 
 We are providing a custom name of our liking (ursa-cli) for the container and the image name we have built previously (ursa). Also, we do a bind mount to mount a file or directory on the host machine into a container, as an example, this is useful to persist the configuration for the identity. Find more on managing the identity [here](#fleek-network-managing-the-key-store).
@@ -304,13 +304,13 @@ Respectively, execute `docker-build` to build the Docker image:
 make docker-build
 ```
 
-Execute the `docker-run` to run the Docker container based in the built image:
+Execute the `docker-run` to run the Docker container based on the built image:
 
 ```sh
 make docker-run
 ```
 
-⚠️ At the time of writing the `make docker-run` does not persist the Ursa configuration ([options, key store, identity](#fleek-network-managing-the-key-store), etc), you'd be better off executing the actual `docker run` command without the sugar coating for better control and sanity check! This happens because the `-v <HOST-PATH>:<CONTAINER-PATH>` bind mount is missing in the makefile declaration `make docker-run`, this can change at any time so be wary of commands that create unnecessary abstractions! On the other hand, you might find useful to use our [proposed stack](#running-a-stack-with-docker-compose) which has the appropriate binding mounts for you.
+⚠️ At the time of writing the `make docker-run` does not persist the Ursa configuration ([options, key store, identity](#fleek-network-managing-the-key-store), etc), you'd be better off executing the actual `docker run` command without the sugar coating for better control and sanity check! This happens because the `-v <HOST-PATH>:<CONTAINER-PATH>` bind mount is missing in the makefile declaration `make docker-run`, this can change at any time so be wary of commands that create unnecessary abstractions! On the other hand, you might find it useful to use our [proposed stack](#running-a-stack-with-docker-compose) which has the appropriate binding mounts for you.
 
 💡 Remember, the utility commands will use default naming and port numbers. Use the original Docker commands for better control or customization.
 
@@ -328,6 +328,26 @@ If all goes well, the output should be similar to:
 2022-12-05T17:06:25.975806Z  INFO ursa_index_provider::provider: index provider listening on: 0.0.0.0:8070
 2022-12-05T17:06:25.975553Z  INFO ursa_network::service: Node starting up with peerId PeerId("12D3KooWRis5Gn8TrKNyvx5iizTMKqVyJehw2KRSRAR79FMnxLqQ")
 2022-12-05T17:06:25.975885Z  INFO ursa_metrics::metrics: listening on 0.0.0.0:4070
+```
+
+Or, you might find familiar,
+
+```sh
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:17 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:22 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:27 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:32 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:37 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:42 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:47 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:52 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:08:57 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:09:02 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:09:07 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:09:12 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:09:17 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:09:22 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
+nginx_1          | 172.19.0.3 - - [06/Jan/2023:19:09:27 +0000] "GET /stub_status HTTP/1.1" 200 100 "-" "Go-http-client/1.1" "-"
 ```
 
 A few points to notice are the listener port number and hostname 👀. As described in the [Run the Docker container](#run-the-docker-container), the container listener port number is exposed to your host's port number.
@@ -525,13 +545,13 @@ docker-compose -f <DOCKER-COMPOSE-FILEPATH> <up | down>
 For our use-case, here's how it'll look like:
 
 ```sh
-docker-compose -f infra/ursa/docker-compose.yml up
+docker-compose -f docker/full-node/docker-compose.yml up
 ```
 
 Where for stopping, you have option `down`:
 
 ```sh
-docker-compose -f infra/ursa/docker-compose.yml down
+docker-compose -f docker/full-node/docker-compose.yml down
 ```
 
 Also, we provide the following utility commands for your convenience.
@@ -558,11 +578,48 @@ If you'd like to use some of the points available in the guide, such as to [exec
 ```sh
   ursa:
     container_name: ursa-cli
-    build:
-      context: ../../.
-      dockerfile: Dockerfile
-    restart: on-failure
+    ...
 ```
+
+At time of writing, you'll find that the output presents errors. The setup we have is based on our staging server use-case, which can be used as an example for yours.
+
+```sh
+nginx_1          | 2023/01/06 13:38:44 [emerg] 10#10: open() "/etc/letsencrypt/options-ssl-nginx.conf" failed (2: No such file or directory) in /etc/nginx/conf.d/app.conf:52
+nginxexporter_1  | time="2023-01-06T13:48:07Z" level=error msg="Error scraping nginx: Error scraping nginx: Get http://nginx:80/stub_status: dial tcp: lookup nginx on 127.0.0.11:53: no such host" source="nginx_exporter.go:171"
+```
+
+To mitigate this issue, you'll have to run a script from the directory `docker/full-node` of the Ursa project.
+
+Start by changing the directory
+
+```sh
+cd ./docker/full-node
+```
+
+The command you'll be running needs to be prefixed by a list of custom domain names
+
+```sh
+DOMAINS="<YOUR-CUSTOM-DOMAIN-NAME-1> <YOUR-CUSTOM-DOMAIN-NAME-2>" ./init-letsencrypt.sh
+```
+
+Here's a practical example,
+
+```sh
+DOMAINS="my-fleek-network-node.dev www.my-fleek-network-node.dev" ./init-letsencrypt.sh
+```
+
+If you haven't set up the domain correctly, you'll get
+
+```sh
+Certbot failed to authenticate some domains (authenticator: webroot). The Certificate Authority reported these problems:
+  Domain: my-fleek-network-node.dev
+  Type:   unauthorized
+  Detail: 2001:4860:4802:32::15: Invalid response from https://www.foobar.dev/.well-known/acme-challenge/3UrSvBmgSNsymLKA20wGKJfxQq_utTKlsTLxltTGNQ4: 403
+
+Hint: The Certificate Authority failed to download the temporary challenge files created by Certbot. Ensure that the listed domains serve their content from the provided --webroot-path/-w and that files created there can be downloaded from the internet.
+```
+
+ 💡 We'll provide a guide with instructions about how to set up the custom domains
 
 ## Conclusion
 
