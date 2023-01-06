@@ -45,6 +45,7 @@ Alternatively, if you need a deep dive into Docker, check the official getting s
     - [Execute Bash Shell in the container](#execute-bash-shell-in-the-container)
   - [Run the container from the recommended stack](#run-the-container-from-the-recommended-stack)
     - [Running a stack with Docker compose](#running-a-stack-with-docker-compose)
+    - [Disabling SSL for testing](#disabling-ssl-for-testing)
   - [Conclusion](#conclusion)
 
 As Fleek Network's repositories are in constant development and change, you should consider that the following guide was [checked in](https://git-scm.com/docs/git-checkout) to commit `180585c`. While we try our best to update documentation and guides during development, there might be breaking changes that might take some time to reflect in our docs. To avoid disappointment, feel free to check into commit `180585c` or contribute by getting in touch with us, or sending a PR in the relevant context 🙏.
@@ -590,7 +591,7 @@ nginxexporter_1  | time="2023-01-06T13:48:07Z" level=error msg="Error scraping n
 
 To mitigate this issue, you'll have to run a script from the directory `docker/full-node` of the Ursa project.
 
-Start by changing the directory
+Start by changing the directory to:
 
 ```sh
 cd ./docker/full-node
@@ -608,7 +609,7 @@ Here's a practical example,
 DOMAINS="my-fleek-network-node.dev www.my-fleek-network-node.dev" ./init-letsencrypt.sh
 ```
 
-If you haven't set up the domain correctly, you'll get
+If you haven't set up the domain correctly, you'd get
 
 ```sh
 Certbot failed to authenticate some domains (authenticator: webroot). The Certificate Authority reported these problems:
@@ -619,7 +620,53 @@ Certbot failed to authenticate some domains (authenticator: webroot). The Certif
 Hint: The Certificate Authority failed to download the temporary challenge files created by Certbot. Ensure that the listed domains serve their content from the provided --webroot-path/-w and that files created there can be downloaded from the internet.
 ```
 
- 💡 We'll provide a guide with instructions about how to set up the custom domains
+ 💡 We'll provide a guide with instructions about how to set up the custom domains.
+
+### Disabling SSL for testing
+
+⚠️ A secure connection is mandatory, the following instructions are available for testing purposes only!
+
+As many of you might not have a custom domain and are just looking around to see what Fleek Network is about, a way around would be to disable SSL for testing, which means that the communication is none secure.
+
+Open and edit the file `docker/full-node/data/nginx/app.conf` and make the content the following:
+
+```sh
+proxy_cache_path /cache keys_zone=nodecache:100m levels=1:2 inactive=31536000s max_size=10g use_temp_path=off;
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name node.ursa.earth www.node.ursa.earth;
+
+    location /stub_status {
+      stub_status;
+    }
+
+    proxy_redirect          off;
+    client_max_body_size    10m;
+    client_body_buffer_size 128k;
+    proxy_connect_timeout   90;
+    proxy_send_timeout      90;
+    proxy_read_timeout      90;
+    proxy_buffers           32 128k;
+
+    location / {
+      add_header content-type  application/vnd.ipld.raw;
+      add_header content-type  application/vnd.ipld.car;
+      add_header content-type  application/octet-stream;
+      add_header cache-control public,max-age=31536000,immutable;
+
+      proxy_cache nodecache;
+      proxy_cache_valid 200 31536000s;
+      add_header X-Proxy-Cache $upstream_cache_status;
+      proxy_cache_methods GET HEAD POST;
+      proxy_cache_key "$request_uri|$request_body";
+      client_max_body_size 1G;
+
+      proxy_pass http://ursa:4069;
+    }
+}
+```
 
 ## Conclusion
 
