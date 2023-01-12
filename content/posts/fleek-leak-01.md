@@ -92,11 +92,11 @@ Before the end of 2022, we [dropped some alpha](https://blog.fleek.co/posts/intr
 
 Since this initial release it’s been full steam ahead 🚂 We’ve been gathering feedback from some big players and trying to reconcile on some primary implementations that we could use for a first use case of NFAs. Ultimately, thanks to some valuable feedback from the [dYdX](https://dydx.exchange/) team among others, we’ve landed on **community hosting**.
 
-In a nutshell, community hosting through NFAs will unlock the ability for web3 app owners to a**llow members of their community to run frontends for them**. Similar to what [Liquity](https://www.liquity.org/) has pioneered, this expands the amount of access points to an app, further decentralizing its most vulnerable attack vector
+In a nutshell, community hosting through NFAs will unlock the ability for web3 app owners to **allow members of their community to run frontends for them**. Similar to what [Liquity](https://www.liquity.org/) has pioneered, this expands the amount of access points to an app, further decentralizing its most vulnerable attack vector
 
 ![](https://storageapi.fleek.one/fleek-team-bucket/Blogs/nfa-roadmap.png)
 
-In addition to the community hosting MVP, we’ve got an EIP submission in the works to fully standardize the usage, management, and consumption of NFAs. 
+In addition to the community hosting MVP, we’ve got an EIP submission in the works to fully standardize the usage, management, and consumption of NFAs.
 
 Interested? NFAs are open source and we’ve got a working branch up and running for this MVP. You can view the code [here](https://github.com/fleekxyz/non-fungible-apps/tree/feat/app-mirrors).
 
