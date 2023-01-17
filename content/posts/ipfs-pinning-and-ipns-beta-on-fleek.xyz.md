@@ -1,6 +1,6 @@
 ---
 template: post
-draft: true
+draft: false
 title: The CLI Beta is Live, with IPFS Pinning & IPNS.
 slug: release-ipfs-pinning-ipns-beta-fleek-xyz
 date: 2023-01-18T03:00:00Z
