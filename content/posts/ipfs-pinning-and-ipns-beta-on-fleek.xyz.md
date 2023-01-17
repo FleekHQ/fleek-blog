@@ -8,12 +8,12 @@ socialImage: https://storageapi.fleek.one/27a60cdd-37d3-480c-ae88-3ad4ca886b13-b
 canonical: ''
 description: Fleek.xyz’s first beta release is live with the new CLI, including the
   IPFS Pinning and IPNS Mapping services.
-category: Announcement
+category: Announcements
 tags:
 - Fleek.xyz
 
 ---
-!![](https://storageapi.fleek.one/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/fleek-wide.png)
+![](https://storageapi.fleek.one/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/fleek-wide.png)
 
 This is not a drill, it’s Fleek.xyz first beta release. We are stoked to start the first chapter of Fleek’s new platform with the **test-phase of our new CLI and its two services: IPFS pinning and IPNS mapping.** Both services are live and ready to be battle-tested.
 
