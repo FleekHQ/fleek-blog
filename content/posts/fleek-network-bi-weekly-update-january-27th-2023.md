@@ -15,7 +15,9 @@ tags:
 - Fleek Network
 
 ---
-We’re back with another Fleek Network update, giving you a look at everything we’ve been working on since our last check-in! Our [last update](https://blog.fleek.co/posts/fleek-network-2023-kickoff) was focused on all the developments since our initial announcement at the beginning of December.
+![](https://storage.fleek.zone/fleek-team-bucket/Blogs/FN-Update-Jan-27.jpg)
+
+We’re back with another Fleek Network Bi-Weekly Update, giving you a look at everything we’ve been working on since our last check-in! Our [last update](https://blog.fleek.co/posts/fleek-network-2023-kickoff) was focused on all the developments since our initial announcement at the beginning of December.
 
 This Bi-weekly Update, and the ones going forward, will focus on work done in the previous two weeks, as well as give a glimpse of what’s to come in the next. Currently, the team is working on these milestones:
 
@@ -34,7 +36,9 @@ After [researching](https://docs.fleek.network/blog/bloom-and-cuckoo-filters-for
 
 We’ve also created some tests to benchmark this content routing system between peers, allowing us to test how fast data can be fetched P2P.
 
-Previously, we internally tracked node metrics globally when measuring network latency benchmarks and milestones. In the past two weeks, we’ve expanded this dashboard to now include [gateway metrics](https://github.com/fleek-network/ursa/pull/299) as well. We plan to release our metrics dashboard to the public soon so stay tuned!
+Previously, we internally tracked node metrics globally when measuring network latency benchmarks and milestones. In the past two weeks, we’ve expanded this dashboard to now include [gateway metrics](https://github.com/fleek-network/ursa/pull/299) as well.
+
+![](https://storage.fleek.zone/fleek-team-bucket/Blogs/gateway-metrics.png)
 
 This isn’t all we’ve completed– we’ve also finished initiatives and features like node-to-client direct streaming for gateways, IPFS origin fetching on cache misses, and more! We’re an open-source project, take a look through our [GitHub](https://github.com/fleek-network) for real-time updates on in-progress developments.
 
