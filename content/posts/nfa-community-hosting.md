@@ -6,7 +6,7 @@ slug: nfa-community-hosting
 date: 2023-01-21T04:00:00Z
 canonical: ''
 socialImage: https://storage.fleek.ooo/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/community-hosting-thumb1.png
-description: Update incoming! We’re working on an initial implementation of Non-Fungible Applications (NFAs) that focuses on decentralizing the access points to community owned web3 apps.
+description: Update incoming! We’re working on an initial implementation of Non-Fungible Applications (NFAs) that focuses on decentralizing the access points to community owned web3 apps
 category: Blog
 tags:
 - NFT
