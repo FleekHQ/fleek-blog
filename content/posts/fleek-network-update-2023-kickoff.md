@@ -91,4 +91,4 @@ We’ve made progress on several key areas, including setting up a devnet, makin
 
 While the team has made some major strides, we’re still putting a lot of effort into finalizing some key areas such as caching algorithms for content, consensus, governance, and our economics paper in the coming weeks. We plan to continue to share the development process transparently by releasing updates regularly so stay tuned.
 
-If you have any questions about Fleek Network and its development, reach out to the team in our [Discord server](https://discord.gg/fleekxyz)!
+If you have any questions about Fleek Network and its development, reach out to the team in our [Discord server](https://discord.gg/fleek)!
