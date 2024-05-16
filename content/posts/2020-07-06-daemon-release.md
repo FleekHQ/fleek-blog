@@ -1,17 +1,18 @@
 ---
 template: post
-title: 'Introducing The Space Daemon: Build Privacy-focused and Peer to Peer Apps'
+title: "Introducing The Space Daemon: Build Privacy-focused and Peer to Peer Apps"
 slug: daemon-release
 draft: false
 date: 2020-07-06T12:18:31.636+00:00
-description: We’re excited to introduce our latest and most exciting decentralized
+description:
+  We’re excited to introduce our latest and most exciting decentralized
   development, the Space Daemon. Come learn more and how to use it!
 category: Release
 socialImage: https://fleek-team-bucket.storage.fleek.co/SpaceDaemon.png
 tags:
-- release
-
+  - release
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/SpaceDaemon.png)
 
 We’re excited to introduce our latest and most exciting decentralized development, the Space Daemon.
@@ -22,15 +23,15 @@ Installing the [Space Daemon](https://github.com/FleekHQ/space-daemon "Space Dae
 
 Space is the next evolution of Cloud, where users can interact with apps fully private, p2p, and control their own data. The Space Deamon can essentially act as a data repository for user controlled data that apps can interact with and applications can build an ecosystem around. Imagine applications opting in for users to store their own data locally and provide experiences that ensure the best privacy and even boast peer to peer interactions between users without touching company servers. Big tech has taken advantage of user data for far too long, it's time to let users take back control and privacy of their data. Here are the features the Space Daemon will bring to your application:
 
-* Fully Private file upload via encrypted textile buckets.
-* Peer to Peer file sharing selectively with other people and/or within teams.
-* Identity solution enabling users to be fully anonymous or have as many identity associations
-* Filecoin network interaction for file storage and retrieval market.
-* Super easy to use Js library with easy to understand functions for File CRUD, Sharing, Identity, Backups, etc.
-* Datastore for applications and application registry to enable user data controlled applications
-* Trustless Data backups
-* Local file system mounting
-* More...
+- Fully Private file upload via encrypted textile buckets.
+- Peer to Peer file sharing selectively with other people and/or within teams.
+- Identity solution enabling users to be fully anonymous or have as many identity associations
+- Filecoin network interaction for file storage and retrieval market.
+- Super easy to use Js library with easy to understand functions for File CRUD, Sharing, Identity, Backups, etc.
+- Datastore for applications and application registry to enable user data controlled applications
+- Trustless Data backups
+- Local file system mounting
+- More...
 
 ## Getting Started
 
@@ -98,15 +99,15 @@ Run the project:
 
 ### Share your creations!
 
-We are excited to see what cool projects you will come up with using the Space Daemon, so share your ideas with us on [Twitter](https://twitter.com/FleekHQ "Fleek's Twitter").
+We are excited to see what cool projects you will come up with using the Space Daemon, so share your ideas with us on [Twitter](https://twitter.com/fleek "Fleek's Twitter").
 
 Happy hacking!
 
 \- Fleek Team
 
-* [Sign up](https://app.fleek.co "Sign Up") to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/ "Fleek's Slack")
-* Follow us on [Twitter](https://twitter.com/FleekHQ "Fleek's Twitter")
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw "Fleek's Youtube Channel")
-* Check out our [Tech Docs](https://docs.fleek.co/ "Fleek Docs")
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co "Sign Up") to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/ "Fleek's Slack")
+- Follow us on [Twitter](https://twitter.com/fleek "Fleek's Twitter")
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw "Fleek's Youtube Channel")
+- Check out our [Tech Docs](https://docs.fleek.co/ "Fleek Docs")
+- Contact us at support@fleek.co

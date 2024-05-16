@@ -1,27 +1,29 @@
 ---
 template: post
 draft: false
-title: 'To DFINITY and Beyond: Static Front-end Hosting, Internet Computer Gateway,
-  and the Next Steps.'
+title:
+  "To DFINITY and Beyond: Static Front-end Hosting, Internet Computer Gateway,
+  and the Next Steps."
 slug: to-dfinity-and-beyond-dfinity-frontend-hosting
 date: 2021-03-09T03:00:00.000+00:00
 socialImage: https://fleek-team-bucket.storage.fleek.co/Blog%20Inline/DfinitySites.png
 canonical: https://blog.fleek.co/posts/to-dfinity-and-beyond-dfinity-frontend-hosting
-description: It’s happening. DFINITY + Fleek are coming together to power front-end
+description:
+  It’s happening. DFINITY + Fleek are coming together to power front-end
   and sites hosting on the Internet Computer, a new Internet Computer Gateway, and
   our path forward into building trustless web services.
 category: Release
 tags:
-- Internet Computer
-- Hosting
-- Dfinity
-
+  - Internet Computer
+  - Hosting
+  - Dfinity
 ---
+
 ![dfinity release](https://fleek-team-bucket.storage.fleek.co/Blog%20Inline/DfinitySites.png)
 
 Major day for Fleek doesn’t begin to even cover it. Today, at a virtual event titled[ “Exploring Entrepreneurship in the Open Internet Boom”](https://dfinity.org/techcrunch/) hosted by the [DFINITY Foundation](https://dfinity.org/) in partnership with Techcrunch, we are revealing that we are joining the Internet Computer ecosystem in **full force** and going live on the Internet Computer!
 
-It’s a special release day  — we have a series of new Internet Computer specific features coming out onto the Fleek platform, like **Static Front-end Hosting**!
+It’s a special release day — we have a series of new Internet Computer specific features coming out onto the Fleek platform, like **Static Front-end Hosting**!
 
 This means you can now host and experiment with websites and apps on the Internet Computer's Alpha, a trustless blockchain-based infrastructure; as well as use our Internet Computer Gateway for accessing canisters over HTTP; or our Canister Proxying for resolving sites on the Internet Computer.
 
@@ -45,7 +47,7 @@ Buckle up, because when we say “To DFINITY and Beyond” we mean it.
 2. [Why do it on the Internet Computer](#next-steps-why-do-it-on-the-internet-computer)
 3. [Wrapping it up!](#next-steps-wrapping-it-up-)
 
-***
+---
 
 ## New Features: Static Frontend Hosting on DFINITY's Internet Computer
 
@@ -82,7 +84,7 @@ We'll progress the product as the Internet Computer progresses with the Mainnet,
 
 ### How Does Fleek Achieve Frontend Hosting on the Internet Computer?
 
-The process in the background is straightforward. When you connect your repository to Fleek, and make a deployment, Fleek uses the **DFINITY SDK** [(view documentation)](https://sdk.dfinity.org/docs/index.html) to create a front-end Canister on mainnet, and build and deploy your website’s code to it. 
+The process in the background is straightforward. When you connect your repository to Fleek, and make a deployment, Fleek uses the **DFINITY SDK** [(view documentation)](https://sdk.dfinity.org/docs/index.html) to create a front-end Canister on mainnet, and build and deploy your website’s code to it.
 
 Right now, we do front-end canisters only (thus, static sites), but in the future we will allow for back-end as well.
 
@@ -90,10 +92,10 @@ Right now, we do front-end canisters only (thus, static sites), but in the futur
 
 Then, the continuous deployment process begins! With your canister up and running, upon any pushed changes to your linked repository’s branch, Fleek will use the DFINITY SDK again to make Canister calls and update your website’s content **reflecting changes immediately.** This means you get all the usual perks, but with your site on the Internet Computer:
 
-* No content update delay
-* No risk of conflicts
-* Automatic SSL / DNS
-* CDN and caching
+- No content update delay
+- No risk of conflicts
+- Automatic SSL / DNS
+- CDN and caching
 
 All these are considered, in many ways, Web 2.0 elements that act as a bridge between the now evolving Web 3.0. As resolving becomes native to more devices and platforms (like browsers, or native apps and Dapps), each will be replaced by its Web 3.0 alternative.
 
@@ -212,9 +214,9 @@ We told you **2021 in the Open Web was going to be AWESOME** 🔥
 
 So stay posted, because we’re bringing more updates soon, and we are not thinking about slowing down our pace with these kinds of surprises!
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

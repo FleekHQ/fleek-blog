@@ -6,16 +6,17 @@ slug: handshake-domains-support-release
 date: 2021-03-29T03:00:00Z
 socialImage: https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/Handshake.png
 canonical: https://blog.fleek.co/posts/handshake-domains-support-release
-description: Link HNS domains to your IPFS or Interet Computer sites on Fleek! Mix
+description:
+  Link HNS domains to your IPFS or Interet Computer sites on Fleek! Mix
   the power of decentralized blockchain domains with distributed sites on the Open
   Web.
 category: Release
 tags:
-- Domains
-- Handshake
-- HNS
-
+  - Domains
+  - Handshake
+  - HNS
 ---
+
 ![](https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/Handshake.png)
 
 Fleek's protocol ranks grow again! Make room for [**Handshake**](https://handshake.org/), the peer-to-peer root naming system blockchain. Add **custom HNS domains for both IPFS & Internet Computer hosted sites and apps**, seamlessly, and as quick as it is to set up DNS or ENS.
@@ -65,7 +66,7 @@ There, click Add HNS, and a modal will pop up where you'll be able to specify an
 
 How do you verify an HNS domain and link it to your site? Same way you do with DNS. Set up a custom record to point it to your Fleek site. If you use **Namebase** to get your HNS TLD/domain, you can quickly update your records through there, or use your own Handshake Nameserver as an alternative.
 
-![](https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/records%20(1).png)
+![](<https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/records%20(1).png>)
 
 Hit verify HNS Configuration, and you're done 🚀 You've paired up Open Web hosting with a blockchain-based domain name.
 
@@ -73,7 +74,7 @@ Hit verify HNS Configuration, and you're done 🚀 You've paired up Open Web hos
 
 Handshake domains live on the Handshake blockchain, much like ENS names live on Ethereum, and are not yet fully supported/resolved but most browsers.
 
-Still, while that gap is bridged, there are many ways of sites using HNS domains. The most quick and easy way is to use [**hns.to**](https://hns.to/) to quickly verify that your new  site is up and running correctly. hns.to is a Handshake resolver, you can enter your domain in its search bar to find your site, or append its url at the end of your HNS domain name (`my.site.hns.to` ) to use it as a gateway to view it over HTTP.
+Still, while that gap is bridged, there are many ways of sites using HNS domains. The most quick and easy way is to use [**hns.to**](https://hns.to/) to quickly verify that your new site is up and running correctly. hns.to is a Handshake resolver, you can enter your domain in its search bar to find your site, or append its url at the end of your HNS domain name (`my.site.hns.to` ) to use it as a gateway to view it over HTTP.
 
 Another option is to use an **HNS compatible browser or extension**, [like PUMA](https://www.pumabrowser.com/), or the [LinkFrame extension](https://chrome.google.com/webstore/detail/linkframe/klcheodcjdbkbiljlcfiphagmkhbifmm?hl=en-US&authuser=0) for Chrome, that
 
@@ -89,9 +90,9 @@ To keep that engine fired, it's a must to keep integrating new protocols (like H
 
 And Handshake's ecosystem packs a punch, we can't wait to see what new opportunities it opens up, and jam with the community on what could come next for HNS + Fleek. Feel free to pop into our Slack community and to brainstorm with the team on some ideas ⚡.
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

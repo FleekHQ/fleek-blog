@@ -8,10 +8,10 @@ description: Did you know the ENTIRE Fleek platform is deployed using the Fleek 
 category: General
 socialImage: "./media/FleekOnFleek/socialImage.png"
 tags:
-- General
-- Informational
-
+  - General
+  - Informational
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/fleek-on-fleek.png)
 
 Did you know the ENTIRE Fleek platform is deployed using the Fleek platform? Yes, we are actually using Fleek on a daily basis to deploy our platform on IPFS. We are our own alpha testers, beta testers and users.
@@ -58,10 +58,10 @@ In the end, Fleek does this through a Fleek account which is the same type of ac
 
 In other words, if we did it, you can do it too!
 
-So don't hesitate to use Fleek to deploy your next project and, of course, share your creations with us on [twitter](https://twitter.com/FleekHQ)!
+So don't hesitate to use Fleek to deploy your next project and, of course, share your creations with us on [twitter](https://twitter.com/fleek)!
 
-* [Sign up](https://app.fleek.co) to try for yourself
-* [Join](https://slack.fleek.co/) our Community Chat
-* [Follow](https://twitter.com/FleekHQ) us on Twitter
-* [Read](https://docs.fleek.co/) out our Tech Docs
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try for yourself
+- [Join](https://slack.fleek.co/) our Community Chat
+- [Follow](https://twitter.com/fleek) us on Twitter
+- [Read](https://docs.fleek.co/) out our Tech Docs
+- Contact us at support@fleek.co

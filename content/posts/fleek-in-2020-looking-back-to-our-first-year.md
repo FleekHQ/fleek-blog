@@ -5,15 +5,16 @@ title: Fleek in 2020, Looking Back to Our First Year
 slug: fleek-in-2020-looking-back-to-our-first-year
 date: 2020-12-30T03:00:00Z
 socialImage: https://fleek-team-bucket.storage.fleek.co/Blog Inline/2020 in Review.jpg
-canonical: ''
-description: From the expected, to the extremely and globally unexpected, we’re grateful
+canonical: ""
+description:
+  From the expected, to the extremely and globally unexpected, we’re grateful
   to look back at our run this 2020 and see that, since Fleek’s release in the year’s
   first quarter, all changes that came pushed us forward to reach new heights and
   better help build the Dweb.
 category: General
 tags: []
-
 ---
+
 ![fleek 2020 review](https://fleek-team-bucket.storage.fleek.co/Blog Inline/2020 in Review.jpg)
 
 This year came with a lot of changes for everyone, and we weren’t the exception. After all, we kicked off 2020 by rebranding to Fleek and [releasing Fleek](https://blog.fleek.co/posts/introducing-fleek) V1 in February!
@@ -36,15 +37,15 @@ At that time, we understood how important Ethereum was going to be to Web 3.0, *
 
 However even with new pieces of the Web 3.0 stack coming together, a lot of them are still not user/developer friendly to use, and definitely not as plug-n-play as the equivalent Web 2.0 services are. **Thus, Fleek was born!** To start, we worked on making Dweb alternatives to core pillars of sites/apps and provide them via a familiar platform for deploying and hosting websites and apps that grew to become what it is today:
 
-* IPFS/Edge Hosting
-* IPFS Storage
-* IPFS Gateway
-* ENS/DNS/DNSLink
-* Diverse Framework Support (JamStack compatible)
+- IPFS/Edge Hosting
+- IPFS Storage
+- IPFS Gateway
+- ENS/DNS/DNSLink
+- Diverse Framework Support (JamStack compatible)
 
 **Almost a year later,** we can say the community’s response has been nothing short of amazing. Support has been a constant, from the day we crossed our first milestone back in February when we reached 1000 Fleek Beta users in one week, to today, with an open-to-public platform that is helping thousands of websites, apps, and Dapps to host and power their projects on the Dweb.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">gotta say that I'm loving <a href="https://twitter.com/FleekHQ?ref_src=twsrc%5Etfw">@FleekHQ</a> with <a href="https://twitter.com/ensdomains?ref_src=twsrc%5Etfw">@ensdomains</a>. very cool stuff guys. seamless ens subdomain integration directly with fleek's hosted ipfs content.</p>— JP (@JeevanPillay) <a href="https://twitter.com/JeevanPillay/status/1336137798160510976?ref_src=twsrc%5Etfw">December 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">gotta say that I'm loving <a href="https://twitter.com/fleek?ref_src=twsrc%5Etfw">@FleekHQ</a> with <a href="https://twitter.com/ensdomains?ref_src=twsrc%5Etfw">@ensdomains</a>. very cool stuff guys. seamless ens subdomain integration directly with fleek's hosted ipfs content.</p>— JP (@JeevanPillay) <a href="https://twitter.com/JeevanPillay/status/1336137798160510976?ref_src=twsrc%5Etfw">December 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 **We are thankful for the love and feedback** we get each day from the community, and the team enjoyed every bit of collaboration we’ve had this year with other close members of the Dweb, like the teams at Protocol Labs and Textile, who continue to push this space forward.
 
@@ -66,17 +67,17 @@ From our perspective, **ENS plays a significant role** in opening up and better 
 
 Our second big highlight of the year landed back in July, with the release of [the Space Daemon](https://blog.fleek.co/posts/space-daemon-getting-to-know), our first **open source library for building Dweb applications** which packages underlying protocols such as IPFS, Textile, Ethereum, and Filecoin and uses them to provide Dweb-enabled functionalities.
 
-<blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">The <a href="https://twitter.com/FleekHQ?ref_src=twsrc%5Etfw">@FleekHQ</a> Space Daemon packages together <a href="https://twitter.com/IPFS?ref_src=twsrc%5Etfw">@IPFS</a>, <a href="https://twitter.com/textileio?ref_src=twsrc%5Etfw">@textileio</a> Threads/Buckets, & Powergate into one easy to install & JS interface to make it easy to build peer to peer & privacy focused apps. Watch this Master Class w/ <a href="https://twitter.com/SamueleAgostin5?ref_src=twsrc%5Etfw">@SamueleAgostin5</a> to learn more: <a href="https://t.co/j8KWeuOkbs">https://t.co/j8KWeuOkbs</a></p>— Filecoin (@Filecoin) <a href="https://twitter.com/Filecoin/status/1344017888752054273?ref_src=twsrc%5Etfw">December 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">The <a href="https://twitter.com/fleek?ref_src=twsrc%5Etfw">@FleekHQ</a> Space Daemon packages together <a href="https://twitter.com/IPFS?ref_src=twsrc%5Etfw">@IPFS</a>, <a href="https://twitter.com/textileio?ref_src=twsrc%5Etfw">@textileio</a> Threads/Buckets, & Powergate into one easy to install & JS interface to make it easy to build peer to peer & privacy focused apps. Watch this Master Class w/ <a href="https://twitter.com/SamueleAgostin5?ref_src=twsrc%5Etfw">@SamueleAgostin5</a> to learn more: <a href="https://t.co/j8KWeuOkbs">https://t.co/j8KWeuOkbs</a></p>— Filecoin (@Filecoin) <a href="https://twitter.com/Filecoin/status/1344017888752054273?ref_src=twsrc%5Etfw">December 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 The Space Daemon is not only a result of, but the very backbone itself of [Space](http://space.storage/), our upcoming distributed and user-controlled storage platform which we will talk about a bit later! As we worked our way towards creating a trustless storage app, we organized the core pieces needed for any Dweb app’s architecture, and packaged them **for anyone to reuse** and power their app’s functionality with.
 
 With Fleek, our focus was to offer Dweb alternatives to the core infrastructure aspects of web/app development: hosting, storage, domains, etc. The Space Daemon, on the other hand, **comes to offer Dweb alternatives for the web/app functionality itself** in a ready-to-use way, approaching each feature from a Web 3.0 outlook:
 
-* Trustless
-* Permissionless
-* User-controlled
-* Censorship-resistant
-* Distributed/Decentralized
+- Trustless
+- Permissionless
+- User-controlled
+- Censorship-resistant
+- Distributed/Decentralized
 
 For example, with features like user-controlled and distributed storage on IPFS/Textile, backup redundancy on Filecoin, peer-to-peer and end-to-end encrypted interactions, and Ethereum-based authentication for user-owned accounts.
 
@@ -118,10 +119,10 @@ We’re thrilled to start the year with a bang. After this past year, and with a
 
 Best wishes from the team, and a happy new year! 🎊 Remember that, if the new year sparks some Dweb ideas, you can reach out or join our Slack community anytime. We’ll be happy to jam and discuss it, or provide any advice or help if we can 🙌
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
 
 Contact us at [support@fleek.co](mailto:support@fleek.co)

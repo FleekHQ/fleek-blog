@@ -4,15 +4,16 @@ title: A People’s Guide to IPFS
 slug: Guide-IPFS
 draft: false
 date: 2020-03-24T04:02:37.816+00:00
-description: IPFS presents itself as a radical innovation whose aim is to reshape
+description:
+  IPFS presents itself as a radical innovation whose aim is to reshape
   the entire web as we know it into a system that is more secure, efficient, and reliable.
 category: Tutorial
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/IPFS.png
 tags:
-- Guide
-- IPFS
-
+  - Guide
+  - IPFS
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/IPFS.png)
 
 “You never change things by fighting the existing reality. To change something, build a new model that makes the existing model obsolete.”
@@ -66,8 +67,8 @@ We have but scratched the surface of the technology and innovation behind IPFS. 
 
 ## Connect with Fleek team
 
-* [Sign up](https://app.fleek.co) to try yourself
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try yourself
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

@@ -15,9 +15,7 @@ tags:
 
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/HugoSocialImage.png)
 
-
 In this tutorial, we will show you how to create a themed Hugo blog, make your first blog post and how to share it with the world by hosting your site to IPFS by using Fleek.
-
 
 Let’s get started!
 
@@ -48,11 +46,9 @@ In my case, the console returns the following:
 Hugo Static Site Generator v0.67.1/extended Linux/amd64 BuildDate: unknown
 ```
 
-
 It’s a success! We can now create a new site.
 
 ## Create a new project
-
 
 Run the command below to initialize a new project.
 
@@ -70,6 +66,7 @@ This will run your website on the localhost with live reload by going to http://
 But you might have noticed we are seeing....a blank screen. That’s because we still need to select a theme!
 
 ## Selecting a theme
+
 Hugo has a TON of great themes we can select from which you can browse by clicking [here](https://themes.gohugo.io/).
 There’s one called Terminal which looks nice so let’s use it. Here is the [theme’s page](https://themes.gohugo.io/hugo-theme-terminal/) with more information and a [demo](https://themes.gohugo.io/theme/hugo-theme-terminal/) too!
 
@@ -97,7 +94,6 @@ tree.
 
 Run the following command in the project’s directory to install the theme by the theme as a git submodule.
 
-
 ```
 git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
@@ -105,6 +101,7 @@ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/termina
 The theme is now installed! If you go to the themes folder, you will find “terminal”, the theme we want to use. You will still not see anything if you go to http://localhost:1313. That’s because we still need to configure the theme.
 
 ## Configuring the theme
+
 Let’s take a quick look at the site structure again.
 
 ```
@@ -197,17 +194,13 @@ Now, let’s run the following command:
 hugo server
 ```
 
-
 If we go to http://localhost:1313, we get a basic page.
 
-
 ![](./Hugo/basic-page.png)
-
 
 By tweaking the config.toml file we can change many things about our blog such as menu items, color, etc… in an intuitive manner.
 
 Here is my new configuration after modifying the blog to my liking:
-
 
 ```
 baseurl = "/"
@@ -280,7 +273,6 @@ And the result below:
 
 But what is a blog without blog posts? Let’s create our first post now!
 
-
 ## Create a blog post
 
 Run the following command:
@@ -327,11 +319,9 @@ Now, we look at the blog through http://localhost:1313:
 
 ![](./Hugo/result-with-post.png)
 
-
 The blog post is there! We can click on it and read its awesome content. At this point, we can either write more blog posts, add images, further style our blog, etc…
 
 But we want to share our content with the world ASAP, so let’s deploy the blog on IPFS with Fleek.
-
 
 ## Deploying with Fleek
 
@@ -355,8 +345,7 @@ Next, we click `DEPLOY SITE` button and wait until the completion of the deploym
 
 And if we click on [wild-river-3030.on.fleek.co](https://wild-river-3010.on.fleek.co/), we are greeted by our beautiful Hugo blog hosted on IPFS!
 
-
 Your turn!
 Now, it’s your turn to create an awesome Hugo blog and host it on IPFS through Fleek.
 
-Share the result with us on [twitter](https://twitter.com/FleekHQ). We’d love to see what you come up with!
+Share the result with us on [twitter](https://twitter.com/fleek). We’d love to see what you come up with!

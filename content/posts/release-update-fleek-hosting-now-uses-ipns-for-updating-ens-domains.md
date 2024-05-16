@@ -5,17 +5,18 @@ title: Release Update - Fleek Hosting Now Uses IPNS for Updating ENS Domains!
 slug: ens-now-on-ipns-hash-updates
 date: 2021-06-01T04:00:00Z
 socialImage: https://storageapi2.fleek.co/fleek-team-bucket/blog/ipns-ens.png
-canonical: ''
-description: Now on Fleek, ENS joins forces with IPNS to make IPFS hash record updates
+canonical: ""
+description:
+  Now on Fleek, ENS joins forces with IPNS to make IPFS hash record updates
   scalable and inexpensive to all users, using static IPNS addresses per site, updated
   on IPFS’ Distributed Hash Tables.
 category: Announcement
 tags:
-- IPFS
-- IPNS
-- ENS
-
+  - IPFS
+  - IPNS
+  - ENS
 ---
+
 ![](https://storageapi2.fleek.co/fleek-team-bucket/blog/ipns-ens.png)
 
 Hosting a site or app on [IPFS](https://ipfs.io/) with Fleek, and decentralizing its naming with an [Ethereum Name Service (ENS) domain](http://ens.domains/)? Then this upgrade is for you. Now on Fleek, [IPNS ](https://docs.ipfs.io/concepts/ipns/#example-ipns-setup-with-cli)+ ENS combine forces to make ENS IPFS hash record updates scalable, fast, and inexpensive on Fleek.
@@ -72,9 +73,9 @@ We’re so pumped about how the use of blockchain domains is ramping up. ENS usa
 
 Plus, the work put behind IPNS by the team at IPFS has been amazing! Since go-ipfs 0.5.0 resolving speed shot up by 30-40x and now MetaMask is also resolving its addresses. This, combined with ENS L2 (which we can’t wait to see more of!) will be key to scaling blockchain domains endlessly.
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

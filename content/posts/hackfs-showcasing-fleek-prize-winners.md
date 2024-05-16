@@ -1,20 +1,21 @@
 ---
 template: post
 draft: false
-title: 'HackFS: Showcasing Fleek Prize Winners'
+title: "HackFS: Showcasing Fleek Prize Winners"
 slug: HackFS-winners
 date: 2020-08-24T04:00:00.000+00:00
-description: Thank you to Protocol Labs and ETH Global, the month of July - August
+description:
+  Thank you to Protocol Labs and ETH Global, the month of July - August
   2020 has been really exciting to watch developer teams build a bunch of awesome
   projects in the IPFS and Filecoin Ecosystem.
 category: Announcement
 tags:
-- Hackathon
+  - Hackathon
 socialImage: https://fleek-team-bucket.storage.fleek.co/HackFS2%20(1).jpg
-canonical: ''
-
+canonical: ""
 ---
-![](https://fleek-team-bucket.storage.fleek.co/HackFS2%20(1).jpg)
+
+![](<https://fleek-team-bucket.storage.fleek.co/HackFS2%20(1).jpg>)
 
 Thank you to Protocol Labs and ETH Global for hosting HackFS! The month of July - August 2020 has been really exciting to watch developer teams build a bunch of awesome projects in the IPFS and Filecoin Ecosystem.
 
@@ -22,9 +23,9 @@ The Fleek team was fortunate to be a Presenter Sponsor, giving an opening talk, 
 
 We wanted to take a moment and showcase some of the Fleek prize winners and share some of our thoughts on why they were special. We won't go over all the prize winners in detail, but here are all the Fleek winners:
 
-* Best Use of **Fleek Space Daemon**: [Shop FS](https://hack.ethglobal.co/showcase/shop-fs-recSnBFT0TY7XgYNK)
-* Best Use of **Fleek Hosting**: [BlockSig](https://hack.ethglobal.co/showcase/blocksig-recT3kpIaPtPKNek2), [Pyr](https://hack.ethglobal.co/showcase/pyr-rec9LKk3ZGMW6qrOa), [Web3API](https://hack.ethglobal.co/showcase/web3api-recItC5qPwuQmLqug), [IPFS-FPS](https://hack.ethglobal.co/showcase/ipfs-fps-rec1OcC5wSjdp1LEp), [Cadbury](https://hack.ethglobal.co/showcase/cadbury-reckhMFHOxGqXC8DY), [WFIL](https://hack.ethglobal.co/showcase/wfil-recCwbCnY2rnipjcR), [Parcel](https://hack.ethglobal.co/showcase/parcel-recMzBP7HUVYDYQIR),  [Public Annotation Network](https://hack.ethglobal.co/showcase/public-annotation-network-recnKxnp9epAR1fOF), [Sailplane](https://hack.ethglobal.co/showcase/sailplane-web-recoJM0CPadSrw9yj), [Pnlp.network](https://hack.ethglobal.co/showcase/pnlp-i-e-pulp-recmjUDBoPH8faOCC)
-* Best Use of **Fleek Storage**: [BlockSig](https://hack.ethglobal.co/showcase/blocksig-recT3kpIaPtPKNek2), [Azureus](https://hack.ethglobal.co/showcase/azureus-recTkk0jGPXRrwg6Z), [Mobility Marketplace](https://hack.ethglobal.co/showcase/mobility-marketplace-rectlFaxjBi0m2S5j), [WatchdogDAO](https://hack.ethglobal.co/showcase/watchdog-dao-rec1ds7btRqO0ZhE3), [Browser Streaming](https://hack.ethglobal.co/showcase/browser-streaming-recBbvY9FuBJYI99c), [Access Denied](https://hack.ethglobal.co/showcase/access-denied-rec4tYQAw3m287S4o), [Dtok](https://hack.ethglobal.co/showcase/dtok-recqD1ftybrCndTYv), [IPFS Deploy for Java](https://hack.ethglobal.co/showcase/ipfs-deploy-for-java-recy6OKUfckknpvas), [Fractal](https://hack.ethglobal.co/showcase/fractal-rec9Pwf9Wu59jLEI7), [Eat Out Coin](https://hack.ethglobal.co/showcase/eat-out-coin-rec29E37C5glphmeI)
+- Best Use of **Fleek Space Daemon**: [Shop FS](https://hack.ethglobal.co/showcase/shop-fs-recSnBFT0TY7XgYNK)
+- Best Use of **Fleek Hosting**: [BlockSig](https://hack.ethglobal.co/showcase/blocksig-recT3kpIaPtPKNek2), [Pyr](https://hack.ethglobal.co/showcase/pyr-rec9LKk3ZGMW6qrOa), [Web3API](https://hack.ethglobal.co/showcase/web3api-recItC5qPwuQmLqug), [IPFS-FPS](https://hack.ethglobal.co/showcase/ipfs-fps-rec1OcC5wSjdp1LEp), [Cadbury](https://hack.ethglobal.co/showcase/cadbury-reckhMFHOxGqXC8DY), [WFIL](https://hack.ethglobal.co/showcase/wfil-recCwbCnY2rnipjcR), [Parcel](https://hack.ethglobal.co/showcase/parcel-recMzBP7HUVYDYQIR), [Public Annotation Network](https://hack.ethglobal.co/showcase/public-annotation-network-recnKxnp9epAR1fOF), [Sailplane](https://hack.ethglobal.co/showcase/sailplane-web-recoJM0CPadSrw9yj), [Pnlp.network](https://hack.ethglobal.co/showcase/pnlp-i-e-pulp-recmjUDBoPH8faOCC)
+- Best Use of **Fleek Storage**: [BlockSig](https://hack.ethglobal.co/showcase/blocksig-recT3kpIaPtPKNek2), [Azureus](https://hack.ethglobal.co/showcase/azureus-recTkk0jGPXRrwg6Z), [Mobility Marketplace](https://hack.ethglobal.co/showcase/mobility-marketplace-rectlFaxjBi0m2S5j), [WatchdogDAO](https://hack.ethglobal.co/showcase/watchdog-dao-rec1ds7btRqO0ZhE3), [Browser Streaming](https://hack.ethglobal.co/showcase/browser-streaming-recBbvY9FuBJYI99c), [Access Denied](https://hack.ethglobal.co/showcase/access-denied-rec4tYQAw3m287S4o), [Dtok](https://hack.ethglobal.co/showcase/dtok-recqD1ftybrCndTYv), [IPFS Deploy for Java](https://hack.ethglobal.co/showcase/ipfs-deploy-for-java-recy6OKUfckknpvas), [Fractal](https://hack.ethglobal.co/showcase/fractal-rec9Pwf9Wu59jLEI7), [Eat Out Coin](https://hack.ethglobal.co/showcase/eat-out-coin-rec29E37C5glphmeI)
 
 ![](https://fleek-team-bucket.storage.fleek.co/fleekhackfswinners.jpeg)
 
@@ -64,9 +65,9 @@ Happy hacking!
 
 \- Fleek Team
 
-* [Sign up](https://app.fleek.co "Sign Up") to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/ "Fleek's Slack")
-* Follow us on [Twitter](https://twitter.com/FleekHQ "Fleek's Twitter")
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw "Fleek's Youtube Channel")
-* Check out our [Tech Docs](https://docs.fleek.co/ "Fleek Docs")
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co "Sign Up") to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/ "Fleek's Slack")
+- Follow us on [Twitter](https://twitter.com/fleek "Fleek's Twitter")
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw "Fleek's Youtube Channel")
+- Check out our [Tech Docs](https://docs.fleek.co/ "Fleek Docs")
+- Contact us at support@fleek.co

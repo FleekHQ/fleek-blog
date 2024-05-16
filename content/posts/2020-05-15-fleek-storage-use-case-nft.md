@@ -1,19 +1,20 @@
 ---
 template: post
-title: 'Fleek Storage SDK: Store NFT Assets on IPFS!'
+title: "Fleek Storage SDK: Store NFT Assets on IPFS!"
 slug: fleek-storage-nft
 draft: false
 date: 2020-05-15T04:02:37.816+00:00
-description: Fleek Storage solves a fundamental problem with many NFTs today by storing
+description:
+  Fleek Storage solves a fundamental problem with many NFTs today by storing
   assets to IPFS instead of a centralized server.
 category: Tutorial
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/SDKNFT.png
 tags:
-- Tutorial
-- SDK
-- NFT
-
+  - Tutorial
+  - SDK
+  - NFT
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/SDKNFT.png)
 
 Our new Fleek Storage product, which stores web assets on IPFS through a simple drag-and-drop interface, has been met with awesome positive feedback!
@@ -60,29 +61,29 @@ This data, including registry of ownership and CID, rests on the Ethereum blockc
 You can consult the smart contract's code of the ERC-721 token below and see how the minting and the setting of the CID works. The contract is based on the [OpenZeppelin libary](https://github.com/OpenZeppelin/openzeppelin-contracts).
 
     pragma solidity >=0.5.0;
-    
+
     import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-    
+
     contract CryptoMuseum is ERC721 {
         constructor() ERC721("CryptoMuseum", "CM") public {
         }
-    
+
         mapping(uint256 => string) private _CIDS;
-    
+
         function CID(uint256 tokenId) public view returns (string memory) {
           require(_exists(tokenId), "ERC721Metadata: CID query for nonexistent token");
-    
+
           string memory _CID = _CIDS[tokenId];
-    
+
           return _CID;
         }
-    
+
         function _setTokenCID(uint256 tokenId, string memory _CID) internal virtual {
           require(_exists(tokenId), "ERC721Metadata: CID set of nonexistent token");
           _CIDS[tokenId] = _CID;
         }
-    
-    
+
+
         function mint(string memory _CID) public {
           uint256 _newId = totalSupply() + 1;
           _safeMint(msg.sender, _newId);
@@ -115,7 +116,7 @@ Let's see how it work programmatically in the Crypto Museum dapp.
         region: 'us-east-1',
         s3ForcePathStyle: true
       });
-    
+
       // We defined the params
       // including the bucket which can be created either
       // programatically or on the Fleek Web app
@@ -127,9 +128,9 @@ Let's see how it work programmatically in the Crypto Museum dapp.
         Body: artwork,
         ACL: 'public-read',
       };
-    
+
       const request = s3.putObject(params);
-    
+
       request.on('httpHeaders', (statusCode, headers) => {
         const ipfsHash = headers['x-fleek-ipfs-hash'];
         // Do stuff with the IPFS hash. E.G.: Create an Ethereum Transaction...
@@ -145,8 +146,8 @@ Fleek Storage is an amazing solution to store assets in IPFS. It fixes a lingeri
 
 It's to make NFTs better thanks to IPFS!
 
-* [Sign up](https://app.fleek.co) to try for yourself
-* [Join](https://slack.fleek.co/) the #community slack channel
-* [Follow](https://twitter.com/FleekHQ) us on Twitter
-* [Read](https://docs.fleek.co/) our Tech Docs
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try for yourself
+- [Join](https://slack.fleek.co/) the #community slack channel
+- [Follow](https://twitter.com/fleek) us on Twitter
+- [Read](https://docs.fleek.co/) our Tech Docs
+- Contact us at support@fleek.co

@@ -1,18 +1,19 @@
 ---
 template: post
-title: 'Fleek + IPFS: Web3 Deployment Simplified'
+title: "Fleek + IPFS: Web3 Deployment Simplified"
 slug: Terminal+IPFS
 draft: false
 date: 2020-03-03T02:39:47.298+00:00
-description: Fleek.co offers a seamless workflow. It offers all the tools needed to
+description:
+  Fleek.co offers a seamless workflow. It offers all the tools needed to
   deploy and manage sites on IPFS. Focus on content and code. Fleek handles the rest.
 category: Informational
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/fleek-plus-ipfs.png
 tags:
-- Informational
-- Guide
-
+  - Informational
+  - Guide
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/fleek-plus-ipfs.png)
 
 ## Overview
@@ -61,17 +62,17 @@ Fleek aims to simplify web development into one seamless workflow. Simply push c
 
 Some features:
 
-* Fleek accommodates many frameworks such as gatsby, jekyll, create-react-app etc.
-* Fleek also handles DNS records. Either purchase a domain from them or point it to a domain you purchased elsewhere.
-* No need to manually update hashes, TXT values etc.
-* Fleek provides a [CID](https://docs.ipfs.io/guides/concepts/cid/)(content identifier) for more IPFS features such as verification and self hosting.
+- Fleek accommodates many frameworks such as gatsby, jekyll, create-react-app etc.
+- Fleek also handles DNS records. Either purchase a domain from them or point it to a domain you purchased elsewhere.
+- No need to manually update hashes, TXT values etc.
+- Fleek provides a [CID](https://docs.ipfs.io/guides/concepts/cid/)(content identifier) for more IPFS features such as verification and self hosting.
 
 ![](./media/deploypage.png)
 
 ## More Info
 
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Contact us at support@fleek.co
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Contact us at support@fleek.co
 
 Check out [Tech Docs](https://docs.fleek.co/)

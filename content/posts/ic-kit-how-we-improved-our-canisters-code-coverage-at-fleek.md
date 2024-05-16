@@ -1,25 +1,26 @@
 ---
 template: post
 draft: false
-title: 'IC Kit: Rust Canister Testing Kit we Used to Improve Code Coverage at Fleek'
+title: "IC Kit: Rust Canister Testing Kit we Used to Improve Code Coverage at Fleek"
 slug: ickit-rust-canister-testing
 date: 2021-09-21T05:00:00Z
 socialImage: https://storageapi2.fleek.co/fleek-team-bucket/ICKit%20Fleek%20Blog%20Header%20Image.png
-canonical: ''
-description: 'ICKit is a Rust library to assist with Rust canister testing on the
-  Internet Computer. '
+canonical: ""
+description:
+  "ICKit is a Rust library to assist with Rust canister testing on the
+  Internet Computer. "
 category: Tutorial
 tags:
-- Testing
-- Canisters
-- Rust
-- Internet Computer
-- ICKit
-
+  - Testing
+  - Canisters
+  - Rust
+  - Internet Computer
+  - ICKit
 ---
+
 ![](https://storageapi2.fleek.co/fleek-team-bucket/ICKit%20Fleek%20Blog%20Header%20Image.png)
 
-The Internet Computer makes it possible to deploy any WASM binary to your canister as long as it meets the runtime standards. So in theory, you could use any programming language that can be compiled to WASM to build canisters. 
+The Internet Computer makes it possible to deploy any WASM binary to your canister as long as it meets the runtime standards. So in theory, you could use any programming language that can be compiled to WASM to build canisters.
 
 Currently, the two most popular languages to write canisters are Rust and Motoko.
 
@@ -41,7 +42,7 @@ If you’re interested in the black magic that the \`ic-kit\` is doing, feel fre
 
 ### How does ICKit work? 🧠
 
-It comes down to conditional builds in rust and the **amazing \`cfg\` macro,** all of the IC system APIs which are accessible under \`ic_kit::ic::*\` module try to get the \`Context\` object based on the different build targets.
+It comes down to conditional builds in rust and the **amazing \`cfg\` macro,** all of the IC system APIs which are accessible under \`ic_kit::ic::\*\` module try to get the \`Context\` object based on the different build targets.
 
 **We have two implementations for the \`Context\` object**, one that uses the actual methods provided by the wasm runtime, and another that gets a custom context object for the current execution thread, because \`cargo test\` runs tests in parallel and we want isolation for our test cases.
 
@@ -59,6 +60,6 @@ If you would like a live demo & more information on ICKit please **check out our
 
 If you have any questions, please feel free to reach out to us on Discord. 👇
 
-* Join our [Discord](https://discord.com/invite/yVEcEzmrgm)💬
-* Follow us on [Twitter](https://twitter.com/FleekHQ) 🐦
-* Subscribe to our [Youtube channel ](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)📺
+- Join our [Discord](https://discord.com/invite/yVEcEzmrgm)💬
+- Follow us on [Twitter](https://twitter.com/fleek) 🐦
+- Subscribe to our [Youtube channel ](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)📺

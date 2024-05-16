@@ -1,21 +1,23 @@
 ---
 template: post
-title: Release Updates - DNS Link, Custom Fleek URLs, NuxtJS Support, Build and Bandwidth
+title:
+  Release Updates - DNS Link, Custom Fleek URLs, NuxtJS Support, Build and Bandwidth
   Stats and more!
 slug: Fleek-Release-Update-DNS-Link
 draft: false
 date: 2020-04-15T04:02:37.816+00:00
-description: '"We''re happy to bring you another release! This one is special because
+description:
+  '"We''re happy to bring you another release! This one is special because
   of all the request for DNS Link Support in particular. We have also released Custom
   Fleek URLs and custom naming of your site, NuxtJS framework auto detection, some
   stats on your build minutes and bandwidth, and more!"'
 category: Announcement
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/Release-Update-UI-rebrand.png
 tags:
-- Announcement
-- Release Update
-
+  - Announcement
+  - Release Update
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/Release-Update-UI-rebrand.png)
 
 We're happy to bring you another release! This one is special because of all the request for DNS Link Support in particular. We have also released Custom Fleek URLs and custom naming of your site, NuxtJS framework auto detection, some stats on your build minutes and bandwidth, and more!
@@ -82,8 +84,8 @@ After you reset your password you are now redirected back to login
 
 Thanks so much for reading the updates! Sign back in and check out the new features, enhancements, and bug fixes.
 
-* [Sign up](https://app.fleek.co) to try for yourself
-* [Join](https://slack.fleek.co/) our Community Chat
-* [Follow](https://twitter.com/FleekHQ) us on Twitter
-* [Read](https://docs.fleek.co/) out our Tech Docs
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try for yourself
+- [Join](https://slack.fleek.co/) our Community Chat
+- [Follow](https://twitter.com/fleek) us on Twitter
+- [Read](https://docs.fleek.co/) out our Tech Docs
+- Contact us at support@fleek.co

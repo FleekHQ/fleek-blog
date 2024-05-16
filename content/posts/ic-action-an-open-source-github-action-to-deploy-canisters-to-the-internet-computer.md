@@ -1,22 +1,24 @@
 ---
 template: post
 draft: false
-title: IC Action - An Open Source GitHub Action to Deploy Canisters to the Internet
+title:
+  IC Action - An Open Source GitHub Action to Deploy Canisters to the Internet
   Computer!
 slug: ic-action-deploy-canisters-internet-computer
 date: 2021-03-25T03:00:00Z
 socialImage: https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/Group%205815.png
-canonical: ''
-description: For any current (and future) devs building on DFINITY's IC (Internet
+canonical: ""
+description:
+  For any current (and future) devs building on DFINITY's IC (Internet
   Computer) and looking for GitHub CI/CD deployments for canisters, we got your back.
 category: Release
 tags:
-- CI/CD
-- Internet Computer
-- DFINITY
-- open source
-
+  - CI/CD
+  - Internet Computer
+  - DFINITY
+  - open source
 ---
+
 ![](https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/Group%205815.png)
 
 We're back with a surprise open source release for developers working on DFINITY's Internet Computer! The team just made public the [**IC Action**](https://github.com/FleekHQ/IC-Deploy-Action)**,** a GitHub Action anyone can use to deploy **any type of canisters** seamlessly to DFINITY's Internet Computer through GitHub's CI/CD pipeline.
@@ -27,13 +29,13 @@ This IC deploy action wraps commands from [DFINITY's DFX](https://github.com/dfi
 
 ![](https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/Dfinity+Fleek.png)
 
-If nothing rings a bell, well, _you've missed a big one_. A couple weeks ago we announced that Fleek was joining the [Internet Computer's ecosystem](https://blog.fleek.co/posts/to-dfinity-and-beyond-dfinity-frontend-hosting) in full force, releasing a stack of Internet Computer focused  features to Fleek:
+If nothing rings a bell, well, _you've missed a big one_. A couple weeks ago we announced that Fleek was joining the [Internet Computer's ecosystem](https://blog.fleek.co/posts/to-dfinity-and-beyond-dfinity-frontend-hosting) in full force, releasing a stack of Internet Computer focused features to Fleek:
 
-* Static frontend hosting on the Internet Computer
-* A new Internet Computer HTTP Gateway
-* Canister Proxying
+- Static frontend hosting on the Internet Computer
+- A new Internet Computer HTTP Gateway
+- Canister Proxying
 
-In Fleek, DFINITY's Internet Computer comes as an alternative to hosting on IPFS, with a different set of perks and purposes. It's a trustless, permissionless, and open blockchain-based infrastructure, and in the future it could allow us to rebuild Fleek on top of a 100% decentralized infrastructure. 
+In Fleek, DFINITY's Internet Computer comes as an alternative to hosting on IPFS, with a different set of perks and purposes. It's a trustless, permissionless, and open blockchain-based infrastructure, and in the future it could allow us to rebuild Fleek on top of a 100% decentralized infrastructure.
 
 But, if you look outside of Fleek, it is much more.
 
@@ -53,7 +55,7 @@ If this is the first time you're hearing about it you might need to step back, t
 
 ![](https://storageapi2.fleek.co/fleek-team-bucket/Blog Inline/Group 5818.png)
 
-Feel a little less lost? Then back to the news! There are **many ways to deploy your projects and code to canisters on the Internet Computer**. 
+Feel a little less lost? Then back to the news! There are **many ways to deploy your projects and code to canisters on the Internet Computer**.
 
 For example, DFINITY's [dfx CLI](https://sdk.dfinity.org/docs/developers-guide/cli-reference.html) and SDK.
 
@@ -65,9 +67,9 @@ Now the long version.
 
 ### Using Fleek's IC Deploy Action
 
-Here's the [IC Deploy Action's repository](https://github.com/FleekHQ/IC-Deploy-Action), you can also find it in the action marketplace. But, before getting started with the IC Action, kick things off by configuring and deploying a project to the Internet Computer using the [dfx CLI](https://sdk.dfinity.org/docs/developers-guide/cli-reference.html). 
+Here's the [IC Deploy Action's repository](https://github.com/FleekHQ/IC-Deploy-Action), you can also find it in the action marketplace. But, before getting started with the IC Action, kick things off by configuring and deploying a project to the Internet Computer using the [dfx CLI](https://sdk.dfinity.org/docs/developers-guide/cli-reference.html).
 
-You have to start with this so that your repository has the right canister identifiers and the configuration files to fill in the necessary GitHub secrets. 
+You have to start with this so that your repository has the right canister identifiers and the configuration files to fill in the necessary GitHub secrets.
 
 To create a new project with the dfx CLI:
 
@@ -86,7 +88,7 @@ Canisters also deploy with a particular entity, `default` by default. We'll use 
 Now that your canister is live on the IC, you can create workflow file `github/workflows/deploy.yml` in your repository:
 
     on: [push]
-    
+
     jobs:
       test-deploy:
         runs-on: ubuntu-latest
@@ -134,9 +136,9 @@ From here forward, this IC Action is **open to collaboration!** As we mentioned 
 
 **Consider this a community project,** everyone's welcome to jam on it 🤙. Just follow the instructions on the repo, create a pull request with your upgrades, and hop in our [Slack Community](https://slack.fleek.co/) to chat it out!
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

@@ -4,7 +4,8 @@ title: Introducing Fleek Storage
 slug: Fleek-Storage-Release
 draft: false
 date: 2020-05-13T04:02:37.816+00:00
-description: We're excited to release Fleek Storage! Storing files on IPFS is easier
+description:
+  We're excited to release Fleek Storage! Storing files on IPFS is easier
   and more performant than ever. We've leveraged an already popular S3 interface to
   interact with IPFS via our easy to use application, CLI, and SDK. The Storage solution
   comes with a built-in CDN, File Compression, and image resizing to achieve upmost
@@ -12,10 +13,10 @@ description: We're excited to release Fleek Storage! Storing files on IPFS is ea
 category: Announcement
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/StorageReleaseCover.png
 tags:
-- Announcement
-- Product Release
-
+  - Announcement
+  - Product Release
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/StorageReleaseCover.png)
 
 We're excited to release Fleek Storage! Storing files on IPFS is easier and more performant than ever. We've leveraged an already popular S3 interface to interact with IPFS via our easy to use application, CLI, and SDK. The Storage solution comes with a built-in CDN, File Compression, and image resizing to achieve upmost performance.
@@ -38,8 +39,8 @@ Last week at the IPFS Pinning Summit our co-founder, Brett Shear, gave a walkthr
 
 Thank you for reading our release updates. Sign up or sign back in and check out the updates for yourself!
 
-* [Sign up](https://app.fleek.co) to try for yourself
-* [Join](https://slack.fleek.co/) the #community slack channel
-* [Follow](https://twitter.com/FleekHQ) us on Twitter
-* [Read](https://docs.fleek.co/) our Tech Docs
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try for yourself
+- [Join](https://slack.fleek.co/) the #community slack channel
+- [Follow](https://twitter.com/fleek) us on Twitter
+- [Read](https://docs.fleek.co/) our Tech Docs
+- Contact us at support@fleek.co

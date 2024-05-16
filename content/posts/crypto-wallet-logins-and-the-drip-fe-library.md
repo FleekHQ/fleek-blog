@@ -5,18 +5,19 @@ title: "Ethereum Wallet Logins⚡ are Arriving to Fleek \U0001F98A"
 slug: crypto-wallet-logins-drip
 date: 2022-05-17T04:00:00Z
 socialImage: https://storageapi.fleek.co/fleek-team-bucket/fleek-ethereumlogin%20(1)%201%20(1).png
-canonical: ''
-description: Use MetaMask, Rainbow, or any Ethereum wallet to sign up & sign in to
+canonical: ""
+description:
+  Use MetaMask, Rainbow, or any Ethereum wallet to sign up & sign in to
   your Fleek account!
 category: Announcement
 tags:
-- Rainbow
-- Metamask
-- Ethereum
-- IPFS
-
+  - Rainbow
+  - Metamask
+  - Ethereum
+  - IPFS
 ---
-![](https://storageapi.fleek.co/fleek-team-bucket/fleek-ethereumlogin%20(1)%201%20(1).png)
+
+![](<https://storageapi.fleek.co/fleek-team-bucket/fleek-ethereumlogin%20(1)%201%20(1).png>)
 
 The day has come! As of today, you can sign up or sign in to Fleek with **an Ethereum wallet. Powered by Sign in With Ethereum and WalletConnect!**
 
@@ -25,7 +26,7 @@ It’s time to **welcome blockchain & crypto users into Fleek, the dApp way.**
 
 This is the first of many steps towards a Web3 rehaul to Fleek, bringing you wallet-based accounts and soon a non-custodial first experience.
 
-***
+---
 
 ## Ethereum Authentication on Fleek ⚡
 
@@ -35,9 +36,9 @@ If you visit [app.fleek.co](https://app.fleek.co/), you’ll find a new Sign in 
 
 For this new authentication option, we brought in **four main Ethereum provider options that you know and love:**
 
-* MetaMask 🦊
-* Rainbow 🌈
-* Wallet Connect 🤝
+- MetaMask 🦊
+- Rainbow 🌈
+- Wallet Connect 🤝
 
 Coming next? Gnosis Multi-Sig 🔒 too! We disabled this option momentarily as Gnosis handles signatures differently and a gas fee payment would be involved upon sign in. We're working on a different implementation to integrate it!
 
@@ -55,19 +56,19 @@ For these three wallets, all it takes is a QR scan to get started!
 
 ![](https://storageapi.fleek.co/fleek-team-bucket/fleek-logins/wc.webp)
 
-***
+---
 
 Users can create **new wallet-only accounts; or use the flow shown below to link a wallet to an existing GitHub or email account:**
 
 ![](https://storageapi.fleek.co/fleek-team-bucket/fleek-logins/change.webp)
 
-***
+---
 
 That’s a wrap for today! Hit our Discord or Twitter if you have any feedback regarding the release, and let us know what you’d like to see next come to Fleek. We’ve got a ton of news in store.
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join us on the [Psychedelic Discord Community](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join us on the [Psychedelic Discord Community](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

@@ -5,16 +5,17 @@ title: Filecoin Archiving Comes to Fleek Sites and Storage
 slug: filecoin-archiving-backup-fleek-sites-and-storage
 date: 2021-02-19T03:00:00Z
 socialImage: https://fleek-team-bucket.storage.fleek.co/Blog Inline/Fleek-Filecoin.png
-canonical: ''
-description: Archive your IPFS sites and storage hosted on Fleek automatically on
+canonical: ""
+description:
+  Archive your IPFS sites and storage hosted on Fleek automatically on
   Filecoin, the decentralized storage network, as a secondary backup layer.
 category: Release
 tags:
-- Hosting
-- Storage
-- Filecoin
-
+  - Hosting
+  - Storage
+  - Filecoin
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/Blog Inline/Fleek-Filecoin.png)
 
 Another update incoming! Last time, we announced the release of the [Space SDK](https://github.com/FleekHQ/space-sdk), our new open source library. Today, we’re excited to announce **we’re enabling automated Filecoin archiving / backups for all sites and storage on Fleek.**
@@ -59,7 +60,7 @@ This is just the beginning, though! As Filecoin grows both its network and funct
 
 Now, let’s dive into how Filecoin archiving behaves in this first release. When you upload a file or host a site on IPFS, Fleek will begin to **package them into batches** and ready them to be stored in Filecoin.
 
-These payloads (composed by multiple files, not individual ones) are then sent to a Filecoin miners who receive the pieces of data, prompting a deal on chain, and beginning Filecoin’s  “sector sealing” process. Here the miner generates a proof-of-replication, a unique representation and replica of the data, sealed in the storage “sector” after being encoded into a new configuration that allows for the next proof process (PoS).
+These payloads (composed by multiple files, not individual ones) are then sent to a Filecoin miners who receive the pieces of data, prompting a deal on chain, and beginning Filecoin’s “sector sealing” process. Here the miner generates a proof-of-replication, a unique representation and replica of the data, sealed in the storage “sector” after being encoded into a new configuration that allows for the next proof process (PoS).
 
 After this, miners must constantly present a Proof-of-Spacetime, or proof of the continuous storage of this information.
 
@@ -79,9 +80,9 @@ Thanks to the team at Protocol Labs for the amazing work together these past few
 
 And do stay alert for that, because like we said, this is just the beginning. We are two months into the year and we can say that, without a doubt, it will be jam-packed with news from IPFS, Filecoin, us, and the rest of the Open Web community.
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

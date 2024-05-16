@@ -5,18 +5,19 @@ title: Using Eth.Limo as an Alternative to Eth.Link in Fleek
 slug: eth-limo-alternative-eth-link
 date: 2021-09-10T04:00:00Z
 socialImage: https://storageapi2.fleek.co/fleek-team-bucket/blog/Eth.limo-background.png
-canonical: ''
-description: Explore using Eth.Limo as a decentralized alternative to Cloudflare's
+canonical: ""
+description:
+  Explore using Eth.Limo as a decentralized alternative to Cloudflare's
   Eth.Link gateway.
 category: Tutorial
 tags:
-- Cloudflare
-- CDN
-- ENS
-- Eth.Link
-- Eth.Limo
-
+  - Cloudflare
+  - CDN
+  - ENS
+  - Eth.Link
+  - Eth.Limo
 ---
+
 ![](https://storageapi2.fleek.co/fleek-team-bucket/blog/Eth.limo-background.png)
 
 Over the last few weeks, we have been getting a lot of support requests regarding IPFS websites using ENS being unable to resolve under .eth.link urls. In the end, we discovered that .ETH.LINK (a resolver/gateway to ENS names provided by Cloudflare) had been having **very inconsistent performances**.
@@ -55,7 +56,7 @@ Most importantly, Limo has been [reporting high uptimes](https://twitter.com/eth
 
 You don't have to do _anything_ to use eth.limo to resolve your ENS domains, that's the best thing.
 
-Visit https://<your-ens-domain>.eth.limo and see for yourself! For example... https://fleekhq.eth.limo. 
+Visit https://<your-ens-domain>.eth.limo and see for yourself! For example... https://fleekhq.eth.limo.
 
 ### Wrapping it up
 
@@ -63,8 +64,8 @@ We hope this helped for everyone having problems resolving their websites with e
 
 As always, feel free to reach out to us on Twitter or Discord to let us know about any features, bugs, or improvements you think our team should take care of next 🤟
 
-* [Sign up](https://app.fleek.co) to try Fleek ⚡️
-* Join our [Community Chat](https://discord.com/invite/yVEcEzmrgm) 💬
-* Follow us on [Twitter](https://twitter.com/FleekHQ) 🐦
-* Subscribe to our [Youtube channel ](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)📺
-* Check out our [Tech Docs](https://docs.fleek.co/) ✍️
+- [Sign up](https://app.fleek.co) to try Fleek ⚡️
+- Join our [Community Chat](https://discord.com/invite/yVEcEzmrgm) 💬
+- Follow us on [Twitter](https://twitter.com/fleek) 🐦
+- Subscribe to our [Youtube channel ](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)📺
+- Check out our [Tech Docs](https://docs.fleek.co/) ✍️

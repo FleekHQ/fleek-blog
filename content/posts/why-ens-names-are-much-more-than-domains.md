@@ -4,18 +4,20 @@ draft: false
 title: Why ENS Names are Much More Than Domains
 slug: why-ens-names-are-much-more-than-domains
 date: 2020-12-23T04:00:00Z
-socialImage: https://fleek-team-bucket.storage.fleek.co/Blog Inline/ENS DOmains All
+socialImage:
+  https://fleek-team-bucket.storage.fleek.co/Blog Inline/ENS DOmains All
   in one web tool.jpg
-canonical: ''
-description: ENS domains have the power to combine multiple web services (banking,
+canonical: ""
+description:
+  ENS domains have the power to combine multiple web services (banking,
   billing, hosting,  authentication, identity, etc...) into a single, frictionless
   one. Learn how this new web stack changes and simplifies how we build websites and
   web applications.
 category: General
 tags:
-- ENS
-
+  - ENS
 ---
+
 ![ENS Domains web infrastructure](https://fleek-team-bucket.storage.fleek.co/Blog Inline/ENS DOmains All in one web tool.jpg)
 
 We recently did a [deep dive on ENS](https://blog.fleek.co/posts/guide-ens-domains-ipfs-ethereum-name-service) (Ethereum Name Service) domains, and how they can help decentralize websites/apps with their Ethereum-based naming system.
@@ -62,15 +64,15 @@ With ENS, domain names (or pseudonyms) could become the main online ID of an ind
 
 What’s more, not only ENS encompasses username-like fields such as ETH addresses, but metadata as well. As of today, when you register an .eth ENS domain like MyName.eth, you could add the following records to it:
 
-* ETH/BTC/Doge/LTC/Atom/Dash +40 other wallet addresses.
-* IPFS content hashes.
-* Custom text records
-* Keywords
-* URLs
-* Github handles
-* Twitter handles
-* Email addresses
-* Avatars
+- ETH/BTC/Doge/LTC/Atom/Dash +40 other wallet addresses.
+- IPFS content hashes.
+- Custom text records
+- Keywords
+- URLs
+- Github handles
+- Twitter handles
+- Email addresses
+- Avatars
 
 This opens up the playing field tremendously for custom use cases in the future. Any platform could add their [custom records](https://medium.com/the-ethereum-name-service/new-custom-text-records-means-every-project-can-have-its-own-ens-record-a68022bb8f86) to ENS and enable users to take advantage of this naming system; or any person could build up their custom online identity, referencing all relevant aspects easily: financial, social, professional, etc.
 
@@ -96,9 +98,9 @@ Now, having matured and grown in use cases, it is time to think of them as an am
 
 Check out the [ENS documentation](https://docs.ens.domains/ens-migration/guide-for-dapp-developers) site for further use case examples and experiments you can make in your Dapp! You can get started with [IPFS+ENS hosting in Fleek](https://fleek.co/ens-domains/), so get building and share with us your latest project 👋
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

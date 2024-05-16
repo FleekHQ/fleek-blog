@@ -4,15 +4,16 @@ title: Constant Links in IPFS - IPNS vs DNSLink VS ENS
 slug: immutable-ipfs
 draft: false
 date: 2020-05-04T04:02:37.816+00:00
-description: How can constant links be generated for IPFS websites? What is IPNS,
+description:
+  How can constant links be generated for IPFS websites? What is IPNS,
   DNS Link and ENS?
 category: General
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/immutable-ipfs.png
 tags:
-- General
-- Informational
-
+  - General
+  - Informational
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/immutable-ipfs.png)
 
 We tend to take constant links for granted when navigating the web. For example, if I invited you to visit Fleek's homepage, I'd give you the following link: [https://fleek.co](https://fleek.co). This link never changes, that is why I can share it with you.
@@ -90,8 +91,8 @@ Here's our site on ENS: [fleekhq.eth/](https://fleekhq.eth/)!
 Fleek harnesses all theses technologies in an easy-to-use manner.
 Host your site on Fleek and join the new decentralized web!
 
-* [Sign up](https://app.fleek.co) to try for yourself
-* [Join](https://slack.fleek.co/) our Community Chat
-* [Follow](https://twitter.com/FleekHQ) us on Twitter
-* [Read](https://docs.fleek.co/) out our Tech Docs
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try for yourself
+- [Join](https://slack.fleek.co/) our Community Chat
+- [Follow](https://twitter.com/fleek) us on Twitter
+- [Read](https://docs.fleek.co/) out our Tech Docs
+- Contact us at support@fleek.co

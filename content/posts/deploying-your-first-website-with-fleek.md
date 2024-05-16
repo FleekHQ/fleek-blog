@@ -1,19 +1,20 @@
 ---
 template: post
 draft: false
-title: 'Deploying Your First Website With Fleek! '
+title: "Deploying Your First Website With Fleek! "
 slug: deploy-your-first-website-with-fleek
 date: 2022-04-13T04:00:00.000+00:00
 socialImage: https://storageapi2.fleek.co/fleek-team-bucket/blog/fleek-guide.png
 canonical: https://blog.fleek.xyz/post/release-sites-deployment-beta-cli/
-description: 'It doesn''t matter what your preferred framework is, deploying a website
-  on the open web has never been easier with Fleek! '
+description:
+  "It doesn't matter what your preferred framework is, deploying a website
+  on the open web has never been easier with Fleek! "
 category: Tutorial
 tags:
-- IPFS
-- Fleek
-
+  - IPFS
+  - Fleek
 ---
+
 ![](https://storageapi2.fleek.co/fleek-team-bucket/blog-images/deploy-fleek.png)
 
 Just getting started on Fleek? In this quick guide, you’ll find resources to kick start your journey with your favorite framework!
@@ -27,16 +28,16 @@ The first step to take to deploy a site is to understand what you’ll be workin
 
 Here are in-depth instructions per framework:
 
-* [Hugo](https://blog.fleek.co/posts/go-with-hugo-and-fleek)
-* [Angular](https://blog.fleek.co/posts/angularjs-on-ipfs-on-fleek)
-* [NuxtJS](https://blog.fleek.co/posts/Deploying-nuxtJS-through-IPFS-on-Fleek)
-* [Jekyll](https://blog.fleek.co/posts/deploy-jekyll-blog-on-fleek)
-* [Gatsby](https://blog.fleek.co/posts/Gatsby-Fleek)
-* [WordPress](https://blog.fleek.co/posts/wordpress+fleek)
-* [NextJS](https://blog.fleek.co/posts/fleek-nextJS)
-* [React](https://blog.fleek.co/posts/fleek-create-react-app)
-* [Forestry CMS](https://blog.fleek.co/posts/make-website-without-coding-cms)
-* [Webflow Static](https://blog.fleek.co/posts/hosting-static-webflow-sites-on-fleek)
+- [Hugo](https://blog.fleek.co/posts/go-with-hugo-and-fleek)
+- [Angular](https://blog.fleek.co/posts/angularjs-on-ipfs-on-fleek)
+- [NuxtJS](https://blog.fleek.co/posts/Deploying-nuxtJS-through-IPFS-on-Fleek)
+- [Jekyll](https://blog.fleek.co/posts/deploy-jekyll-blog-on-fleek)
+- [Gatsby](https://blog.fleek.co/posts/Gatsby-Fleek)
+- [WordPress](https://blog.fleek.co/posts/wordpress+fleek)
+- [NextJS](https://blog.fleek.co/posts/fleek-nextJS)
+- [React](https://blog.fleek.co/posts/fleek-create-react-app)
+- [Forestry CMS](https://blog.fleek.co/posts/make-website-without-coding-cms)
+- [Webflow Static](https://blog.fleek.co/posts/hosting-static-webflow-sites-on-fleek)
 
 Whatever your choice is, **step two happens in the same place for everyone: a GitHub repository.** You will need to create your site and push the project to a Github Repository. With that in hand, you’ll be ready to **visit the Hosting tab in the Fleek app, and hit “Add New Site”.**
 
@@ -46,7 +47,7 @@ Connect your GitHub account to Fleek, select your site’s repo and branch, and 
 
 That’s all! Fleek will run your build and will create a preview URL of your site under a Fleek-powered subdomain. You’ll also be able to verify the content on IPFS (or the IC) via a separate and direct url.
 
-***
+---
 
 ## Next Steps- Customizing a DNS, ENS or HNS Domain
 
@@ -88,7 +89,7 @@ Pay the ensuing ETH gas fee, and your site will now direct to your ENS domain. T
 
 An ENS domain can encompass the entirety of an online entity or company, all within a single decentralized web address. Companies can handle payments, and direct to sites or socials with one single address. And with Fleek, integrating these addresses into your sites, and having them point to your content in IPFS is as easy as adding any DNS domain!
 
-***
+---
 
 ## Why Deploy Through Fleek & Host on the Open Web?
 
@@ -100,13 +101,13 @@ Additionally, since IPFS distributes data across nodes and points to specific da
 
 In the case of Internet Computer hosting, you can rely on a decentralized and blockchain-run infrastructure that can store your content directly onto a smart contract (canister).
 
-***
+---
 
 That’s all for today’s quick guide! As always you can find us on Twitter, our Discord community (the Psychedelic Discord server), if you need further assistance or have questions regarding your experience at Fleek.
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join us on the [Psychedelic Discord Community](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join us on the [Psychedelic Discord Community](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

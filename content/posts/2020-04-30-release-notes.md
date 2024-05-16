@@ -4,16 +4,17 @@ title: Release Updates - ENS Domains on Your IPFS Site!
 slug: Fleek-Release-ENS-Domains
 draft: false
 date: 2020-04-30T04:02:37.816+00:00
-description: This release brings the IPFS community ENS Domains! Since so much of
+description:
+  This release brings the IPFS community ENS Domains! Since so much of
   the Ethereum space uses IPFS for their sites and apps, ENS support has been one
   of our most requested features.
 category: Announcement
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/Release-Update-UI-rebrand.png
 tags:
-- Announcement
-- Release Update
-
+  - Announcement
+  - Release Update
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/Release-Update-UI-rebrand.png)
 
 This release brings the IPFS community ENS Domains! Since so much of the Ethereum space uses IPFS for their sites and apps, ENS support has been one of our most requested features.
@@ -34,8 +35,8 @@ We've been working on a major release that you can learn about at our next talk 
 
 Thanks you for reading our release updates. Sign back in and check out them out yourself!
 
-* [Sign up](https://app.fleek.co) to try for yourself
-* [Join](https://slack.fleek.co/) the #community slack channel
-* [Follow](https://twitter.com/FleekHQ) us on Twitter
-* [Read](https://docs.fleek.co/) our Tech Docs
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try for yourself
+- [Join](https://slack.fleek.co/) the #community slack channel
+- [Follow](https://twitter.com/fleek) us on Twitter
+- [Read](https://docs.fleek.co/) our Tech Docs
+- Contact us at support@fleek.co

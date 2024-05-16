@@ -4,17 +4,18 @@ title: Create and Deploy a React Application to IPFS in Under Ten Minutes
 slug: fleek-create-react-app
 draft: false
 date: 2020-03-10T02:38:34.993+00:00
-description: A React application can be bootstrapped in a matter of minutes with create-react-app.
+description:
+  A React application can be bootstrapped in a matter of minutes with create-react-app.
   Fleek allows apps to be deployed to IPFS in a matter of minutes. These two go together
   like peanut butter and jelly, allowing for development and deployment to be complete
   in a flash.
 category: Tutorial
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/CreateReactAppSocialimage.png
 tags:
-- Tutorial
-- Guide
-
+  - Tutorial
+  - Guide
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/CreateReactAppSocialimage.png)
 
 A React application can be bootstrapped in a matter of minutes with create-react-app. Fleek allows apps to be deployed to IPFS in a matter of minutes. These two go together like peanut butter and jelly, allowing for development and deployment to be complete in a flash.
@@ -121,7 +122,7 @@ Creating the default react app and deploying it to IPFS takes less than 10 minut
 
 [**Create-React-App**](https://reactjs.org/docs/create-a-new-react-app.html)
 
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/fleekxyz)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

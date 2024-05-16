@@ -1,22 +1,23 @@
 ---
 template: post
 draft: false
-title: 'Introducing the Space SDK: Build Your Web & Mobile App on the Open Web'
+title: "Introducing the Space SDK: Build Your Web & Mobile App on the Open Web"
 slug: introducing-space-sdk-release
 date: 2021-02-03T03:00:00Z
 socialImage: https://fleek-team-bucket.storage.fleek.co/Blog Inline/SpaceSDK.png
 canonical: https://blog.space.storage/posts/introducing-space-sdk-release
-description: The Space SDK is a complimentary framework that enables the use of features
+description:
+  The Space SDK is a complimentary framework that enables the use of features
   enabled by IPFS, Textile, Ethereum, GunDB, and other Open Web protocols via the
   Space API.
 category: Release
 tags:
-- Textile
-- IPFS
-- GunDB
-- Space
-
+  - Textile
+  - IPFS
+  - GunDB
+  - Space
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/Blog Inline/SpaceSDK.png)
 
 The team’s thrilled to showcase our latest open source endeavor… A new library for developing decentralized applications on web and mobile: **the Space SDK!**
@@ -25,18 +26,18 @@ The **Space SDK** is a JavaScript/TypeScript library that you can integrate with
 
 **You can find the repository and documentation here:**
 
-* [Space SDK Github Page](https://github.com/FleekHQ/space-sdk)
-* [Space SDK Documentation](https://fleekhq.github.io/space-sdk/docs/)
-* [Entire Space SDK package breakdown](https://fleekhq.github.io/space-sdk/docs/sdk)
+- [Space SDK Github Page](https://github.com/FleekHQ/space-sdk)
+- [Space SDK Documentation](https://fleekhq.github.io/space-sdk/docs/)
+- [Entire Space SDK package breakdown](https://fleekhq.github.io/space-sdk/docs/sdk)
 
 This is an early version of the SDK, and more updates are coming to it this week as its first expansion (Sharing features), as well as in the upcoming months as we test it out in the open and receive feedback and suggestions to explore new ideas!
 
 The Space SDK is a complimentary framework that enables the use of [IPFS](https://ipfs.io/), [Textile](http://textile.io/), [Ethereum](https://ethereum.org/), [GunDB](https://gun.eco/), and other Open Web protocols via the Space API, **without the need of running local instances** like an IPFS node on the user’s device, and allowing for web and mobile experiences that can:
 
-* Store files and data in user-controlled storage.
-* Enable public or private and e2e encrypted file sharing.
-* Integrate a user-owned key-pair based identity system.
-* Host/deliver content via user-powered global data layers (coming soon!)
+- Store files and data in user-controlled storage.
+- Enable public or private and e2e encrypted file sharing.
+- Integrate a user-owned key-pair based identity system.
+- Host/deliver content via user-powered global data layers (coming soon!)
 
 All features in the Space SDK are simplified. Things like storage, file sharing, key-based authentication are easily accessible via **ready-to-use methods** 🔥
 
@@ -75,18 +76,18 @@ Currently, the SDK has the following APIs:
 
 The User Module handles a couple of elements regarding user identity and authentication management. The default implementation provides a basic identity layer on top of the Textile Hub, handling key generation and retrieval for each user, authentication, and session tokens.
 
-* Identity creation and management
-* Challenge-based authentication
-* Passphrase key backup
+- Identity creation and management
+- Challenge-based authentication
+- Passphrase key backup
 
 ## Storage API:
 
 The Storage Module enables web/mobile applications to upload, pin, manage, and fetch files and data from IPFS/Textile, programmatically, using CRUD operations. By default, it points to the Textile Hub and Space Services, but it can be modified to connect other storage layers. [GunDB is used as the default metadata storage](https://fleekhq.github.io/space-sdk/docs/sdk.gundbmetadatastore) used by the UserStorage class.
 
-* Create files / directories
-* List files /directories
-* Create buckets
-* Sharing **(coming soon!)**
+- Create files / directories
+- List files /directories
+- Create buckets
+- Sharing **(coming soon!)**
 
 ### Interface Highlights ✨
 
@@ -107,23 +108,23 @@ That's all! You're set to get started using our different APIs.
 **Users / Identities example:**
 
     import { Users } from '@spacehq/sdk';
-    
+
     const users = new Users({ endpoint: 'wss://auth-dev.space.storage' });
-    
+
     // createIdentity generate a random keypair identity
     const identity = await users.createIdentity();
-    
+
     // the new keypair can be used to authenticate a new user
     // `users.authenticate()` generates hub API session tokens for the keypair identity.
     const user = await users.authenticate(identity);
     // `user` can be used with the storage class to provide identity.
-    
+
     // user's identity can also be backed up with a special recovery phrase
     const uuid = 'specify-uuid-representing-user-in-your-system';
     const passphrase = 'specify-unique-pass-phrase-related-to-backup-type';
     const backupType = VaultBackupType.Google;
     await users.backupKeysByPassphrase(uuid, passphrase, backupType, user.identity);
-    
+
     // backed up users identity can also be recovered later
     const recoveredUser = await users.recoverKeysByPassphrase(uuid, passphrase, backupType);
     // `recoveredUser` has same authentication as `user` above.
@@ -133,12 +134,12 @@ Want more examples? Read the [User's class document](https://fleekhq.github.io/s
 **Storage example:**
 
     import { UserStorage, AddItemsResultSummary } from '@spacehq/sdk';
-    
+
     const storage = new UserStorage(user);
     await storage.createFolder({ bucket: 'personal', path: 'topFolder' });
     const result = await storage.listDirectory({ path: '' });
     // result contains `topFolder` items
-    
+
     // upload a file
     const uploadResponse = await spaceStorage.addItems({
        bucket: 'personal',
@@ -173,9 +174,9 @@ You can get started with the Space SDK on its [Github page](https://github.com/F
 
 We’re looking forward to seeing what cool projects come up! It’s exciting to think that, with the SDK, Dapps and websites across all platforms (web/mobile/desktop) can explore new ways of providing Web3 enabled features 🔥
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

@@ -8,10 +8,10 @@ description: Learn how to use the storage SDK to store files in IPFS.
 category: Tutorial
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/SDKGuideCover.png
 tags:
-- Tutorial
-- SDK
-
+  - Tutorial
+  - SDK
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/SDKGuideCover.png)
 
 Fleek Storage makes it easy to upload files to IPFS and distribute them on modern websites. To that end, we have made an awesome [web app](https://app.fleek.co) that allows users to store and access their files in a simple and visual manner.
@@ -29,9 +29,9 @@ Below are some common commands for the Fleek Storage SDK. They are only a small 
 
 That being said, the commands we will share in this article should be sufficient for common use cases such as:
 
-* Uploading a file
-* Getting the IPFS hash of a file
-* Creating a shareable public URL of assets for use in websites
+- Uploading a file
+- Getting the IPFS hash of a file
+- Creating a shareable public URL of assets for use in websites
 
 ## Fetching your credentials with the Fleek CLI
 
@@ -65,7 +65,7 @@ The `aws-sdk` npm package must be installed to interact with Fleek Storage.
 We will now set up an S3 client using our credentials. This client will be used for all other AWS S3 commands.
 
     const AWS = require('aws-sdk');
-    
+
     const s3 = new AWS.S3({
         apiVersion: '2006-03-01',
         accessKeyId: '[[apiKey]]',
@@ -189,8 +189,8 @@ You are now a master of the Fleek Storage SDK. We cannot wait to see what you wi
 
 If you have questions or suggestions concerning our SDK, do not hesitate to contact us on our [Slack Channel](https://join.slack.com/t/fleek-public/shared_invite/zt-bxna7y1d-PbVdut4rgHt5jM6Zjg9g9A).
 
-* [Sign up](https://app.fleek.co) to try for yourself
-* [Join](https://slack.fleek.co/) the #community slack channel
-* [Follow](https://twitter.com/FleekHQ) us on Twitter
-* [Read](https://docs.fleek.co/) our Tech Docs
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try for yourself
+- [Join](https://slack.fleek.co/) the #community slack channel
+- [Follow](https://twitter.com/fleek) us on Twitter
+- [Read](https://docs.fleek.co/) our Tech Docs
+- Contact us at support@fleek.co
