@@ -8,12 +8,12 @@ description: Get started with deploying your AngularJS app on IPFS on Fleek
 category: Tutorial
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/angular.png
 tags:
-- general
-- angularjs
-- ipfs
-- getting started
-
+  - general
+  - angularjs
+  - ipfs
+  - getting started
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/angular.png)
 
 Get your AngularJS app sailing on IPFS. In this short tutorial, we will learn how to create an Angular app and deploy it on Fleek so it can be shared on the decentralized web.
@@ -77,8 +77,8 @@ Congrats! You've just joined the web3 family by deploying an Angular app to IPFS
 
 We love to see what our users come up with. Do not hesitate to share your work with us by tweeting about your deployed site!
 
-* [Sign up](https://app.fleek.co) to try for yourself
-* [Join](https://slack.fleek.co/) our Community Chat
-* [Follow](https://twitter.com/FleekHQ) us on Twitter
-* [Read](https://docs.fleek.co/) out our Tech Docs
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try for yourself
+- [Join](https://slack.fleek.co/) our Community Chat
+- [Follow](https://twitter.com/fleek) us on Twitter
+- [Read](https://docs.fleek.co/) out our Tech Docs
+- Contact us at support@fleek.co

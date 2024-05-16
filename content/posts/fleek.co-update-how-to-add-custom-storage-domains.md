@@ -5,24 +5,25 @@ title: Fleek.co Update - How To Add Custom Storage Domains
 slug: fleek-co-how-to-add-custom-storage-domains
 date: 2023-01-03T14:00:00.000+00:00
 socialImage: https://storageapi.fleek.one/fleek-team-bucket/thumbnails/fleek-co-custom-storage-domain.png
-canonical: ''
-description: Today, we’re enabling existing Fleek.co users to add custom domains to
+canonical: ""
+description:
+  Today, we’re enabling existing Fleek.co users to add custom domains to
   their Fleek storage buckets to increase uptime & accessibility.
 category: Announcement
 tags:
-- Bucket
-- Custom Domain
-- Storage
-- Fleek.co
-
+  - Bucket
+  - Custom Domain
+  - Storage
+  - Fleek.co
 ---
+
 ![](https://storageapi.fleek.one/fleek-team-bucket/thumbnails/fleek-co-custom-storage-domain.png)
 
 Today, we’re increasing the uptime & accessibility of storage buckets on our (soon to be legacy) Fleek.co platform by removing reliance on our own domains for accessing storage buckets, and instead **allowing users to use their own custom domains to access their Fleek Storage buckets**.
 
 _This feature is being added for existing Fleek.co Storage users only._ If you’re hearing about Fleek for the first time, you’ll be able to use this feature, and many more, in our upcoming new platform - Fleek.xyz. For the interested, join [the waitlist](https://fleek.xyz) or hop into [our Discord](https://discord.gg/fleek) for early access to the web3 development platform of the future.
 
-***
+---
 
 # How to Add a Custom Storage Domain
 
@@ -60,7 +61,7 @@ In the example above, we’ve successfully added `storage.mergeit.xyz` as the cu
 
 For any further help, reference the ["Custom Storage Domains" section of our docs](https://docs.fleek.co/storage/custom-storage-domains/).
 
-## Consuming Your New Endpoint Via  Fleek.co SDK
+## Consuming Your New Endpoint Via Fleek.co SDK
 
 If you’re using [our Fleek SDK](https://docs.fleek.co/storage/fleek-storage-js/) to consume your storage bucket, we have published a new version that lets you input your custom storage domain as the endpoint to use.
 
@@ -74,7 +75,7 @@ Please make sure you upgrade the `@fleekhq/fleek-storage-js` package to version 
 
 Whether you use the Fleek SDK or not, please update your SDKs and application code to now use your custom URL.
 
-***
+---
 
 # Custom Domains In Fleek.xyz
 
@@ -84,8 +85,8 @@ In the past, Fleek’s domains have been a target for censorship due to phishing
 
 All Fleek.xyz services where endpoints are relevant will give users the option to route traffic through their own custom domain (exactly as we’ve previously done for sites & just did for storage in Fleek.co). This may eventually lead to the full deprecation of Fleek’s public domains - in this scenario users would wire their domain up to Fleek’s scaffolding as a part of the sign up process and all services (gateways, APIs, deployment previews) deployed would automatically be routed through the user’s custom domain 🔥
 
-***
+---
 
 And with that, we wrap 2022! In Q1 2023 we’ll be continuing the Fleek.co sunsetting process, will start to release the first of the Fleek.xyz betas (IPNS as a Service and CLI site deployments), and continue to share updates as Fleek Network gets closer to a testnet.
 
-Needless to say, **we’re psyched for 2023** and are happy to have you Freaks along for the ride. To keep up with everything we’ve got going on, follow us on [Twitter](https://twitter.com/fleekxyz) or hop into [our Discord](https://discord.gg/fleek) to jam with our team. ⚡
+Needless to say, **we’re psyched for 2023** and are happy to have you Freaks along for the ride. To keep up with everything we’ve got going on, follow us on [Twitter](https://twitter.com/fleek) or hop into [our Discord](https://discord.gg/fleek) to jam with our team. ⚡

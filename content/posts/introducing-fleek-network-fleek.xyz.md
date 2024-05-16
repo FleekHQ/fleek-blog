@@ -6,16 +6,17 @@ slug: introducing-fleek-network-and-fleek-xyz
 date: 2022-11-30T17:00:00Z
 socialImage: https://storageapi.fleek.co/fleek-team-bucket/thumbnails/xyz-ntwrk-release-image.png
 canonical: https://blog.fleek.xyz/post/introducing-fleek-network-and-fleek-xyz/
-description: We just closed a $25M Series A to build Fleek Network, a decentralized
+description:
+  We just closed a $25M Series A to build Fleek Network, a decentralized
   CDN, and Fleek.xyz, the web3 dev platform of the future.
 category: Announcement
 tags:
-- CDN
-- Raise
-- Fleek.xyz
-- Fleek Network
-
+  - CDN
+  - Raise
+  - Fleek.xyz
+  - Fleek Network
 ---
+
 ![](https://storageapi.fleek.co/fleek-team-bucket/thumbnails/xyz-ntwrk-release-image.png)
 
 We’re closing out 2022 with not one, not two, but three big announcements:
@@ -26,15 +27,15 @@ We’re closing out 2022 with not one, not two, but three big announcements:
 
 Before we dive in and examine all three in detail, here's an action list for the eager:
 
-* Sign up for updates on [Fleek.xyz](https://fleek.xyz).
-* Sign up for updates on [Fleek Network](https://fleek.network).
-* Join [the Fleek Discord](https://discord.gg/fleek).
-* Read the [Fleek Network whitepaper.](https://fleek.network/fleek-network.pdf?202212011428)
-* [Test out running a node](https://blog.fleek.co/posts/fleek-network-getting-started-guide) for Fleek Network.
+- Sign up for updates on [Fleek.xyz](https://fleek.xyz).
+- Sign up for updates on [Fleek Network](https://fleek.network).
+- Join [the Fleek Discord](https://discord.gg/fleek).
+- Read the [Fleek Network whitepaper.](https://fleek.network/fleek-network.pdf?202212011428)
+- [Test out running a node](https://blog.fleek.co/posts/fleek-network-getting-started-guide) for Fleek Network.
 
 Without further ado, let’s dive in! ⚡️
 
-***
+---
 
 ## Fleek Network - Supercharging Web3 Content
 
@@ -68,7 +69,7 @@ We’ve banded some of the decentralized storage OG’s like IPFS, Filecoin, and
 
 It’s a win-win for all! Storage protocols can continue building key storage infrastructure without worrying about delivery, and users can build web3 apps knowing their content and apps will perform as well as web2 apps, without risk of being deplatformed, censored, or facing any other pitfalls of using corporate owned infrastructure/cloud services.
 
-***
+---
 
 ## Hello Fleek.xyz - A Next-Gen Platform For Web3 Development
 
@@ -108,7 +109,7 @@ By isolating developments and creating easy-to-use tools to connect them togethe
 
 More info on the extensibility of the new Fleek.xyz platform, how ‘Services’ within the new platform work, how to build them, etc. will be shared in the coming weeks leading up to the public launch of Fleek.xyz in early 2023.
 
-***
+---
 
 ## It’s been real, Fleek.co! 👋
 
@@ -120,7 +121,7 @@ Over the next few months we’ll continue adding new features to the Fleek.xyz p
 
 More incremental updates to come soon (or just [sign up for our mailing list](https://fleek.xyz))!
 
-***
+---
 
 ## Roadmap
 
@@ -130,15 +131,15 @@ Get ready for a 🔥 2023 year from Fleek.
 
 _Note: this does not include a roadmap for Fleek Network, more on that in the coming weeks_.
 
-***
+---
 
 Now that the cat is out of the bag, we couldn’t be more stoked! Next year will be an action packed and exciting one for Fleek. We are on a mission to build the web3 development platform of the future for our community, with our community. ⚡️
 
 P.s. All communications with our community will now also come from our new fleek.xyz domain, so watch out for those emails in your inbox!
 
-* Visit the [Fleek Network Website](https://fleek.network).
-* Visit the [Fleek.xyz Website](https://fleek.xyz).
-* Join [our Discord](https://discord.gg/fleek).
-* Follow [Fleek.xyz on Twitter](https://twitter.com/fleekxyz).
-* Follow [Fleek Network on Twitter](https://twitter.com/fleek_net).
-* Subscribe to [our Youtube](https://www.youtube.com/@FleekHQ).
+- Visit the [Fleek Network Website](https://fleek.network).
+- Visit the [Fleek.xyz Website](https://fleek.xyz).
+- Join [our Discord](https://discord.gg/fleek).
+- Follow [Fleek.xyz on Twitter](https://twitter.com/fleek).
+- Follow [Fleek Network on Twitter](https://twitter.com/fleek_net).
+- Subscribe to [our Youtube](https://www.youtube.com/@FleekHQ).

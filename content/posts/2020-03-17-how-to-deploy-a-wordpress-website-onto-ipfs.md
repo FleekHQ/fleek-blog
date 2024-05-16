@@ -4,18 +4,19 @@ title: How to Deploy a Wordpress Website onto IPFS
 slug: wordpress+fleek
 draft: false
 date: 2020-03-17T01:24:42.196+00:00
-description: Fleek allows websites to easily find a home on IPFS where they can rest
+description:
+  Fleek allows websites to easily find a home on IPFS where they can rest
   readily accessible, permanent, and uncensorable. In this tutorial, we will show
   you how simple it is to export a Wordpress site, host it on IPFS and share it with
   the world.
 category: Tutorial
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/WordpressSocialImage.png
 tags:
-- Tutorial
-- Guide
-- Wordpress
-
+  - Tutorial
+  - Guide
+  - Wordpress
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/WordpressSocialImage.png)
 
 Fleek allows websites to easily find a home on IPFS where they can rest readily accessible, permanent, and uncensorable. In this tutorial, we will show you how simple it is to export a Wordpress site, host it on IPFS and share it with the world. First, we will show how to export the site using a plugin and then we will upload the exported site to WordPress.
@@ -58,8 +59,8 @@ And that is all! Once the site is done deploying, which should take around a min
 
 Congratulations! Your content is now deployed and a part of IPFS! Your cool site can be shared with the world either with the Fleek-provided URL, or by adding one of your domains to Fleek, or through IPFS by clicking on “Verify on IPFS”. You can now be confident that your site is safe and untouchable on IPFS!
 
-* [Sign up](https://app.fleek.co) to try yourself
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try yourself
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

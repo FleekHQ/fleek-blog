@@ -5,15 +5,16 @@ title: Hosting Static Webflow Sites on Fleek (No CMS)
 slug: hosting-static-webflow-sites-on-fleek
 date: 2021-03-17T03:00:00Z
 socialImage: https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/WEBFLOW.png
-canonical: ''
-description: Learn on this guide how to export your sites from Webflow and, with a
+canonical: ""
+description:
+  Learn on this guide how to export your sites from Webflow and, with a
   little Python magic, take them live to the Open Web with Fleek.
 category: Tutorial
 tags:
-- Hosting
-- Webflow
-
+  - Hosting
+  - Webflow
 ---
+
 ![](https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/WEBFLOW.png)
 
 [Webflow’s](https://webflow.com/) site builder is an amazing tool for quickly setting up a new site, both at a no-code beginner level and at an advanced hands-on one. But what if you want to build your site from scratch with this tool, and then **host it on the Open Web** on IPFS or the Internet Computer with Fleek?
@@ -207,9 +208,9 @@ Fleek will automatically detect the new push and re-run the script on your site,
 
 If you have issues with the build, need a hand to adapt your site to the script, or see a cool way to improve this workflow, remember that you can always hop in on our Community Slack below and the team we’ll give you a helping hand and hear out all ideas 🔥🔥
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

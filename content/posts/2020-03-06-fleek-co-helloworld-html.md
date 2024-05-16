@@ -8,10 +8,10 @@ description: Create and deploy a static website using Fleek and IPFS
 category: Tutorial
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/fleek-plus-ipfs.png
 tags:
-- Tutorial
-- Resource
-
+  - Tutorial
+  - Resource
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/fleek-plus-ipfs.png)
 
 ## Overview
@@ -92,8 +92,8 @@ Or verify with the CID.
 
 Fleek will automatically redeploy your website whenever you make changes to GitHub. The provided domain name will remain the same and will point to the new CID. This enables you to build fast modern websites hosted on IPFS.
 
-* [Sign up](https://app.fleek.co)
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co)
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

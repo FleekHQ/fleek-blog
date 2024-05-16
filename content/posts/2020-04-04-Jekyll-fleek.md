@@ -4,16 +4,17 @@ title: Deploy a Jekyll Blog to IPFS on Fleek
 slug: deploy-jekyll-blog-on-fleek
 draft: false
 date: 2020-04-04T04:02:37.816+00:00
-description: Get your Jekyll blog sailing on the Web3 waters! In this short tutorial,
+description:
+  Get your Jekyll blog sailing on the Web3 waters! In this short tutorial,
   we will learn how to create a Jekyll blog and deploy it on Fleek so it can be shared
   through IPFS.
 category: Tutorial
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/jekyll-social-img.png
 tags:
-- Tutorial
-- Resource
-
+  - Tutorial
+  - Resource
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/jekyll-social-img.png)
 
 Get your Jekyll blog sailing on the Web3 waters! In this short tutorial, we will learn how to create a Jekyll blog and deploy it on Fleek so it can be shared through IPFS.
@@ -42,7 +43,7 @@ This file will allow you to modify configurations that will be used when generat
     # For technical reasons, this file is *NOT* reloaded automatically when you use
     # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
     #
-    # If you need help with YAML syntax, here are some quick references for you: 
+    # If you need help with YAML syntax, here are some quick references for you:
     # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
     # https://learnxinyminutes.com/docs/yaml/
     #
@@ -51,7 +52,7 @@ This file will allow you to modify configurations that will be used when generat
     # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
     # You can create any custom variable you would like, and they will be accessible
     # in the templates via {{ site.myvariable }}.
-    
+
     title: Fleek and Jekyll
     email: support@fleek.co
     description: >- # this means to ignore newlines until "baseurl:"
@@ -60,12 +61,12 @@ This file will allow you to modify configurations that will be used when generat
     url: "" # the base hostname & protocol for your site, e.g. http://example.com
     twitter_username: fleekhq
     github_username:  fleekhq
-    
+
     # Build settings
     theme: minima
     plugins:
       - jekyll-feed
-    
+
     # Exclude from processing.
     # The following items will not be processed, by default.
     # Any item listed under the `exclude:` key here will be automatically added to
@@ -85,7 +86,6 @@ This file will allow you to modify configurations that will be used when generat
     #   - vendor/cache/
     #   - vendor/gems/
     #   - vendor/ruby/
-    
 
 In the `_config.yml` file, you may have noticed a line with `theme: minima`. That is because we are using the default theme. For this tutorial, we will keep the default so we can focus on deploying the site, but you can go [here](https://jekyllrb.com/docs/themes/#pick-up-a-theme) to learn more!
 
@@ -101,17 +101,17 @@ Here's my sample blog post:
     date:   2020-04-02 15:44:16 -0400
     categories: fleek jekyll web3
     ---
-    
+
     ## Welcome to Web3!
-    
+
     This site was generated with Jekyll and deployed to IPFS thanks to fleek!
-    
+
     Fleek provides everything you need to launch and maintain fast, modern websites hosted on IPFS. Welcome to the new internet.
-    
+
     # Documentation
-    
+
     Fleek docs:  <https://docs.fleek.co>
-    
+
     Jekyll docs: <https://jekyllrb.com/docs/home>
 
 Once you are ready, you can see your blog in action by running the site in your local machine.
@@ -155,8 +155,8 @@ Congrats! You've just joined the Web3 family by deploying a Jekyll blog to IPFS 
 
 We love to see what our users come up with. Do not hesitate to share your work with us by tweeting your deployed site!
 
-* [Sign up](https://app.fleek.co) to try for yourself
-* [Join](https://slack.fleek.co/) our Community Chat
-* [Follow](https://twitter.com/FleekHQ) us on Twitter
-* [Read](https://docs.fleek.co/) out our Tech Docs
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try for yourself
+- [Join](https://slack.fleek.co/) our Community Chat
+- [Follow](https://twitter.com/fleek) us on Twitter
+- [Read](https://docs.fleek.co/) out our Tech Docs
+- Contact us at support@fleek.co

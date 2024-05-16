@@ -5,25 +5,26 @@ title: Sites Deployments Release on the CLI Beta.
 slug: release-sites-deployment-beta-cli
 date: 2023-02-02T03:00:00Z
 socialImage: https://storage.fleek.ooo/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/imgs/cli-sites.png
-canonical: ''
-description: New features are coming to the CLI! Today we are releasing the Sites
+canonical: ""
+description:
+  New features are coming to the CLI! Today we are releasing the Sites
   Deployments service to the CLI for developers to start testing.
 category: Blog
 tags:
-- Domains
-- Sites
-- CLI
-- Beta
-- Release
-
+  - Domains
+  - Sites
+  - CLI
+  - Beta
+  - Release
 ---
+
 ![](https://storage.fleek.ooo/27a60cdd-37d3-480c-ae88-3ad4ca886b13-bucket/imgs/cli-sites.png)
 
 The beta’s growing, and with new testers, new features are coming to the CLI! Today we are releasing the **Sites Deployments service** to the CLI for developers to start testing and [share their feedback](https://github.com/fleekxyz/fleekxyz-support) on.
 
 Step aside, it’s time to host some sites on IPFS! If you want a quick-start, visit our [updated docs](https://docs.fleek.xyz/) right away ⚡️
 
-***
+---
 
 ## Static Sites Deployments on the CLI
 
@@ -51,10 +52,10 @@ Being open-source, **anyone is open to contribute or suggest in the repository**
 
 These templates will set a foundation that in the future, the Fleek's UI and CLI can pick-up and integrate to provide them as options, inside the development experience itself.
 
-***
+---
 
 The CLI’s growing Fleek fam! We’re on the road to matching the legacy platform’s features, and then breaking further into new services and features for web3 developers.
 
-We want to see **what sites you’re hosting and trying on the beta!** Ping us on [Twitter](https://twitter.com/fleekxyz) or [Discord](https://discord.gg/fleek) with them.
+We want to see **what sites you’re hosting and trying on the beta!** Ping us on [Twitter](https://twitter.com/fleek) or [Discord](https://discord.gg/fleek) with them.
 
 For more resources visit our [LinkTree](https://linktr.ee/fleek).

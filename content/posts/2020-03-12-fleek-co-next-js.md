@@ -4,15 +4,16 @@ title: How to deploy a Next.js app onto IPFS using Fleek
 slug: fleek-nextJS
 draft: false
 date: 2020-03-12T14:06:38.733+00:00
-description: We’ll create a Next.js app and deploy it on Fleek. This whole process
+description:
+  We’ll create a Next.js app and deploy it on Fleek. This whole process
   It should take 10 minutes.
 category: Tutorial
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/Next.png
 tags:
-- Tutorial
-- Guide
-
+  - Tutorial
+  - Guide
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/Next.png)
 
 ## Overview
@@ -21,9 +22,9 @@ We’ll create a Next.js app and deploy it on Fleek. This whole process should t
 
 Tools:
 
-* Fleek account
-* GitHub account
-* node.js/npm
+- Fleek account
+- GitHub account
+- node.js/npm
 
 ### Step 1: Set Up a Repo on Github
 
@@ -43,7 +44,7 @@ Open `package.json` and add in the following scripts
         "dev": "next",
         "build": "next build",
         "start": "next start",
-        "export": "next export"  
+        "export": "next export"
     }
 
 ![](./media/nextjs/Openpackagejson.png)
@@ -60,7 +61,7 @@ Let’s create some pages: Create a folder called pages Inside pages, create `in
 
     // index.js
     import Link from "next/link";
-    
+
     export default function Index() {
       return (
         <div>
@@ -152,8 +153,8 @@ Or verify with the CID.
 
 Fleek will automatically redeploy your website whenever you make changes to GitHub. Make sure to provide the domain name will remain the same and will point to the new CID. This enables you to build fast modern websites hosted on IPFS.
 
-* [Sign up](https://app.fleek.co) to try yourself
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try yourself
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

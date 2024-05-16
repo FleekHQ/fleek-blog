@@ -1,20 +1,22 @@
 ---
 template: post
-title: Release Updates - UI Rebrand, Teams, Zero Config Deployments, Framework Auto-detection,
+title:
+  Release Updates - UI Rebrand, Teams, Zero Config Deployments, Framework Auto-detection,
   and more!
 slug: Fleek-Release-Update-UI-Rebrand
 draft: false
 date: 2020-04-03T04:02:37.816+00:00
-description: We underwent a full platform rebranding to Fleek! We've also released
+description:
+  We underwent a full platform rebranding to Fleek! We've also released
   a bunch of exciting features, enhancements, and bug fixes that we will deep dive
   into this release update.
 category: Announcement
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/Release-Update-UI-rebrand.png
 tags:
-- Announcement
-- Release Update
-
+  - Announcement
+  - Release Update
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/Release-Update-UI-rebrand.png)
 
 We underwent a full platform rebranding to Fleek! We've also released a bunch of exciting features, enhancements, and bug fixes that we will deep dive into this release update. Our team is very excited to share the latest:
@@ -76,8 +78,8 @@ We fixed up the UI and Log subscription to pull in the logs nice and smooth. You
 
 Thanks for reading our release updates. Now come [sign in](https://app.fleek.co) and check them out for yourself. We're already working on the next release to come!
 
-* [Sign up](https://app.fleek.co) to try for yourself
-* [Join](https://slack.fleek.co/) our Community Chat
-* [Follow](https://twitter.com/FleekHQ) us on Twitter
-* [Read](https://docs.fleek.co/) out our Tech Docs
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try for yourself
+- [Join](https://slack.fleek.co/) our Community Chat
+- [Follow](https://twitter.com/fleek) us on Twitter
+- [Read](https://docs.fleek.co/) out our Tech Docs
+- Contact us at support@fleek.co

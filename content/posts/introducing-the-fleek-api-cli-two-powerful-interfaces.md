@@ -5,16 +5,17 @@ title: Release Updates - Fleek Hosting CLI & API, and Github Actions
 slug: release-update-fleek-cli-github-actions
 date: 2021-03-19T03:00:00Z
 socialImage: https://storageapi2.fleek.co/fleek-team-bucket/cli-api.png
-canonical: ''
-description: A new hosting CLI & GraphQL API to manage and control your hosting suite
+canonical: ""
+description:
+  A new hosting CLI & GraphQL API to manage and control your hosting suite
   on Fleek. Deploy from local machine, use custom GitHub Actions, and more!
 category: Release
 tags:
-- Hosting
-- CLI
-- API
-
+  - Hosting
+  - CLI
+  - API
 ---
+
 ![](https://storageapi2.fleek.co/fleek-team-bucket/cli-api.png)
 
 Thought we'd take a break from news for a while after announcing trustless [Static Frontend Hosting, a new Gateway, and Canister Proxying on the Internet Computer](https://blog.fleek.co/posts/to-dfinity-and-beyond-dfinity-frontend-hosting)? Well, _not today._
@@ -23,16 +24,16 @@ Thought we'd take a break from news for a while after announcing trustless [Stat
 
 We keep updates coming 🔥 Today's release gives **developers a lot more control over their experience in Fleek**, especially over our Hosting suite of tools for building sites on the Open Web, and for integrating Fleek to other experiences:
 
-* Hosting CLI
-* GitHub Actions
-* Fleek's GraphQL API
+- Hosting CLI
+- GitHub Actions
+- Fleek's GraphQL API
 
 ## The Hosting CLI 💻
 
 We gave our CLI a power up, and now it includes our hosting pipeline! You can now interact with Fleek’s Hosting directly from command line, **and try new cool workflow alternatives** like:
 
-* Fleek site deployments from local machine.
-* Using custom GitHub actions or deploy from other CIs.
+- Fleek site deployments from local machine.
+- Using custom GitHub actions or deploy from other CIs.
 
 Everything is abstracted into just a couple of commands. Install, login, initialize, deploy, and you're done. Can't get any simpler. **Want to get started with it? Here's all you need:** [CLI Documentation/Overview](https://docs.fleek.co/fleek-cli/overview/).
 
@@ -150,7 +151,7 @@ And you're good to go! **Authenticating** is just passing the key in the `Author
 Most GraphQL client libraries let you add a header to all your requests, for example in JS with [Apollo Boost](https://www.npmjs.com/package/apollo-boost):
 
     import ApolloClient from 'apollo-boost';
-    
+
     const fleekApiKey = process.env.FLEEK_API_KEY;
     const client = new ApolloClient({
         uri: 'https://api.fleek.co/graphql',
@@ -191,9 +192,9 @@ This is just the beginning for these interfaces. So, hop on them and let us know
 
 Fleek's [bounties are live](https://gitcoin.co/issue/protocol/grants/7/100025064), with three open tracks (Innovation, NFTs, Communication), for building Dapps using the [Space SDK](https://github.com/FleekHQ/space-sdk). Up for the challenge? ⚡⚡⚡
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

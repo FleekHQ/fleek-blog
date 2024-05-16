@@ -5,28 +5,29 @@ title: Release Update - BunnyCDN for HNS, DNS Link, & Domains
 slug: release-team-name-hns-cdn
 date: 2021-07-07T16:00:00Z
 socialImage: https://storageapi2.fleek.co/fleek-team-bucket/Release-notes-hns-cdn-team-name-v2.png
-canonical: ''
-description: HNS domains now benefit from our CDN, and we removed the ability to purchase
+canonical: ""
+description:
+  HNS domains now benefit from our CDN, and we removed the ability to purchase
   domains through Fleek, read to learn about what this means for legacy users.
 category: Announcement
 tags:
-- Release
-- Domains
-- BunnyCDN
-- HNS
-- DNS
-
+  - Release
+  - Domains
+  - BunnyCDN
+  - HNS
+  - DNS
 ---
+
 ![](https://storageapi2.fleek.co/fleek-team-bucket/Release-notes-hns-cdn-team-name-v2.png)
 
 It’s time for another quick release ⚡ This week we’re bringing some changes to the Fleek.co platform, a little bit of adding here, some subtracting over there. As always, feel free to submit any requests or ideas to the team! 🔥
 
 What do we have in store this week?
 
-* Added BunnyCDN for HNS (we’re just hopping along aren’t we 🐰)
-* Removed DNS Link for Internet Computer sites (no need for that!)
-* Removed the ability to buy Domains on Fleek (more on this below 👇 )
-* Minor Improvements & Bug Fixes 🐞
+- Added BunnyCDN for HNS (we’re just hopping along aren’t we 🐰)
+- Removed DNS Link for Internet Computer sites (no need for that!)
+- Removed the ability to buy Domains on Fleek (more on this below 👇 )
+- Minor Improvements & Bug Fixes 🐞
 
 # New Features
 
@@ -46,20 +47,20 @@ Legacy users! You can still use your Fleek-purchased domains, and if it’s been
 
 # UX/UI Improvements & Bug Fixes
 
-* Removed “stop auto-publish button” for IC sites.
-* Removed PR previews settings for IC sites.
-* Removed SDK button on the navigation menu.
-* Updated the default docker images on the site creator.
-* Updated the Handshake DNS settings in the Handshake modals.
-* Fixed bug - Ethereum transaction being sent by Fleek controller to write IPNS hash for users with ENS domains from before the IPNS update.
+- Removed “stop auto-publish button” for IC sites.
+- Removed PR previews settings for IC sites.
+- Removed SDK button on the navigation menu.
+- Updated the default docker images on the site creator.
+- Updated the Handshake DNS settings in the Handshake modals.
+- Fixed bug - Ethereum transaction being sent by Fleek controller to write IPNS hash for users with ENS domains from before the IPNS update.
 
 # Wrapping it Up
 
 That is all for today’s release notes! Stay tuned for more updates and improvements! As always, you can hit us up in Twitter or Discord to let us know the features, improvements, or bugs you’d like to see tackled next 😎
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Discord](https://discord.gg/yVEcEzmrgm)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at [support@fleek.co](mailto:support@fleek.co)
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Discord](https://discord.gg/yVEcEzmrgm)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at [support@fleek.co](mailto:support@fleek.co)

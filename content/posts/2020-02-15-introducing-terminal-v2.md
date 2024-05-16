@@ -4,17 +4,18 @@ title: Introducing Fleek
 slug: introducing-fleek
 draft: false
 date: 2020-02-15T18:06:49.154+00:00
-description: Today, we’re excited to launch a new version of Fleek - the easiest way
+description:
+  Today, we’re excited to launch a new version of Fleek - the easiest way
   to build, deploy, and host websites & apps on IPFS. From local development to global
   deployment, Fleek provides one seamless workflow with everything you need to build
   fast, modern sites & web apps hosted on IPFS.
 category: General
 socialImage: https://fleek-team-bucket.storage.fleek.co/FleekIntro.jpg
 tags:
-- general
-- launch
-
+  - general
+  - launch
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/FleekIntro.jpg)
 
 Today, we’re excited to launch a new version of Fleek - the easiest way to build, deploy, and host websites & apps on IPFS. From local development to global deployment, Fleek provides one seamless workflow with everything you need to build fast, modern sites & web apps hosted on IPFS. All you have to do is link your github, and within a few clicks you will have your first site deployed to IPFS (and everytime after that it will happen automatically 😄)
@@ -43,10 +44,10 @@ The mission for Fleek is still the same as it was when we started the company - 
 
 To start, we decided to focus on IPFS hosting because we believe that
 
-* most of the infrastructure needed to start decentralizing the hosting aspect of a site or app is available today.
-* there is interest from the Ethereum & Web 3 community to host sites on IPFS.
-* the process to build, deploy, and host a site or web app on IPFS (especially one that is updated frequently) is time consuming and difficult
-* trends in web development like serverless, no code/low code, and the JAM Stack make IPFS hosting feasible and attractive to both Web 3 and Web 2 companies.
+- most of the infrastructure needed to start decentralizing the hosting aspect of a site or app is available today.
+- there is interest from the Ethereum & Web 3 community to host sites on IPFS.
+- the process to build, deploy, and host a site or web app on IPFS (especially one that is updated frequently) is time consuming and difficult
+- trends in web development like serverless, no code/low code, and the JAM Stack make IPFS hosting feasible and attractive to both Web 3 and Web 2 companies.
 
 Our initial IPFS hosting product is not 100% decentralized, but it’s a big step in the right direction and provides a good balance of decentralization vs. performance/experience (and also it’s the extent of what’s possible to decentralize today). For example, DNS will be centralized until decentralized alternatives are realistic to use as a full replacement for DNS. And in order to make IPFS hosted sites as fast and performant as normal sites, we offer an optional enterprise-grade, global CDN you can use. The CDN itself is centralized, however if the CDN ever went down all sites are still fully accessible (they might just load a bit slower), so using it shouldn’t be a concern. We also have some cool plans to decentralize the CDN aspect of our stack in the future.
 
@@ -54,9 +55,9 @@ A lot of the inspiration for Fleek comes from the low code movement that compani
 
 We’re super excited to embark on this new journey and to help bring the next million devs into the Web 3 space. We’d love to invite you all into our community to try out the new product and get your feedback. And if you feel there are opportunities to collaborate with us please reach out, we’d be happy to chat!
 
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Contact us at hi@fleek.co
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Contact us at hi@fleek.co
 
 Check out [Tech Docs](https://docs.fleek.co/)
 

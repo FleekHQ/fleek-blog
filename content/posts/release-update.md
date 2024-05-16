@@ -5,17 +5,18 @@ title: Release Updates - Multiple Custom Domains, WalletConnect for ENS, and TLD
 slug: release-update-multiple-custom-domains-walletconnect-tld-verification
 date: 2021-02-11T03:00:00Z
 socialImage: https://fleek-team-bucket.storage.fleek.co/Blog Inline/release-update.png
-canonical: ''
-description: Another round of weekly updates, releases, and enhancements comes our
+canonical: ""
+description:
+  Another round of weekly updates, releases, and enhancements comes our
   way on February!
 category: Announcement
 tags:
-- WalletConnect
-- DNS
-- ENS
-
+  - WalletConnect
+  - DNS
+  - ENS
 ---
-![](https://fleek-team-bucket.storage.fleek.co/Blog Inline/Release Update  Feb.png)
+
+![](https://fleek-team-bucket.storage.fleek.co/Blog Inline/Release Update Feb.png)
 
 We’re back with a multi-release update! This time we’re bringing several features into the platform from different requests from users, and pending tools that help make Fleek’s experience interface-wise a little bit better for everyone.
 
@@ -49,9 +50,9 @@ Now, these are supported as well and can be verified! So you can go nuts and use
 
 Stay tuned for more upcoming updates, releases and fixes coming to Fleek. We’re gearing up to reach March with a couple more big ones! Remember that you can reach out to us any time with feedback, requests, or any cool ideas you’d like to see in Fleek. We’ll be happy to chat about it, and build out the best experience possible.
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

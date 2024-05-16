@@ -4,16 +4,17 @@ title: Easily pin to IPFS with Fleek Storage Js! - A short guide
 slug: guide-to-fleek-storage-js
 draft: false
 date: 2020-06-22T12:18:31.636+00:00
-description: It's now easier than ever to upload and pin files to IPFS thanks to Fleek
+description:
+  It's now easier than ever to upload and pin files to IPFS thanks to Fleek
   Storage Js. Come learn how!
 category: Tutorial
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/fleek_storage_js_thumbnail.png
 tags:
-- Tutorial
-- Guide
-- Storage
-
+  - Tutorial
+  - Guide
+  - Storage
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/fleek_storage_js_thumbnail.png)
 
 It's now easier than ever to upload and pin files to IPFS thanks to Fleek Storage Js.
@@ -29,20 +30,18 @@ We will cover the two most important actions: uploading a file and getting a fil
 Fleek Storage Js can be installed as an [npm package](https://www.npmjs.com/package/@fleekhq/fleek-storage-js).
 
     npm install @fleekhq/fleek-storage-js
-    
 
 or with yarn...
 
     yarn add @fleekhq/fleek-storage-js
-    
 
 Then import the package in your code.
 
-    const fleek = require('@fleekhq/fleek-storage-js');   
+    const fleek = require('@fleekhq/fleek-storage-js');
 
 or...
 
-    import fleek from '@fleekhq/fleek-storage-js';   
+    import fleek from '@fleekhq/fleek-storage-js';
 
 Using Fleek Storage Js necessitates an api key. A key can easily be generated on the web app [https://app.fleek.co](https://app.fleek.co) in the [user settings](https://app.fleek.co/#/settings/general/profile).
 
@@ -66,9 +65,8 @@ The `upload` method can be used to upload individual files on IPFS.
         key: `my-folder/my-file-name`,
         data: myFile,
       };
-    
+
       const result = await fleek.upload(input);
-    
 
 The method returns a promise. It requires the api key, api secret and the file's data.
 If using node, `fs.readFile` can be used to get a file's data from the computer.
@@ -88,7 +86,6 @@ What does the returned data of the method looks like? Let's take a look!
       bucket: 'my-bucket',
       publicUrl:
        'https://my-bucket.storage.fleek.co/my-file-name' }
-    
 
 The promise returns the v1 IPFS hash (`hash` field) and the v0 IPFS hash (`hashV0` field). The v0 IPFS hash is shorter and is therefore suited for writing on blockchains such as Ethereum, where data storage is costly. In all other cases, however, the v1 hash is preferred.
 
@@ -104,9 +101,8 @@ The `get` method is for fetching either data related to a file, such as the key,
         key: `my-folder/my-file-name`,
         getOptions: ['hash', 'data', 'publicUrl', 'key']
       };
-    
+
       const result = await fleek.get(input);
-    
 
 The method will return an object whose fields will correspond to the values specified in the `getOptions` field.
 The possible values for the getOptions array are `data`, `bucket`, `hash`, `key` and `publicUrl`.
@@ -131,9 +127,9 @@ You can now unleash your creative powers on the decentralized web.
 
 Share your awesome creations with us on Twitter!
 
-* [Sign up](https://app.fleek.co) to try yourself
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try yourself
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

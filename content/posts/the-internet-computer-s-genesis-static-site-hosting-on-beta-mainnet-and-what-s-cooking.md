@@ -5,17 +5,18 @@ title: Internet Computer Hosting - Now on Mainnet, Following the Network's Genes
 slug: internet-computer-genesis-static-site-hosting-beta-mainnet
 date: 2021-05-21T04:00:00Z
 socialImage: https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/mainnet-hosting.png
-canonical: ''
-description: The Internet Computer’s Mainnet is live, and we are migrating our Internet
+canonical: ""
+description:
+  The Internet Computer’s Mainnet is live, and we are migrating our Internet
   Computer Static Hosting feature to it!
 category: Announcement
 tags:
-- Hosting
-- Mainnet
-- Genesis
-- Internet Computer
-
+  - Hosting
+  - Mainnet
+  - Genesis
+  - Internet Computer
 ---
+
 ![](https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/mainnet-hosting.png)
 
 If you missed it (where were you!?), the DFINITY Foundation celebrated the final step towards the release of the Internet Computer’s public Mainnet network at the “[Mercury Genesis Launch Event](https://dfinity.org/mercury/)”.
@@ -44,7 +45,7 @@ The Web2 is a wild array of corporate owned web services users don’t own or co
 
 ![](https://storageapi2.fleek.co/fleek-team-bucket/web2.gif)
 
-Thanks to canisters, the Internet Computer’s equivalent to Smart Contracts (evolved to hold both state and program), anything can be built on an open, trustless, and decentralized internet infrastructure, governed by the [Nervous Network System](https://dfinity.org/faq/network-nervous-system-(nns)) autonomous protocol. And when we say anything, **we mean anything**. Frontends, backends, databases, assets, infrastructure, Dapps, DeFi... All of them, living in an unstoppable infrastructure.
+Thanks to canisters, the Internet Computer’s equivalent to Smart Contracts (evolved to hold both state and program), anything can be built on an open, trustless, and decentralized internet infrastructure, governed by the [Nervous Network System](<https://dfinity.org/faq/network-nervous-system-(nns)>) autonomous protocol. And when we say anything, **we mean anything**. Frontends, backends, databases, assets, infrastructure, Dapps, DeFi... All of them, living in an unstoppable infrastructure.
 
 This means we can finally conceive **open internet services.** Imagine any service you know and use today (like hosting, storage, social media) but built as decentralized and user-controlled protocols anyone can access, governed by an autonomous network and its users, and not controlled or dependable on a few.
 
@@ -78,9 +79,9 @@ We literally can’t wait, but we need to get back to work so that we can blow y
 
 Keep an eye out in the next couple of weeks, and in the meantime, start prepping some projects you want to take to the Internet Computer, **because we’re gonna make it real easy for you to build amazing, seamless IC experiences.**
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Slack](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Slack](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

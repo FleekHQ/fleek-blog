@@ -6,15 +6,16 @@ slug: welcome-gundb-to-open-web-protocol-stack
 date: 2021-01-20T03:00:00Z
 socialImage: https://fleek-team-bucket.storage.fleek.co/Blog Inline/Gun-Open-Web.jpg
 canonical: https://blog.space.storage/posts/welcome-gundb-to-open-web-protocol-stack
-description: 'Today, the Open Web stack grows with GunDB, a distributed graph database
-  that works in a decentralized network in a peer-to-peer way. '
+description:
+  "Today, the Open Web stack grows with GunDB, a distributed graph database
+  that works in a decentralized network in a peer-to-peer way. "
 category: Announcement
 tags:
-- GunDB
-- Space
-- SpaceSDK
-
+  - GunDB
+  - Space
+  - SpaceSDK
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/Blog Inline/Gun-Open-Web.jpg)
 
 When we talk about what the Open Web protocol stack looks like, we’re extremely certain of one thing: **it’s ever-shifting**. It needs to be! Unlike the current web, where the underlying layer doesn’t move a lot, the next web has to be a flexible environment ready to take on new growth and not be bound or bogged down by dependencies.
@@ -31,8 +32,8 @@ We’ve packaged these protocols and the features they enable into [open source 
 
 ![](https://fleek-team-bucket.storage.fleek.co/Blog Inline/challenger.webp)
 
-We are currently transitioning from using the Space Daemon, a desktop focused library, to the SpaceSDK for building V1 of Space. Initially, we intended to release the desktop version of the application first.  
-  
+We are currently transitioning from using the Space Daemon, a desktop focused library, to the SpaceSDK for building V1 of Space. Initially, we intended to release the desktop version of the application first.
+
 But, seeing that the SpaceSDK has a higher compatibility platform-wise and future-proofness, we decided to release V1 of Space in the shape of a browser application using that library. The flexibility and power of the SpaceSDK **(you will see more of it real soon!)** means in the future it will be easier to port it to other platforms as well, so building it forward was a no brainer.
 
 However, this shift brought a couple of changes to Space’s initial architecture, which involved the usage of local storage. Storage-wise, there wasn’t an impactful change. Files are still stored online in IPFS/Textile nodes without trouble, without requiring a local mirrored instance.
@@ -65,9 +66,9 @@ We’ll be making all of these features easily available for anyone to build wit
 
 We’ll keep spoilers at a minimum until its release, but expect the power of the Space Daemon, **in a modular, open-source, JS-based, and highly customizable package** 🔥 Until then!
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

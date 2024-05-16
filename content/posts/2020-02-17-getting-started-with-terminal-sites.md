@@ -8,11 +8,11 @@ description: Get started deploying your first site on IPFS on Fleek
 category: getting started
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/getting-started.png
 tags:
-- general
-- getting started
-- fleek
-
+  - general
+  - getting started
+  - fleek
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/getting-started.png)
 
 So you're ready to get started on Fleek? Well, let's get right into it. In this guide, we will walk through deploying a website to IPFS using Fleek. This guide is most helpful if you are already signed up for Fleek. If you haven’t already signed up you can [request early access](https://terminalbeta.typeform.com/to/kionHH).
@@ -115,8 +115,8 @@ Now that you have deployed a performant website on IPFS, let's add or buy a doma
 
 ![Encrypted](./media/certroot.png "Encrypted")
 
-* [Sign up](https://app.fleek.co) to try yourself
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try yourself
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

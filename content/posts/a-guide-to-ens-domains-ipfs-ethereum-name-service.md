@@ -4,18 +4,20 @@ draft: false
 title: A Guide to ENS Domains + IPFS (Ethereum Name Service)
 slug: guide-ens-domains-ipfs-ethereum-name-service
 date: 2020-12-17T03:00:00.000+00:00
-socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/ENS - Introduction
+socialImage:
+  https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/ENS - Introduction
   Guide.jpg
-canonical: ''
-description: Learn how to register your first ENS domain and use it to host a decentralized
+canonical: ""
+description:
+  Learn how to register your first ENS domain and use it to host a decentralized
   IPFS website in Fleek!
 category: Tutorial
 tags:
-- Tutorial
-- Guide
-- ENS
-
+  - Tutorial
+  - Guide
+  - ENS
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/ENS - Introduction Guide.jpg)
 
 ENS ([Ethereum Name Service](https://ens.domains/)) domains, much like the name entails, are the decentralized Ethereum-based naming system alternative to DNS (Domain Name System).
@@ -34,9 +36,9 @@ Let’s do an overview of what ENS domains are, why they are important, and how 
 
 **What you will learn on this article:**
 
-* [What is the Ethereum Name Service (ENS)?](#what-is-the-ethereum-name-service-ens)
-* [How to buy ENS domains and register them?](#how-to-buy-ens-domains-and-register-them)
-* [How to link your ENS domain to an IPFS site with Fleek.](#how-to-link-ens-domains-to-ipfs-sites)
+- [What is the Ethereum Name Service (ENS)?](#what-is-the-ethereum-name-service-ens)
+- [How to buy ENS domains and register them?](#how-to-buy-ens-domains-and-register-them)
+- [How to link your ENS domain to an IPFS site with Fleek.](#how-to-link-ens-domains-to-ipfs-sites)
 
 ## What is the Ethereum Name Service (ENS)?
 
@@ -68,14 +70,14 @@ Especially because of the fact ENS allows us to access content on decentralized 
 
 ENS adoption still needs to grow, and P2P content storage/delivery networks are evolving as well to better achieve this ([we’re working on that with Space](https://blog.space.storage/posts/how-is-space-different-from-cloud-storage)!). But, ENS domains -and the idea behind them- definitely represent the base structure of what hosting and content serving should look like in Web 3.0, because unlike DNS they are:
 
-* Decentralized
-* Immutable
-* Censorship-resistant
-* User-owned/controlled
+- Decentralized
+- Immutable
+- Censorship-resistant
+- User-owned/controlled
 
 And, above all, ENS resides in the Ethereum ecosystem, which is not a minor perk! Rather than being an alternate blockchain/network, it exists in an ecosystem in which it can easily interact with most of the decentralized use cases it pairs up well with: Dapps, Defi, NFTs, DAOs, wallets, etc.
 
-Not only that, but it can integrate all of those use cases under a single address! With DNS,  your domain, identity, payments, and bank are all separate things. ENS can unite it all in a single address that becomes not only your site, but identity, and bank. After all, not only it can carry an IPFS hash, but ETH, or BTC addresses and more things at once.
+Not only that, but it can integrate all of those use cases under a single address! With DNS, your domain, identity, payments, and bank are all separate things. ENS can unite it all in a single address that becomes not only your site, but identity, and bank. After all, not only it can carry an IPFS hash, but ETH, or BTC addresses and more things at once.
 
 ## How to Buy ENS Domains and Register Them
 
@@ -191,9 +193,9 @@ Now that you know how to register your first ENS domain, and how to use it toget
 
 **Stay tuned for more updates** on ENS features that are coming to Fleek ⚡ We’re currently working on an adjustment that would change how Fleek is given access to modify/update the records on your ENS domains automatically, by using the “setAuthorisation” function of the resolver, which is a more flexible approach than assigning us as the Controller itself because it allows users to continue to create subdomains themselves.
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at [support@fleek.co](mailto:support@fleek.co)
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at [support@fleek.co](mailto:support@fleek.co)

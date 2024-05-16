@@ -5,16 +5,17 @@ title: Release Update - New DNS Configuration with CDN Perks & DDOS Protection
 slug: new-dns-configuration-ddos-cdn
 date: 2021-05-03T04:00:00Z
 socialImage: https://storageapi2.fleek.co/fleek-team-bucket/dns-1.png
-canonical: ''
-description: We're upgrading our infrastructure to offer a faster, safer, and resilient
+canonical: ""
+description:
+  We're upgrading our infrastructure to offer a faster, safer, and resilient
   DNS configuration with extra CDN benefits and DDOs protection! You can migrate your
   site to it in a click.
 category: Announcement
 tags:
-- DNS
-- hosting
-
+  - DNS
+  - hosting
 ---
+
 ![](https://storageapi2.fleek.co/fleek-team-bucket/dns-1.png)
 
 New upgrade coming for everyone hosting sites/apps on Fleek using custom DNS domains! You can now upgrade your site to our new DNS configuration to unlock extra CDN benefits, DDOS protection, and faster routing. Courtesy of Bunny CDN 😎
@@ -84,9 +85,9 @@ That's all, go back to Fleek's domain management setting and verify your domain.
 
 That is all for today! This week we are taking extra care on strengthening and scaling our hosting features to give maximum reliability to all the amazing users coming into the platform. Expect more news on this soon!
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

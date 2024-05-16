@@ -5,18 +5,19 @@ title: How to Setup 2-Factor Authentication in your Fleek Account
 slug: setup-2fa-fleek-account
 date: 2021-12-10T03:00:00Z
 socialImage: https://storageapi2.fleek.co/fleek-team-bucket/blog-2fa/Cloudflare-RepoSwitch.png
-canonical: ''
-description: Did you know you can set up 2FA with a phone number in your account?
+canonical: ""
+description:
+  Did you know you can set up 2FA with a phone number in your account?
   Check this quick guide to learn how to quickly configure it and up your account’s
   security.
 category: Tutorial
 tags:
-- Settings
-- Account
-- Fleek
-- 2FA
-
+  - Settings
+  - Account
+  - Fleek
+  - 2FA
 ---
+
 ![](https://storageapi2.fleek.co/fleek-team-bucket/blog-2fa/Cloudflare-RepoSwitch.png)
 
 Today we’re going to take a look at Fleek’s **2-factor authentication** setting, which will help you protect your account with a secondary layer of verification by associating a **phone number to your Account.**
@@ -29,7 +30,7 @@ Each time you log in, you will receive a **confirmation code to that associated 
 
 To get started, visit your **account's settings,** by clicking on the bottom left account name on the Fleek app.
 
-![](https://storageapi2.fleek.co/fleek-team-bucket/blog-2fa/image%20261%20(1).png)
+![](<https://storageapi2.fleek.co/fleek-team-bucket/blog-2fa/image%20261%20(1).png>)
 
 Once you enter your account's settings page, **scroll down to find the 2-factor authentication section**.
 
@@ -65,13 +66,13 @@ The only difference is that, **after entering your credentials,** you will need 
 
 Enter the correct code, and you'll be logged into Fleek as always. An extra layer of security goes a long way to secure your account, with a minor effort involved.
 
-***
+---
 
 That's all for today's quick guide! As always you can find us on Twitter, our Discord community (the Psychedelic Discord server), if you need further assistance or have questions regarding your Fleek account.
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join us on the  [Psychedelic Discord Community](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join us on the [Psychedelic Discord Community](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

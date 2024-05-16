@@ -5,18 +5,19 @@ title: Fleek's Gitcoin GR9 Hackathon Prize Winners!
 slug: gitcoin-gr9-hackathon-fleek-winners
 date: 2021-04-08T04:00:00Z
 socialImage: https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/GR9.png
-canonical: ''
-description: We challenged developers to build their hacks using the Space SDK and
+canonical: ""
+description:
+  We challenged developers to build their hacks using the Space SDK and
   Fleek Storage JS! Let's review this year's winning projects for Fleek's GR9 Hackathon
   challenge.
 category: General
 tags:
-- Storage JS
-- Space SDK
-- Hackathon
-- GR9
-
+  - Storage JS
+  - Space SDK
+  - Hackathon
+  - GR9
 ---
+
 ![](https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/GR9.png)
 
 Last week Gitcoin's Grant Round 9 Hackathon came to an end, with an immense folder of dope projects and groups participating in another jampacked hackathon. The event wrapped with over 1.2 million raised by the community, and over $300k in hackathon prizes!
@@ -33,9 +34,9 @@ We opened up three tracks, focused on **Innovation, NFTs, and Communication.** A
 
 **What are the prize tiers?**
 
-* 1st place: $2,000 + Protocol Labs matching.
-* 2nd places: $1,000 + Protocol Labs matching.
-* 3rd places: $500 + Protocol Labs matching.
+- 1st place: $2,000 + Protocol Labs matching.
+- 2nd places: $1,000 + Protocol Labs matching.
+- 3rd places: $500 + Protocol Labs matching.
 
 ## The Winning Projects
 
@@ -43,7 +44,7 @@ In total we selected five winners! This year [@stevegachau](https://gitcoin.co/s
 
 Sharing second place, [@ysongh](https://gitcoin.co/ysongh) with [**StoriesNFT**](https://github.com/ysongh/StoriesNFT), a Dapp for minting written stories and selling them as NFTs; together with [@morganstar](https://gitcoin.co/morganstar) who presented [**Space Case**](https://github.com/endowl/space-case), an identity management and file sharing app!
 
-In Third we have  [@koder-abc123](https://gitcoin.co/koder-abc123) with [**Bottle**](https://github.com/koder-abc123/Bottle), a Telegram bot for interacting with the Matic network, and [@belfordz](https://gitcoin.co/belfordz) with [**Fleek Chat**](https://github.com/xops/fleekchat), a Fleek react starter kit.
+In Third we have [@koder-abc123](https://gitcoin.co/koder-abc123) with [**Bottle**](https://github.com/koder-abc123/Bottle), a Telegram bot for interacting with the Matic network, and [@belfordz](https://gitcoin.co/belfordz) with [**Fleek Chat**](https://github.com/xops/fleekchat), a Fleek react starter kit.
 
 Cheers everyone! Thanks a lot for joining us and hacking away, it's exciting to see developers jump on to prove what's possible with the power of the Open Web!
 
@@ -99,9 +100,9 @@ Thanks again to all the applicants and everyone else for joining us and Protocol
 
 Applicants we'll be hearing from us and Protocol Labs soon for their prizes. If you didn't make it to GR9 and missed the chance to explore a PoCs or hack built on Fleek's suite of tools, drop into our community Slack. The team's always up for jamming on new ideas 🤙
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

@@ -1,20 +1,21 @@
 ---
 template: post
 draft: false
-title: 'Fleek Storage is out of Beta: New Architecture & Performance Boost ⚡'
+title: "Fleek Storage is out of Beta: New Architecture & Performance Boost ⚡"
 slug: fleek-storage-is-out-of-beta-v2-release
 date: 2021-01-11T03:00:00Z
 socialImage: https://fleek-team-bucket.storage.fleek.co/Blog Inline/Fleek-Storage-V2.jpg
 canonical: https://blog.fleek.co/posts/fleek-storage-is-out-of-beta-v2-release
-description: The V2 of our Fleek Storage product is out, and it is packing a major
+description:
+  The V2 of our Fleek Storage product is out, and it is packing a major
   performance boost, as well as architecture changes that enable high-availability
   and robustness.⚡
 category: Release
 tags:
-- IPFS
-- Storage
-
+  - IPFS
+  - Storage
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/Blog Inline/Fleek-Storage-V2.jpg)
 
 New release incoming! The V2 of our Fleek [**Storage**](https://fleek.co/storage/) product is out, which officially takes it out of Beta. This architecture overhaul comes with a major performance boost ⚡
@@ -60,9 +61,9 @@ Now it’s time for you to take Fleek Storage for a new test run! Give this new 
 
 This won’t be the last Storage-related thing you’ll hear from us in the near future, so expect new announcements soon!
 
-* [Sign up](https://app.fleek.co/) to try Fleek
-* Join our [Community Chat](https://slack.fleek.co/)
-* Follow us on [Twitter](https://twitter.com/FleekHQ)
-* Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
-* Check out our [Tech Docs](https://docs.fleek.co/)
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co/) to try Fleek
+- Join our [Community Chat](https://slack.fleek.co/)
+- Follow us on [Twitter](https://twitter.com/fleek)
+- Subscribe to our [Youtube channel](https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw)
+- Check out our [Tech Docs](https://docs.fleek.co/)
+- Contact us at support@fleek.co

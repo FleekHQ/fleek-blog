@@ -1,18 +1,19 @@
 ---
 template: post
-title: 'No Coding Required: Make a Website With the Forestry CMS and Fleek!'
+title: "No Coding Required: Make a Website With the Forestry CMS and Fleek!"
 slug: make-website-without-coding-cms
 draft: false
 date: 2020-06-01T04:02:37.816+00:00
-description: Now anyone can make a website thanks to the Forestry CMS and Fleek's
+description:
+  Now anyone can make a website thanks to the Forestry CMS and Fleek's
   site hosting... no coding required!
 category: Tutorial
 socialImage: https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/NoCode.png
 tags:
-- Tutorial
-- CMS
-
+  - Tutorial
+  - CMS
 ---
+
 ![](https://fleek-team-bucket.storage.fleek.co/thumbnails-blog/NoCode.png)
 
 Fleek is the easiest way to deploy a website... but what about actually _making_ one? Whether you do not know how to code, or you _do_ know but lack the time, the solution boils down to three letters:
@@ -107,8 +108,8 @@ It's pretty amazing that web development tooling has come this far so that liter
 
 The great tools are out there. They are only awaiting your special touch!
 
-* [Sign up](https://app.fleek.co) to try for yourself
-* [Join](https://slack.fleek.co/) the #community slack channel
-* [Follow](https://twitter.com/FleekHQ) us on Twitter
-* [Read](https://docs.fleek.co/) our Tech Docs
-* Contact us at support@fleek.co
+- [Sign up](https://app.fleek.co) to try for yourself
+- [Join](https://slack.fleek.co/) the #community slack channel
+- [Follow](https://twitter.com/fleek) us on Twitter
+- [Read](https://docs.fleek.co/) our Tech Docs
+- Contact us at support@fleek.co
